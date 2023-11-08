@@ -5,7 +5,7 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-@font-face {
+/* @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 
 }
@@ -23,7 +23,7 @@
 @font-face {
   font-family: Montserrat-Bold;
   src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
+} */
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -137,7 +137,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 95px 130px 45px 130px;
+  padding: 65px 100px;
 }
 
 /*------------------------------------------------------------------
@@ -157,21 +157,21 @@ button:hover {
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
-  width: 290px;
+  width: 300px;
 }
 .login-title-container {
   background-color: rgb(212, 175, 55); 
-  padding: 40px; 
+  padding: 32px 25px; 
   text-align: center;
-  border-radius: 5px;
-  margin-top: -100px;
+  border-radius: 0 0 15px 15px;
+  margin-top: -65px;
   margin-bottom: 70px;
 }
 
 
 .login100-form-title {
   font-family: Poppins-Bold;
-  font-size: 24px;
+  font-size: 31px;
   color: #ffffff;
   line-height: 1.2;
   text-align: center;
@@ -220,7 +220,7 @@ button:hover {
   color: rgb(212, 175, 55);
 }
 
-.input100:focus + .focus-input100 {
+.input100:focus ~ .focus-input100 {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
@@ -264,7 +264,7 @@ button:hover {
   transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100 + .symbol-input100 {
+.input100:focus ~ .focus-input100 ~ .symbol-input100 {
   color: rgb(212, 175, 55);
   padding-left: 28px;
 }

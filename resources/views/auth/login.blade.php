@@ -18,20 +18,29 @@
 							Ingresa a Los Archivos del Duque
 						</span>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100 @error('nickname') is-invalid @enderror" type="text"  name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" placeholder="Correo" autofocus>
-							@error('nickname')
-								<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
-								</span>
-							@enderror
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+					<div class="mb-4">
+						<div class="wrap-input100 @error('nickname') is-invalid @enderror">
+
+							<input class="input100 @error('nickname') is-invalid @enderror" type="text"  name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" placeholder="Nombre de usuario" autofocus>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</span>
+
+						</div>
+						@error('nickname')
+						<span class="invalid-feedback" role="alert">
+							<strong>
+								<i class="fa-solid fa-circle-exclamation me-1"></i> 
+								{{ $message }}
+							</strong>
+						</span>
+						@enderror
+					</div>
+					
+
+					<div class="wrap-input100 validate-input my-1">
 						<input class="input100 @error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Contraseña">
 							@error('password')
 								<span class="invalid-feedback" role="alert">
