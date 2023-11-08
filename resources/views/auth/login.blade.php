@@ -1,73 +1,88 @@
-@extends('layouts.app')
+
+@extends('auth.layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic">
+					<img src="{{asset('assets/login/img/logo.png')}}" alt="IMG">
+				</div>
 
-                        <div class="row mb-3">
-                            <label for="nickname" class="col-md-4 col-form-label text-md-end">{{ __('Nombre de usuario') }}</label>
+				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+					@csrf
 
-                            <div class="col-md-6">
-                                <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" autofocus>
+					<div class="login-title-container">
+						<span class="login100-form-title">
+							Ingresa a Los Archivos del Duque
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100 @error('nickname') is-invalid @enderror" type="text"  name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" placeholder="Correo" autofocus>
+							@error('nickname')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-                                @error('nickname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100 @error('password') is-invalid @enderror" type="password" name="password" required autocomplete="current-password" placeholder="Contraseña">
+							@error('password')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }}</label>
+					<!-- <div class="row mb-3">
+						<div class="col-md-6 offset-md-4">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+								<label class="form-check-label" for="remember">
+									{{ __('Remember Me') }}
+								</label>
+							</div>
+						</div>
+					</div> -->
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Ingresar
+						</button>
+						
+					</div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+					{{-- <div class="text-center ">
+						@if (Route::has('password.request'))
+							<a class="sign-up-btn" href="{{ route('password.request') }}">
+								{{ __('Forgot Your Password?') }}
+							</a>
+						@endif
+					</div> --}}
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+					<div class="text-center mt-2">
+						<a class="sign-up-btn" href="#">
+							Crear cuenta nueva
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection
