@@ -14,6 +14,13 @@ function setActive($routeName)
     return request()->routeIs($routeName) ? 'active' : '';
 }
 
+function getMessageFromSuccess($success, $context)
+{
+    $message = $success ? config('parameters.'. $context .'_message') : config('parameters.exception_message');
+
+    return $message;
+}
+
 function getStatusButton($status)
 {
     return '<span class="status ' . ($status == 1 ? 'active' : 'inactive') . '">' . 

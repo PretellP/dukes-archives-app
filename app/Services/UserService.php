@@ -77,6 +77,7 @@ class UserService
         $data = normalizeInputStatus($request->validated());
         $data['password'] = $data['password'] == NULL ? $user->password : Hash::make($data['password']);
         $data['status'] = $user->id == Auth::user()->id ? 1 : $data['status'];
+        $data['role_id'] = $user->id == Auth::user()->id ? $user->role_id : $data['role_id'];
 
         if ($user->update($data)) {
             return true;

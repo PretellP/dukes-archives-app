@@ -389,6 +389,12 @@ $(function () {
                     form.find('.user-status-checkbox').prop('checked', false);
                     $('.txt-status-user').html('Inactivo');
                 }
+
+                if (data.isAuth) {
+                    roleSelect.attr('readonly', true)
+                } else {
+                    roleSelect.removeAttr('readonly')
+                }
             },
             complete: function (data) {
                 modal.modal('show')

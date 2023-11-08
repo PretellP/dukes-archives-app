@@ -7,6 +7,7 @@ use App\Http\Requests\User\{UserStoreRequest, UserUpdateRequest};
 use Illuminate\Http\Request;
 use App\Models\{Role, User};
 use App\Services\UserService;
+use Auth;
 use Exception;
 
 class UsersController extends Controller
@@ -49,11 +50,11 @@ class UsersController extends Controller
         try {
             $this->userService->store($request, $storage);
             $success = true;
-            $message = config('parameters.stored_message');
         } catch (Exception $e) {
             $success = false;
-            $message = $e->getMessage();
         }
+
+        $message = getMessageFromSuccess($success, 'stored');
 
         return response()->json([
             "success" => $success,
@@ -72,7 +73,8 @@ class UsersController extends Controller
     public function edit(User $user)
     {
         return response()->json([
-            "user" => $user
+            "user" => $user,
+            "isAuth" => $user->id == Auth::user()->id,
         ]);
     }
 
@@ -82,11 +84,11 @@ class UsersController extends Controller
 
         try {
             $success = $this->userService->update($request, $user, $storage);
-            $message = config('parameters.updated_message');
         } catch (Exception $e) {
             $success = false;
-            $message = $e->getMessage();
         }
+
+        $message = getMessageFromSuccess($success, 'updated');
 
         return response()->json([
             "success" => $success,
@@ -98,11 +100,11 @@ class UsersController extends Controller
     {
         try {
             $success = $this->userService->destroy($user);
-            $message = config('parameters.deleted_message');
         } catch (Exception $e) {
             $success = false;
-            $message = $e->getMessage();
         }
+
+        $message = getMessageFromSuccess($success, 'deleted');
 
         return response()->json([
             "success" => $success,
