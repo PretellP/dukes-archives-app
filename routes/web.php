@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(LoginController::class)->group(function () {
     Route::get('/', 'showLoginForm')->name('login');
 });
-Auth::routes(['register' => false]);
+Auth::routes();
 
 
 Route::controller(HomeController::class)->group(function () {
