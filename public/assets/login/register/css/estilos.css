@@ -1,0 +1,12 @@
+
+li {
+    list-style: none !important;
+}
+
+.bg-register{
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center bottom; 
+    background-attachment: fixed;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../img/registerbg.jpg');
+}

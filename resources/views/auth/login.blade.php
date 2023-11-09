@@ -81,7 +81,7 @@
 					</div> --}}
 
 					<div class="text-center mt-2">
-						<a class="sign-up-btn" href="#">
+						<a class="sign-up-btn" href="{{ route('register') }}">
 							Crear cuenta nueva
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
