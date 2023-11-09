@@ -46,6 +46,7 @@ class FileService
     public function makeDirectory($model, $file_type, $category, $belongsTo)
     {
         $directory = $file_type . '/' . $category;
+        
         if ($belongsTo == 'folder') {
             $directory = $model->folder_path;
         }

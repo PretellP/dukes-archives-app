@@ -66,7 +66,7 @@
 
             <div class="form-row">
 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-5">
                     <label>Tipo de documento *</label>
                     <div class="input-group">
                         <select name="document_type" class="form-control select2 document_type_select">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-8">
+                <div class="form-group col-md-7">
                     <label>Nro. de documento *</label>
                     <div class="input-group">
                         <input type="text" name="document_number" class="form-control document_number"
