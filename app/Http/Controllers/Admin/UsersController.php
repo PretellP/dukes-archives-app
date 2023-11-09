@@ -61,6 +61,15 @@ class UsersController extends Controller
             "message" => $message
         ]);
     }  
+
+    public function show(User $user)
+    {
+        $user['status'] = getStatusButton($user->status);
+
+        return response()->json([
+            "user" => $user
+        ]);
+    }
     
     public function editValidate(Request $request, string $column)
     {

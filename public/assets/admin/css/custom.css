@@ -55,6 +55,12 @@ button:focus {
     user-select: none;
 }
 
+input:read-only
+{
+    user-select: none;
+    pointer-events: none;
+}
+
 input.error,
 input.error:focus {
     border: 0;

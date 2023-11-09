@@ -6,7 +6,6 @@ use App\Http\Controllers\Admin\{
 };
 
 use App\Http\Controllers\Home\{HomeController};
-
 use App\Http\Controllers\Auth\{LoginController};
 
 use Illuminate\Support\Facades\Auth;
@@ -20,20 +19,29 @@ Auth::routes(['register' => false]);
 
 Route::controller(HomeController::class)->group(function () {
 
-    Route::get('/inicio', 'index')->name('home.index');
+    Route::group(['prefix' => 'inicio', 'as' => 'home.'], function () {
+
+        //----- home.* -----
+        Route::get('/', 'index')->name('index');
+    });
 });
 
 
 Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
 
     // RUTAS DE LA INTERFAZ ADMINISTRADOR ------------------
-
+    // ---- admin.*
     Route::group(['middleware' => 'check.role:ADMINISTRADOR,ALMACENERO', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
         // -------- DASHBOARD ----------
-        // ---- admin.*
-        Route::get('/inicio', [DashboardController::class, 'index'])->name('dashboard.index');
+        // ---- admin.dashboard.*
+        Route::group(['prefix' => 'inicio', 'as' => 'dashboard.'], function () {
 
+            Route::controller(DashboardController::class)->group(function () {
+                Route::get('/', 'index')->name('index');
+            });
+        });
+        
         // --------------- USERS -------------------------
         // ---- admin.users.* ------
         Route::group(['prefix' => 'usuarios', 'as' => 'users.'], function () {
@@ -41,6 +49,7 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
             Route::controller(UsersController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
+                Route::get('/ver/{user}', 'show')->name('show');
                 Route::get('/editar/{user}', 'edit')->name('edit');
                 Route::post('/registrar', 'store')->name('store');
                 Route::post('/actualizar/{user}', 'update')->name('update');

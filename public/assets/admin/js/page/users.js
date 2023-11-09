@@ -212,6 +212,56 @@ $(function () {
     })
 
 
+    // ---------------- VER -------------------
+
+    var viewRegisterObject = $('#viewUserForm')
+
+    initRoleSelect(viewRegisterObject.find('.roleSelect'), viewRegisterObject)
+    initGenderSelect(viewRegisterObject.find('.genderSelect'), viewRegisterObject)
+    initDocTypeSelect(viewRegisterObject.find('.document_type_select'), viewRegisterObject)
+
+    $('html').on('click', '.view_user_btn', function () {
+        var modal = $('#viewUserModal')
+        var form = modal.find('#viewUserForm')
+        var getDataUrl = $(this).data('url')
+        var genderSelect = form.find('.genderSelect')
+        var roleSelect = form.find('.roleSelect')
+        var docTypeSelect = form.find('.document_type_select')
+
+        $.ajax({
+            type: 'GET',
+            url: getDataUrl,
+            dataType: 'JSON',
+            success: function (data) {
+
+                var user = data.user;
+
+                form.find('input[name=password]').attr('placeholder', 'Ingrese una nueva contraseña')
+                form.find('input[name=id]').val(user.id)
+                form.find('input[name=name]').val(user.name);
+                form.find('input[name=lastname]').val(user.lastname);
+                form.find('input[name=birthdate]').val(user.birthdate);
+                form.find('input[name=email]').val(user.email);
+                form.find('input[name=document_number]').val(user.document_number);
+                form.find('input[name=phone]').val(user.phone);
+                form.find('input[name=nickname]').val(user.nickname);
+                form.find('.status-btn').html(user.status)
+
+                genderSelect.val(user.gender).change()
+                roleSelect.val(user.role_id).change()
+                docTypeSelect.val(user.document_type).change()
+
+            },
+            complete: function (data) {
+                modal.modal('show')
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        })
+    })
+
+
     /* ---------------- EDITAR  ----------------- */
 
     var formEditObject = $('#editUserForm')

@@ -51,6 +51,7 @@
 @section('modals')
 @include('admin.users.partials.modals._register')
 @include('admin.users.partials.modals._edit')
+@include('admin.users.partials.modals._view')
 @endsection
 
 @section('extra-script')

@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class RegisterController_old extends Controller
+class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -23,6 +22,16 @@ class RegisterController_old extends Controller
     */
 
     use RegistersUsers;
+
+            /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
 
     /**
      * Where to redirect users after registration.
@@ -41,7 +50,6 @@ class RegisterController_old extends Controller
         $this->middleware('guest');
     }
 
-    
 
     /**
      * Get a validator for an incoming registration request.
