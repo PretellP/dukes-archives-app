@@ -29,6 +29,58 @@
                 </a>
             </li>
 
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Categorías</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <span>Productos</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>Anuncios</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Inventario</span>
+                </a>
+            </li>
+
+            <ul class="sidebar-menu txt-divider">
+                <li class="">
+                    <a class="nav-link" href="javascript:void(0);">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reportes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-user-tag"></i>
+                    <span>Clientes</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="" class="nav-link">
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                    <span>Ventas</span>
+                </a>
+            </li>
+
+
             <li class="logout mt-5">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); 
                 document.getElementById('logout-form').submit();">

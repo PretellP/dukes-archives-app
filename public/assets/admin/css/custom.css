@@ -199,6 +199,12 @@ select[readonly].select2-hidden-accessible + .select2-container .select2-selecti
 
 /* --------- SIDEAR ------------*/
 
+.txt-divider
+{
+    pointer-events: none;
+    background-color: rgba(var(--second-color-opacity), 0.5);
+}
+
 body.sidebar-mini .main-sidebar .sidebar-brand-sm
 {
     display: flex !important;
