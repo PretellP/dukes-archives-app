@@ -111,7 +111,6 @@ $(function () {
                 maxlength: 255
             },
             phone: {
-                required: true,
                 maxlength: 255
             },
             role_id: {
@@ -293,7 +292,6 @@ $(function () {
                 maxlength: 255
             },
             phone: {
-                required: true,
                 maxlength: 255
             },
             role_id: {

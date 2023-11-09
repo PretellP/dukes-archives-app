@@ -31,7 +31,7 @@ class UserStoreRequest extends FormRequest
             "birthdate" => ['required', 'date'],
             "document_type" => ['required', 'integer'],
             "document_number" => ['required', 'string'],
-            "phone" => ['required', 'max:255'],
+            "phone" => ['nullable', 'max:255'],
             "status" => ['nullable'],
             "role_id" => ['required', 'exists:roles,id'],
             "email" => ['required', 'email', 'max:255', 'unique:users,email'],

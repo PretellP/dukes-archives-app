@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('birthdate');
             $table->integer('document_type');
             $table->string('document_number');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->boolean('status')->default(false);
             $table->foreignId('role_id')->constrained('roles');           
             $table->string('email')->unique();
