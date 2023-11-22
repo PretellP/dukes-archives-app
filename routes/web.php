@@ -5,31 +5,39 @@ use App\Http\Controllers\Admin\{
    DashboardController 
 };
 
-use App\Http\Controllers\Home\{HomeController};
+use App\Http\Controllers\Home\{HomeController, ProductsController};
 use App\Http\Controllers\Auth\{LoginController};
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::controller(LoginController::class)->group(function () {
-    Route::get('/', 'showLoginForm')->name('login');
-});
+
 Auth::routes();
 
-
 Route::controller(HomeController::class)->group(function () {
+             //----- home.* -----
+            Route::get('/', 'index')->name('home.index');
+});
 
-    Route::group(['prefix' => 'inicio', 'as' => 'home.'], function () {
 
-        //----- home.* -----
-        Route::get('/', 'index')->name('index');
+Route::group(["prefix" => "inicio", "as" => "home."], function () {
+
+    Route::controller(ProductsController::class)->group(function () {
+        Route::group(["prefix" => "productos", "as" => "products."], function () {
+             //----- products.* -----
+             Route::get('/', 'index')->name('index');
+        });
+
     });
+
+    
+
 });
 
 
 Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
 
-    // RUTAS DE LA INTERFAZ ADMINISTRADOR ------------------
+    // RUTAS DE LA INTERFAZ ADMINISTRADOR ------------------'
     // ---- admin.*
     Route::group(['middleware' => 'check.role:ADMINISTRADOR,ALMACENERO', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
