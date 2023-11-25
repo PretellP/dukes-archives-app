@@ -29,8 +29,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="" class="nav-link">
+            <li class="{{setActive('admin.labels.*')}}">
+                <a href="{{route('admin.labels.index')}}" class="nav-link">
                     <i class="fa-solid fa-tags"></i>
                     <span>Categorías</span>
                 </a>

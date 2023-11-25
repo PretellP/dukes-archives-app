@@ -1,5 +1,6 @@
 import { DataTableEs } from '../datatable_lang.js';
 import { Toast, ToastError, SwalDelete } from '../sweet_alerts.js';
+import { setActiveCheckbox, initImageChange, setActiveSubmitButton } from '../../../common/js/utils.js';
 
 $(function () {
 
@@ -29,15 +30,7 @@ $(function () {
         })
     }
 
-
-    $('html').on('change', '.user-status-checkbox', function () {
-        var txtDesc = $(this).closest('form').find('.txt-status-user');
-        if (this.checked) {
-            txtDesc.html('Activo');
-        } else {
-            txtDesc.html('Inactivo')
-        }
-    })
+    setActiveCheckbox('.user-status-checkbox', '.txt-status-user')
 
     /*------------------------------------*/
 
@@ -45,6 +38,7 @@ $(function () {
     var getDataTable = usersTableEle.data('url');
     var usersTable = usersTableEle.DataTable({
         language: DataTableEs,
+        responsive: true,
         serverSide: true,
         processing: true,
         ajax: getDataTable,
@@ -180,7 +174,7 @@ $(function () {
                     if (data.success) {
 
                         registerUserForm.resetForm()
-                        usersTable.ajax.reload(null, false)
+                        usersTable.draw()
 
                         form.trigger('reset')
                         modal.modal('hide')
@@ -432,10 +426,10 @@ $(function () {
 
                 if (user.status == 1) {
                     form.find('.user-status-checkbox').prop('checked', true);
-                    $('.txt-status-user').html('Activo');
+                    form.find('.txt-status-user').html('Activo');
                 } else {
                     form.find('.user-status-checkbox').prop('checked', false);
-                    $('.txt-status-user').html('Inactivo');
+                    form.find('.txt-status-user').html('Inactivo');
                 }
 
                 if (data.isAuth) {

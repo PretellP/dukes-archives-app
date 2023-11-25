@@ -48,17 +48,17 @@ button:focus {
 
 .input-disabled {
     padding: 10px;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(234, 237, 240);
     text-align: center;
     border-radius: 5px;
     cursor: not-allowed;
     user-select: none;
 }
 
-input:read-only
+input:read-only:focus,
+textarea:read-only:focus
 {
-    user-select: none;
-    pointer-events: none;
+    background-color: rgb(234, 237, 240);
 }
 
 input.error,

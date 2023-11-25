@@ -8,10 +8,11 @@
 
 
 
-<script src="{{asset('assets/common/modules/datatables/datatables.min.js')}}"></script>
+{{-- <script src="{{asset('assets/common/modules/datatables/datatables.min.js')}}"></script>
 <script src="{{asset('assets/common/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
-{{-- <script src="{{asset('vendor/datatables/buttons.server-side.js')}}"></script> --}}
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script> --}}
+
+<script src="https://cdn.datatables.net/v/bs4/dt-1.13.7/r-2.5.0/datatables.min.js"></script>
 
 <script src="{{asset('assets/common/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
 <script src="{{asset('assets/common/modules/moment.min.js')}}"></script>

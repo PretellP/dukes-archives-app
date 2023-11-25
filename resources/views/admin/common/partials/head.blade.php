@@ -7,16 +7,18 @@
 
     <title>@yield('title', 'Los Archivos del Duque | Admin')</title>
 
-	<link rel="stylesheet" href="{{asset('assets/common/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
+	{{-- <link rel="stylesheet" href="{{ asset('assets/common/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}"> --}}
 
    <!-- General CSS Files -->
-	<link rel="stylesheet" href="{{asset('assets/common/modules/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/bootstrap/css/bootstrap.min.css') }}">
 
 	<script src="https://kit.fontawesome.com/469f55554f.js" crossorigin="anonymous"></script>
 
+	<link href="https://cdn.datatables.net/v/bs4/dt-1.13.7/r-2.5.0/datatables.min.css" rel="stylesheet">
+
 	<!-- CSS Libraries -->
-	<link rel="stylesheet" href="{{asset('assets/common/modules/jqvmap/dist/jqvmap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/common/modules/summernote/summernote-bs4.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/jqvmap/dist/jqvmap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/summernote/summernote-bs4.css') }}">
 
 
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />

@@ -1,16 +1,14 @@
 <?php
 
 use App\Http\Controllers\Admin\{
-   UsersController,
-   DashboardController 
+    UsersController,
+    DashboardController,
+    LabelsController
 };
 
 use App\Http\Controllers\Home\{HomeController, ProductsController};
-use App\Http\Controllers\Auth\{LoginController};
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\{Auth, Route};
 
 Auth::routes();
 
@@ -65,6 +63,21 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
 
                 Route::delete('/eliminar/{user}', 'destroy')->name('destroy');
+            });
+        });
+
+        // ---------------- LABELS -------------------
+        // ---- admin.labels.* ------
+        Route::group(['prefix' => 'categorías', 'as' => 'labels.'], function () {
+
+            Route::controller(LabelsController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
+                Route::get('/ver/{label}', 'show')->name('show');
+                Route::get('/editar/{label}', 'edit')->name('edit');
+                Route::post('/registrar', 'store')->name('store');
+                Route::post('/actualizar/{label}', 'update')->name('update');
+                Route::delete('/eliminar/{label}', 'destroy')->name('destroy');
             });
         });
 
