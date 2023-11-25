@@ -21,6 +21,9 @@ class LabelService
                     $label->name
                     . '</a>';
             })
+            ->editColumn('description', function ($label) {
+                return restrictMaxLengthText($label->description, 100);
+            })
             ->editColumn('status', function ($label) {
                 return getStatusButton($label->status);
             })

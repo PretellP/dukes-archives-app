@@ -112,8 +112,13 @@ function getCurrentMonth()
 
 // ----------------------------------
 
-
-
+function restrictMaxLengthText(string $description, int $length)
+{   
+    return strlen($description) > $length ? 
+            mb_substr($description, 0, $length, 'UTF-8') . ' ...'
+            : 
+            $description;
+}
 
 function normalizeInputStatus($data)
 {
@@ -121,7 +126,6 @@ function normalizeInputStatus($data)
 
     return $data;
 }
-
 
 function getFileExtension(ModelsFile $file)
 {

@@ -51,7 +51,7 @@
                 <div class="form-group col-md-6">
                     <label for="inputName">Fecha de nacimiento </label>
                     <div class="input-group">
-                        <input type="text" name="birthdate" class="form-control datepicker" readonly="readonly">
+                        <input type="text" name="birthdate" class="form-control datepicker not-user-allowed" readonly="readonly">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
                                 <i class="fa-solid fa-calendar-days"></i>
