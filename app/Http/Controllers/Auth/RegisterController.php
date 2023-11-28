@@ -40,9 +40,9 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $roles = Role::get(['id', 'name']);
-        $genders = config('parameters.genders') ;
-        $document_types = config('parameters.document_types');
-        rsort($genders);
+        $genders = array_reverse(config('parameters.genders'), true);
+        $document_types = config('parameters.document_types');       
+
         return view('auth.register', compact(
             'roles',
             'genders',
@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'document_type' => ['required', 'integer'],
             'document_number' => ['required', 'string', 'max:255'],
             'phone' => ['nullable', 'string', 'max:255'],         
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }

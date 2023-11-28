@@ -51,7 +51,7 @@ $(function () {
             { data: 'document_type', name: 'document_type'},
             { data: 'document_number', name: 'document_number'},
             { data: 'phone', name: 'phone'},
-            { data: 'role_id', name: 'role_id'},
+            { data: 'role.name', name: 'role.name'},
             { data: 'status', name: 'status', searchable: false },
             { data: 'action', name: 'action', orderable: false, searchable: false },
         ],

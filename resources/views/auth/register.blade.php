@@ -39,7 +39,7 @@
         <div class="book_section layout_padding ">
             <div class="form_container d-flex justify-content-center">             
                 <div class="bg-white p-5 rounded">
-                    <form action="{{ route('register') }}" method="post">
+                    <form action="{{ route('register') }}" method="POST">
                         @csrf
                             <div class="text-center mb-5">
                                 <h2>

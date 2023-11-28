@@ -86,12 +86,12 @@ class User extends Authenticatable
 
     public function getGenderNameAttribute()
     {
-        return config('parameters.genders')[$this->gender];
+        return config('parameters.genders')[$this->gender] ?? '-';
     }
 
     public function getDocumentTypeNameAttribute()
     {
-        return config('parameters.document_types')[$this->document_type];
+        return config('parameters.document_types')[$this->document_type] ?? '-';
     }
 
     public function getBirthOnlyDateAttribute()
