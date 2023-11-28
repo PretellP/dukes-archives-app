@@ -7,12 +7,10 @@
         <div class="slider-area principal-slider">
             <div class="swiper-container slider__active">
                 <div class="slider-wrapper swiper-wrapper">
-                    <!-- <div class="single-slider swiper-slide slider-height">
-                        <img class="imagencita" src="assets/img/slider/01-slide.png" alt="">
-                    </div>-->
+                    <div class="single-slider swiper-slide slider-height">
+                        <img class="imagencita" src="{{asset('assets/customer/img/slider/01-slide.png')}}" alt="">
+                    </div>
                     <!-- /single-slider -->
-                    <div class="single-slider swiper-slide slider-height d-flex align-items-center" data-background="{{asset('assets/customer/img/slider/01-slide.png')}}">
-                    </div><!-- /single-slider -->
                     <div class="single-slider swiper-slide slider-height d-flex align-items-center" data-background="{{asset('assets/customer/img/slider/01-slide-2.png')}}">
                         <div class="container">
                             <div class="row">
@@ -59,13 +57,14 @@
         <!-- slider-area-end -->
 
         <!-- features__area-start -->
+
         <section class="features__area pt-20">
             <div class="container">
                 <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-2 gx-0">
                     <div class="col">
                         <div class="features__item d-flex white-bg">
                             <div class="features__icon mr-20">
-                                <i class="fal fa-truck"></i>
+                                <i class="fa fa-truck"></i>
                             </div>
                             <div class="features__content">
                                 <h6>DELIVERY GRATIS</h6>
@@ -76,7 +75,7 @@
                     <div class="col">
                         <div class="features__item d-flex white-bg">
                             <div class="features__icon mr-20">
-                                <i class="fal fa-money-check"></i>
+                                <i class="fa fa-money-check"></i>
                             </div>
                             <div class="features__content">
                                 <h6>PAGOS SEGUROS</h6>
@@ -87,7 +86,7 @@
                     <div class="col">
                         <div class="features__item d-flex white-bg">
                             <div class="features__icon mr-20">
-                                <i class="fal fa-comments-alt"></i>
+                                <i class="fa-solid fa-comments"></i>
                             </div>
                             <div class="features__content">
                                 <h6>OPERANDO 24/7</h6>
@@ -98,7 +97,7 @@
                     <div class="col">
                         <div class="features__item features__item-last d-flex white-bg">
                             <div class="features__icon mr-20">
-                                <i class="fad fa-user-headset"></i>
+                                <i class="fa-solid fa-headset"></i>
                             </div>
                             <div class="features__content">
                                 <h6>SERVICIO AMISTOSO</h6>
@@ -169,7 +168,7 @@
                                 <h5 class="st-titile">LIBROS DE CIENCIA FICCIÓN</h5>
                             </div>
                             <div class="button-wrap">
-                                <a href="shop.html">VER TODO <i class="fal fa-chevron-right"></i></a>
+                                <a href="shop.html">VER TODO <i class="fa fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -190,16 +189,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -208,11 +207,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -238,16 +237,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -256,11 +255,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -286,16 +285,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -304,11 +303,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -334,16 +333,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -352,11 +351,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -382,16 +381,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -400,11 +399,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -422,8 +421,8 @@
                             </div>
                         </div>
                          <!-- If we need navigation buttons -->
-                         <div class="bs-button bs-button-prev"><i class="fal fa-chevron-left"></i></div>
-                         <div class="bs-button bs-button-next"><i class="fal fa-chevron-right"></i></div>
+                         <div class="bs-button bs-button-prev"><i class="fa fa-chevron-left"></i></div>
+                         <div class="bs-button bs-button-next"><i class="fa fa-chevron-right"></i></div>
                     </div>
                 </div>
             </div>
@@ -468,6 +467,7 @@
                                 <div class="product-bs-slider-2">
                                     <div class="product-slider-2 swiper-container">
                                         <div class="swiper-wrapper">
+
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
@@ -480,16 +480,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-shopping-cart"></i>
-                                                            <i class="fal fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -498,11 +498,11 @@
                                                     <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -528,16 +528,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-shopping-cart"></i>
-                                                            <i class="fal fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -546,11 +546,11 @@
                                                     <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -576,16 +576,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-shopping-cart"></i>
-                                                            <i class="fal fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -594,11 +594,11 @@
                                                     <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -624,16 +624,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-shopping-cart"></i>
-                                                            <i class="fal fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -642,11 +642,11 @@
                                                     <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -672,16 +672,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-shopping-cart"></i>
-                                                            <i class="fal fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                            <i class="fa fa-shopping-cart"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -690,11 +690,11 @@
                                                     <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -712,10 +712,11 @@
                                         </div>
                                     </div>
                                     <!-- If we need navigation buttons -->
-                                    <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                    <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
+                                    <div class="bs-button bs2-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="bs-button bs2-button-next"><i class="fa fa-chevron-right"></i></div>
                                 </div>
                             </div>
+
                             <div class="tab-pane fade" id="samsung" role="tabpanel" aria-labelledby="samsung-tab">
                                 <div class="product-bs-slider-2">
                                     <div class="product-slider-2 swiper-container">
@@ -724,7 +725,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-1.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -732,16 +733,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -749,11 +750,11 @@
                                                     <h6><a href="product-details.html">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -771,21 +772,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-4.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -793,11 +794,11 @@
                                                     <h6><a href="product-details.html">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -815,7 +816,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-5.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -823,16 +824,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -840,11 +841,11 @@
                                                     <h6><a href="product-details.html">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -862,21 +863,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-6.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -884,11 +885,11 @@
                                                     <h6><a href="product-details.html">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -906,21 +907,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-2.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -928,11 +929,11 @@
                                                     <h6><a href="product-details.html">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -950,7 +951,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-3.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -958,16 +959,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -975,11 +976,11 @@
                                                     <h6><a href="product-details.html">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -996,8 +997,8 @@
                                         </div>
                                         <!-- If we need navigation buttons -->
                                     </div>
-                                    <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                    <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
+                                    <div class="bs-button bs2-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="bs-button bs2-button-next"><i class="fa fa-chevron-right"></i></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="htc" role="tabpanel" aria-labelledby="htc-tab">
@@ -1008,21 +1009,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-4.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1030,11 +1031,11 @@
                                                     <h6><a href="product-details.html">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1052,7 +1053,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-5.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1060,16 +1061,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1077,11 +1078,11 @@
                                                     <h6><a href="product-details.html">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1099,21 +1100,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-6.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1121,11 +1122,11 @@
                                                     <h6><a href="product-details.html">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1143,7 +1144,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-1.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1151,16 +1152,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1168,11 +1169,11 @@
                                                     <h6><a href="product-details.html">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1190,21 +1191,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-2.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1212,11 +1213,11 @@
                                                     <h6><a href="product-details.html">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1234,7 +1235,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-3.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1242,16 +1243,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1259,11 +1260,11 @@
                                                     <h6><a href="product-details.html">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1280,8 +1281,8 @@
                                         </div>
                                     </div>
                                     <!-- If we need navigation buttons -->
-                                    <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                    <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
+                                    <div class="bs-button bs2-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="bs-button bs2-button-next"><i class="fa fa-chevron-right"></i></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nokia" role="tabpanel" aria-labelledby="nokia-tab">
@@ -1292,7 +1293,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-1.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1300,16 +1301,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1317,11 +1318,11 @@
                                                     <h6><a href="product-details.html">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1339,21 +1340,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-2.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1361,11 +1362,11 @@
                                                     <h6><a href="product-details.html">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1383,7 +1384,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-3.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1391,16 +1392,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1408,11 +1409,11 @@
                                                     <h6><a href="product-details.html">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1430,21 +1431,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-4.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1452,11 +1453,11 @@
                                                     <h6><a href="product-details.html">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1474,7 +1475,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-5.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1482,16 +1483,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1499,11 +1500,11 @@
                                                     <h6><a href="product-details.html">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1521,21 +1522,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-6.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1543,11 +1544,11 @@
                                                     <h6><a href="product-details.html">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1564,8 +1565,8 @@
                                         </div>
                                     </div>
                                     <!-- If we need navigation buttons -->
-                                    <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                    <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
+                                    <div class="bs-button bs2-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="bs-button bs2-button-next"><i class="fa fa-chevron-right"></i></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="cell" role="tabpanel" aria-labelledby="cell-tab">
@@ -1576,7 +1577,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-1.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1584,16 +1585,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1601,11 +1602,11 @@
                                                     <h6><a href="product-details.html">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1623,21 +1624,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-2.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1645,11 +1646,11 @@
                                                     <h6><a href="product-details.html">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1667,7 +1668,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-3.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1675,16 +1676,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1692,11 +1693,11 @@
                                                     <h6><a href="product-details.html">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1714,21 +1715,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-4.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1736,11 +1737,11 @@
                                                     <h6><a href="product-details.html">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1758,7 +1759,7 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-5.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product__offer">
@@ -1766,16 +1767,16 @@
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1783,11 +1784,11 @@
                                                     <h6><a href="product-details.html">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1805,21 +1806,21 @@
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
                                                         <a href="product-details.html">
-                                                            <img src="assets/img/product/tp-6.jpg" alt="product">
+                                                            <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
                                                     <div class="product-action">
                                                         <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                            <i class="fal fa-eye"></i>
-                                                            <i class="fal fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
+                                                            <i class="fa fa-eye"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-heart"></i>
-                                                            <i class="fal fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </a>
                                                         <a href="#" class="icon-box icon-box-1">
-                                                            <i class="fal fa-layer-group"></i>
-                                                            <i class="fal fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
+                                                            <i class="fa fa-layer-group"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1827,11 +1828,11 @@
                                                     <h6><a href="product-details.html">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                         </ul>
                                                         <span>(01 review)</span>
                                                     </div>
@@ -1848,8 +1849,8 @@
                                         </div>
                                     </div>
                                     <!-- If we need navigation buttons -->
-                                    <div class="bs-button bs2-button-prev"><i class="fal fa-chevron-left"></i></div>
-                                    <div class="bs-button bs2-button-next"><i class="fal fa-chevron-right"></i></div>
+                                    <div class="bs-button bs2-button-prev"><i class="fa fa-chevron-left"></i></div>
+                                    <div class="bs-button bs2-button-next"><i class="fa fa-chevron-right"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -1881,7 +1882,7 @@
                                 <h5 class="st-titile">LIBROS DE CIENCIA FICCIÓN</h5>
                             </div>
                             <div class="button-wrap">
-                                <a href="shop.html">VER TODO <i class="fal fa-chevron-right"></i></a>
+                                <a href="shop.html">VER TODO <i class="fa fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1902,16 +1903,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1920,11 +1921,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -1950,16 +1951,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1968,11 +1969,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -1998,16 +1999,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -2016,11 +2017,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -2046,16 +2047,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -2064,11 +2065,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -2094,16 +2095,16 @@
                                         </div>
                                         <div class="product-action">
                                             <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
-                                                <i class="fal fa-eye"></i>
-                                                <i class="fal fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
+                                                <i class="fa fa-eye"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-heart"></i>
-                                                <i class="fal fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart"></i>
                                             </a>
                                             <a href="#" class="icon-box icon-box-1">
-                                                <i class="fal fa-shopping-cart"></i>
-                                                <i class="fal fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <i class="fa fa-shopping-cart"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -2112,11 +2113,11 @@
                                         <h6 class="text-truncate"><a href="product-details.html">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                                <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             </ul>
                                             <span>(01 review)</span>
                                         </div>
@@ -2134,8 +2135,8 @@
                             </div>
                         </div>
                          <!-- If we need navigation buttons -->
-                         <div class="bs-button bs-button-prev"><i class="fal fa-chevron-left"></i></div>
-                         <div class="bs-button bs-button-next"><i class="fal fa-chevron-right"></i></div>
+                         <div class="bs-button bs-button-prev"><i class="fa fa-chevron-left"></i></div>
+                         <div class="bs-button bs-button-next"><i class="fa fa-chevron-right"></i></div>
                     </div>
                 </div>
             </div>
@@ -2308,7 +2309,7 @@
                             <a href="#"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxESEhUSEhEVFRMVGBkWFhcYFRYWFRcYGRYXGxYYGxgYHiggGBolHhYfITEhJyorLi4zFyAzODMsNyktLisBCgoKDg0OGxAQGzUlICUxNzUtMjUtLS0tLzUyLS0tLS8tLS0tLS0tLS8tLy0tLS0tLS0tLS8tLS0tLy0tLS0tLf/AABEIAJQBVAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcEBQgDAgH/xABLEAABAwICBgUGCAwFBQEAAAABAAIDBBEFEgYHITFBURMiYXGBMnORobHBIzRCUnKCsrMUJDM1VGKSosLR0vBTg5Oj4RYXQ2PTFf/EABoBAQADAQEBAAAAAAAAAAAAAAADBAUCAQb/xAA1EQACAQMABgkDBAEFAAAAAAAAAQIDBBESITFBUdEFEzJxgaGxwfAUYZEiM+HxUhUkNENi/9oADAMBAAIRAxEAPwC8UREAREQBFHMK00oqmcU8Mpc8hxHUc1py7SAXAXNrnwKz5cbp2SmB8gZILGzrtBBGyzjsPpXbpTTw4vPcR9bDGcrGzabRERcEgREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAUDir/wDGHvGwRT9J/lvs4tH1HkKe60aLZDMO1jj62/xKKa5KTLWtfbZJE0ntc1zmn1Bqk2KONXgDJQbvjjY6/HNC7JIe+wd6VsaeHRreD9ObMmpS6yNah4r15EewLSqelIAdni4xuOzwO9p7tnYVaWB41DVx54nbR5TD5bDyI9+4rnqDEjuftHPj/ypJorWvZO2SJ9rA35OFvJcOIvbZ2Ka6tIVE5LVL17+ZRs7qrbyUJ64+nc/b8YL2Ra/CMSZUMzN2EbHN4tP8uRWwWE4uLwz6OMlJZWwIiLw9CIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgKp14wfFX+daf9sj3rO1YfjGFz05+dLHb9WSMH2uK/ddbPxaE8pbemN38lhaj5TaqZwBicPHpAfshae2yzwfv/JQ2Xfevb+CqQVJtDYyDJJ3NHtPuWkxaHJPMwfJe9v7LyPcpfgFN0cDObuufrbvVZaVaX6e8oU4fqa4G+wvE3QSCRnc5vBw4j/ngrIoaxkzA9hu0+kHiDyIVSuW10bx000nWuYneWOXaBzHrHgs64odYsx2+pYoVuplh9n0+/Ms9RfGNLWUlS2GoYWxyNDo5htbyc143ix4i/lDYN6kkcgcA5pBBFwRtBB3EKH61MK6aiMoHXgOcc8h2SDutZ31FQoRjKooz2PUaNZyUG47VrJfFK1zQ5rg5rhcEEEEHcQRvC9VR+r7S2SlkELyXUzr3G8xn5zezm3jv377sikDgHNIIIBBG0EHcQeS6uLeVGWHs3M5oXEaq1bd6PRERQE4REQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQFd66/ikXnh91ItJqQd8NUDnGw+hx/mtvrtf+LwN5yE+hhH8S1GpEfD1B/8AW31u/wCFqQX+xl83oz5f8td3syKYzRGTEqiPgaia/wBHpHE+pSpwWM2k/HKyYjyp5mt7hK7MfEi3gsl6sylnC4IiUcNvi36nm5eD1tP/AM5xpjUDaGvLHDkMrC0+kkeIWrekWmQ1E0SnQrSHI4U8ruo4/BuPBx4HsPDke/ZPKmBsjHRvF2vaWuHMOFiPQVSMqsHQjScTWppXfDNbdhP/AJGDft4vbx5jbt22p3lv/wBkfHnzJ7G619TLw5cvwVAymdDUOhd5UTnsPaWgi/qVtatsXL43U7jcx9ZvPKTtHgT+8FCtYdF0WKOcN0rGy9m4sPrZfxXrodW9DWQm+xzsru53V29xIPgrtWPX2+d+M+P96vEoKf096ktmzwbf8MuhEWBi2KQ00ZlnkDGDid5PIAbXHsCwkm3hH0beNpnoqsxTW3tIpqa44Pldv+o3+paZ2tOvPyYR3Ru971aVjWe7HiVXeUVv8i7EVOUmtirafhYIXj9XPGfSS4epTjRjTukrSIwTFMd0b7db6Dhsd3bD2Lipa1aay1q+2s7p3NObwmStEVaaSay5Keplgjp2ObG7Lmc83JAFzYDYP5LilRnVeIndSrGmsyZZaKr8D1oyTVEUL6ZgbK9sd2vNwXuDQbEbRcrf6Q6wqOlJY0meUbC2O2Vp5Oedg7hcjkupWtVSUdHWzlXFNx0s6iYoqin1uTk9SliaP1pHO9YDVMdHdLfwihlrHxZTCJM7GnY7o2Z+qTuuCN69qWtWCzJeaPIXFObxF+pLEVPnW3U/o0P7T1INF9YrJmTPqmshEQa7M0kh2YkZQ07S642Wve/Cy9nZ1oLLXnk8hdUpvCZYCKosV1rzucRTQMYzgZbvee2zSA3uu5Y1FrWrGn4WKGRvEAOjd4OuR6l2rGs1nHmc/WUc4z5FzItFo1pPT1zC6EkOb5cbtj2+HEHgR7di1WlWn1NRkxNHTTjexps1h/XftsewAnnZV1Sm5aCWsndSCjpN6iZIqWl1qVxN2shaOAyPPpJft9S2eDa2HZg2rhblO98VxbvY4m/g7wKndjWSzjzIFeUW8Z8i1kWLQVkc0bZYnh7Hi7XDcf5crcFkPcALk2A3lVHqLR9Iq8x3WlTxOLKeMzkbC8uyR/VNiXegDkSozNrWrierHA0fQeT6S/3K1GyrSWcY79RWld0ovGS6UVJs1p14+TCe+N3ueFvMI1sNJDaqnyji+I5gO0sdtt3EnsXsrGslnGTyN5RbxnyZaCLEw+tjnjbLE8PY4XDgbg/yPZwWWqhaCIiAIiIAiIgKm14T9alZybK4+JjA+yU1Hx9erdyEQ9JlPuWm1wVWevyg/ko2MPecz/Y8KUam48lHPMeMhHgyNp/iK1p/psUuPvLJmx/Vdt8OWDDrSDI8ji9x9LifesV69ivMi5XaEuJNtDIWvpXscLtc9wI5gtbf2qE43h7qeZ0TuG1p+c0+Sfd3gqc6CvBgfb/EcPQ1gPrFvBfumWEdPDnYPhIrkc3N+U33ju7VVjV0LiSexs6nS6y3i1tS/sq+Ra7EJHsyzRuLZInB7XDeFsZFizNBBB3HYtaJhzloy0kbbSLGWV8dLUgBssbZIpm8nHIWED5hs4jxHArSAnhsPDvWtwqIgvvw6vtutgSuqcFTjorYRXlV1arlvwvQvfDq9ssEc97NfG2S/ABzQ73qhdMNIX11Q6Uk9G27YW8Gsvvt851rn0bgFP6PFCNHi++0ROg7rymIfuuCqRZ9lQUJTfB45m9e1cxjFb9fIzcIwyWplbDC3M9+7gABvcTwA/varGptUbcvwlUc36kYyj0m579i8tSlGM1TMRtAZG08gcznjxs30K1lHeXVSNTQg8YOrW1hKGlJZyURpfoJPQt6UPEsNwC8NyuYSdmZtzsO64O/lsvE2kg3BsRtBGwg8CCuk8cpBNTzRO3Pjc3uJabHvB2+C5rBVmyuJVYvS2or3lCNKS0djL21caRuraa0hvNCQx54uBHUf3kAg9rSqm05/OFV50+5SDU3UFtZJH8l8RJHa17LepzvSo/pz+cKrzp9y5oU1TuZpbMcjutUc7eLfH2ZogVt8H0YrKpuanp3PYNma7WM7bOeQDbsusLCqUTTxRE2EkjIyRvGd4bf1rpOlpmRsbHG0NYwBrWjcANwXV3cuikorWzi1tlVy29SKLOrzFP0X/dg/rU5wPBZqTBquOdoa90dRJluHZQYcoBIuL9W+w8VYS1OlfxKq8xN905Z87ydXEWlt+/u2X6drCk9JN7Pm45xXtR0kk0jYomF73mzWjeT7hxvuFl4qxdS8bTPO4gXEbQDbaLu225XsPQtivU6uDlwMmhT6yajxPql1SzlgMlVGx/zQxzwOzNmHsUL0hwOaimMMwF7Zmuabtc08Qe8WseS6RVTa7PylL3Se1iz7W7qTqqMtjzu+2S/c21OFNyjqa5lfYdiE0D+khkdG+xbmabGzhYj+9xAO8BbbRjRGqriTGA2MGzpX3y34gcXu/skXUfXQ+hLAKCmAAHwTDs2bSLk+JN/FWbus6Mcx2v54la1oqrLEtiK4xbVXURxl8M7ZnNFyzIWOPY3aQT2Gyr9dSLmXFR8NL9N/wBsqOyuJ1cqe4kvKEKeHHeTnU/jTmTupHHqSgvYOUjRc272g3+gFLda9c+KgIbcdK9sTiODSHOd4HLl+sq21afnOm75PupFe1TIxrHOkLQwC7i4gNAG8knYAq15incKeOD9Sxa5nQcc8Ucw5hzVh4DqulmjbLPN0OcBwjDMzwDuzEkBp7LG3qW+xPWXQxOIggMpHyg1sbL9jiM3jlWsOt5/6E3/AFz/APNWZ1bma/RDHe174K8KdvB/rlnwftk9MQ1SWYTBVEvA2NewBrjyzNPV77FVjPE5jnMcCHNJa4HeHA2I8CFZX/d5/wChD/WP9Cr/ABmv/CJ5Z8gZ0jy/KDcAnftsLqS2+o1qr4bPY4uOownS9/cleqfHHQ1Qpyfgp7i3ASAXa4crgZTzu3krsXOGibiK2lt/jw+uRoK6PVHpGCVRNb0XLCTdNp7mERFQLoREQBEWl0wxP8Go55r2cGEM+m7qs/ecF7GLk0lvPG0lllCaU1/4RWVEwNw+R2U82g5WfugK2NFoegwVt98jXO7+leQ390hUvTwOe5sbBdzyGtHMuIAHpKvfSoNhp4KZnktAA+jG0NA9Y9C2bzC0Ka4+SRl2mW51H8yRNyw8QqujYT8o7G9/Pw/ksmV4AJJsALkncAN6i9ZVmU5tw+SOQ4eJ3qSjDSkQ3lXq6f3ZburdlqCM/OdIf9xw9ylC0+ikHR0dO21vg2uPe4Zj6ytwsatLSqyfFv1NahHRpRjwS9CrNN8H/B5s7R8FLdzeTXfKb7x39iir1dWP4W2pgdEdhO1h+a8eSfcewlUzVQuY5zHizmktcORGwha1lW6yGHtRhdJUOrnpLY/jXuYmQC9uJue+1vcvOc2a49h9i9XLGr3Wjd3W9Jsr5kpZkiUaPtdLgFXGN7Jcw+i0wSH2OVfqz9TrGzU9ZTvF2uyhw7JGPafU1V7jGGSU0z4JB1oza/Bw+S4dhG3xVSjLFWpD75/KX8fk3q8c04T+2PwWPqTmGWpj4gxu8CHj+H1q0FzrojpA+hqBM0ZmkZJGXtmYSDs7QQCO63FW9S6xMNe3MZyw8WvjeHDs2Ag+BKz72hPrHJLKZctK0OrUW8NEixCcRxSPcbNYxziewNJPsXMjdysvTzWBFPC6npMxa/ZJKQWjLxa0Hbt3EkDZs232VqrdhRlTi3JYz7Fa9qxnJKO73JzqdiJrnHg2J5Pi5gHt9S0enP5wqvOn3KxtUWCOhgfUPFnT2yA7+jbex+sST3Bp4quNOfzhVedPuXtKaldTxuWPQVIONtHPHmY2i/x2l8/D96xdIrm7Rf47S+fh+9YukVW6S7USx0f2H3+yC1OlfxKq8xN905bZanSv4lVeYm+6cs+PaReew5xVj6lPy9R5tn2iq4Vj6lPy9R5tn2it68/Zl83mJZ/ux+bmW6qm12/lKX6MvtjVsqptdv5Sl+jL7Y1k2X78fH0Zp3f7MvD1RWi6J0M+IUvmY/shc7LonQz4hS+Zj+yFc6S7Ee/2KnR/al83m7XMuK/l5fpv+2V00uZcV/Ly/Tf9srjo3bIk6Q7Me83urT8503fJ91It/rgxx7pm0bXWjY0PkA+U921oPY0WI7XdgWg1afnOm75PupFma2aNzK9zyOrKxjmnh1RkI7xl9YVmSTu45/x1flleLatXj/LkQ1TnDtV1ZIwPe+KIkXyOzOePpWFgey5UIp5ix7Xi12uDhfddpBF+zYrwoNYuHyMDnzGJ1usx7H3B72gh3h6l7d1KsEurXfqyeWtOlPPWPu14Ij/2kqf0mL9l6g2MYeaeeSBzg4xuLSRuNuV1beLa0qKMfAtfO7h1TGzxc8X9DSqjxavdUTSTvADpHFxAvYX4C68tZV5NuqsLux81HtzGhFLq9v5+azK0U+PUvn4vvWLo9c4aKfHqXz8X3rF0eqvSPaiWej+w+8IiLNL4REQBVZrqxezYaRp2k9M/uF2xjuJzH6oVnyyBrS5xAa0EkncANpJXN2lGLmrqpZzez3dQHgwbGDsNgL9pKvdH0tKrpcCne1NGnjj8ZutV2F9PiEZIuyEGZ3K7djPHM4H6pU60rqukqHAbmAMHeNrvWbeCx9WVG2joJKySwMvWF9nUZdrBt3XcSb8iFCNINJM2ZkTiS4nPJu378vfz9HNW2nWuJNbI6uZBFxpUVnfr5DHcS6V/QMPVBvIRxt8nu9/cvOjpTLIyIb3lrB9Yge9YWH0+Vtzvdt7hwCm+rTCzLUmYjqwi/e5wIaPRc+AVybVCk5cPX+zIy7q4Ud3tvLXjYAABuAsO4L7RF80fVBV9rHwI7KqNu6wlt2eS73Hw7VYK+SL7DuUtGq6U1JENxQjXpuEv6OfnLBxZ1mW5ke8q7azQqikdm6ItvvDXEN/Z3DwsvSj0QoIiHCna5w3GS8ljzAdcA9oC1f8AUqWNjz4c/YxIdEVVNNtY8eXuRTUthsrIp5ntLWSmMR3FswZnu4c29cAHsKk2l2icFewZ+pK0WZKBcgfNcPlNvtt6CLlSVFlzrylVdVambkKMY0+retFEYrq6xCEnLEJm8HRuB9LHWdfuB71pX6O1w2GjnH+TL/SukUVqPSNRLWkV3YU29TaOd6PQ/EJTZtHMPpt6MemSynOi+q8NcJK1zX22iFly0/TcfKH6o2dpGxWei4qX9WSwtXr87jqnZU4vL1ny0W2DcqX0w0Nr5KyeSOnL2SPztc1zLEEDgTcEbvBXUigoV5UXmJNWoxqrEijtHNCsQbV0730zmMZLG9znOZYNY8OO43J2bArxRF7XryrNOW48o0Y0liIWux6ldLTTxMtnkikY2+wZnMIF+y5WxRQp4eSVrJz4dBsT/Q3/ALUf9SneqvRyqpXzyVERjDmta0EtJJBJJs0mw7+ashFbq3s6kXFpa+/mVaVnCnJSTYVd61NHqqqMD6eLpAwPa4AtBGYtINnEXGwqxEVelVdOamixUpqpFxZz5/0Nif6G/wDaj/qV36NUboKWCF9s8cTGusbgENFxfitoilr3UqySklqIqNtGk2451hUPi+g+I9PLlpnPaZHFrmuZYguJBF3X3Hir4Rc0LiVFvR3nVahGqkpbindAdEa6KuimmgMccecuLnN4xuaAACSTd3qKsbSnRuGui6OS7XN2xyDymO97TxHHsIBG8RKtxOc1PY1wFOhGEHDanxKGxbV7iEBOWLpmcHRG9+9h6wPge9af/p2uvb8DqL8uhl/pXSKKzHpGolrSK7sKe5soPCtX+ITkXh6JvF0pyW+r5V/BZ2kGrirhewU7HVDCwZngsbZ9zmGUm4FrW396u5Fy+kKulnVjh81nX0NLGNfeUfo1oVXtq6d76csYySORznOZYNY8OO4kkm1h3q8ERQV68qzTluJqNGNJYiERFATBEWFimIR08T5pXZWRjM4+wDmSdgHEkJt1IEK1uaQdDTilYfhJx1ubYgdv7R6vcHKp8Bwt9VURU7N8jrE/Nbve7waCfBfWP4vJV1ElRJvedgvcNaNjWjuHp2nirE1bYeyipJcSqNl2nJz6MHhfi91gO5vNbiX0tDV2n6vl82mQ39TX/wDK9FzPPW5ijIo4cPh2Na1r3gbg1oyxM9RNv1Wqu8MpM5zHyR6zyXvVTS1tRJM/fI7M48Gjg0dwAA7lvcOw18jmwwMLncAOXEk8B2lWbekqVNJ7tvuZ19dOdTENr2d3NnjS0j5pGxRtLnvNmj+9w4k8LK6dHMIZSQNibtO97vnPO8+4dgCwNFNGmUjbmzpiLOdwA5Ds7ePqEkWTe3fWvRj2V5mr0bY/Tx0p9p+S4d/EIiKgaYREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAFo9LsAbXU7oC8sNw5rhtAcL2zDi3buW8Rexk4tSW1HkoqSwyicH1fVTq0U9RGWxt68kguWOjB3MfzdutvFybbFLdO6CsrHspKaB7aWK2Z1gxr3AdVrc1gWtHHdcn5oVkorcr2cpqbS1bNuM8dpW+kioOCbWd+/54Fc4Nq5ygdLIGtHyWbXHvcRYHwKnGG4ZDTtyRMDRx4k9pJ2lZyKKtc1avaerhu/B7Qs6NDXBa+O1/kIiKAshERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAf/Z" alt="brand" style="width: 140px; height: 40px; object-fit: cover;"></a>
                         </div>
                         <div class="brand-item w-img swiper-slide d-flex justify-content-center">
-                            <a href="#"><img src="https://static.wikia.nocookie.net/manga-hispano/images/6/67/Panini_Manga_logo.png/revision/latest?cb=20220713174159&path-prefix=es" alt="brand" style="width: 140px; height: 40px; object-fit: cover;"></a>
+                            <a href="#"><img src="{{ asset('assets/customer/img/brand/1.jpg') }}" alt="brand" style="width: 140px; height: 40px; object-fit: cover;"></a>
 
                             <a href="#"><img src="data:image/png;base64,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" alt="brand" style="width: 140px; height: 40px; object-fit: cover;"></a>
                         </div>
@@ -2330,12 +2331,13 @@
        
 
         <!-- shop modal start -->
+
         <div class="modal fade" id="productModalId" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered product__modal" role="document">
                 <div class="modal-content">
                     <div class="product__modal-wrapper p-relative">
                         <div class="product__modal-close p-absolute">
-                            <button data-bs-dismiss="modal"><i class="fal fa-times"></i></button>
+                            <button data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
                         </div>
                         <div class="product__modal-inner">
                             <div class="row">
@@ -2344,44 +2346,44 @@
                                     <div class="tab-content" id="modalTabContent">
                                         <div class="tab-pane fade show active" id="nav1" role="tabpanel" aria-labelledby="nav1-tab">
                                             <div class="product__modal-img w-img">
-                                                <img src="{{asset('assets/customer/assets/img/quick-view/quick-view-1.jpg')}}" alt="">
+                                                <img src="{{asset('assets/customer/img/quick-view/quick-view-1.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="nav2" role="tabpanel" aria-labelledby="nav2-tab">
                                             <div class="product__modal-img w-img">
-                                                <img src="{{asset('assets/customer/assets/img/quick-view/quick-view-2.jpg')}}" alt="">
+                                                <img src="{{asset('assets/customer/img/quick-view/quick-view-2.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="nav3" role="tabpanel" aria-labelledby="nav3-tab">
                                             <div class="product__modal-img w-img">
-                                                <img src="{{asset('assets/customer/assets/img/quick-view/quick-view-3.jpg')}}" alt="">
+                                                <img src="{{asset('assets/customer/img/quick-view/quick-view-3.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="nav4" role="tabpanel" aria-labelledby="nav4-tab">
                                             <div class="product__modal-img w-img">
-                                                <img src="{{asset('assets/customer/assets/img/quick-view/quick-view-4.jpg')}}" alt="">
+                                                <img src="{{asset('assets/customer/img/quick-view/quick-view-4.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         </div>
                                     <ul class="nav nav-tabs" id="modalTab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="nav1-tab" data-bs-toggle="tab" data-bs-target="#nav1" type="button" role="tab" aria-controls="nav1" aria-selected="true">
-                                                <img src="{{asset('assets/customer/assets/img/quick-view/quick-nav-1.jpg')}}" alt="">
+                                                <img src="{{ asset('assets/customer/img/quick-view/quick-nav-1.jpg') }}" alt="">
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="nav2-tab" data-bs-toggle="tab" data-bs-target="#nav2" type="button" role="tab" aria-controls="nav2" aria-selected="false">
-                                            <img src="{{asset('assets/customer/assets/img/quick-view/quick-nav-2.jpg')}}" alt="">
+                                            <img src="{{ asset('assets/customer/img/quick-view/quick-nav-2.jpg') }}" alt="">
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="nav3-tab" data-bs-toggle="tab" data-bs-target="#nav3" type="button" role="tab" aria-controls="nav3" aria-selected="false">
-                                            <img src="{{asset('assets/img/quick-view/quick-nav-3.jpg')}}" alt="">
+                                            <img src="{{ asset('assets/customer/img/quick-view/quick-nav-3.jpg') }}" alt="">
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="nav4-tab" data-bs-toggle="tab" data-bs-target="#nav4" type="button" role="tab" aria-controls="nav4" aria-selected="false">
-                                            <img src="{{asset('assets/customer/assets/img/quick-view/quick-nav-4.jpg')}}" alt="">
+                                            <img src="{{ asset('assets/customer/img/quick-view/quick-nav-4.jpg') }}" alt="">
                                             </button>
                                         </li>
                                         </ul>
@@ -2393,11 +2395,11 @@
                                     <div class="product__review d-sm-flex">
                                         <div class="rating rating__shop mb-10 mr-30">
                                         <ul>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
                                         </ul>
                                         </div>
                                         <div class="product__add-review mb-15">

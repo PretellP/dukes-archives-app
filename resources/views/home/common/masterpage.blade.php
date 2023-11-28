@@ -1,33 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Los Archivos del Duque | Web </title>
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-    <!-- CSS here -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/owl-carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/swiper-bundle.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/backtotop.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/flaticon/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/font-awesome-pro.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/default.css')}}">
-
-    <link rel="stylesheet" href="{{asset('assets/customer/css/stylep.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/menu.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/index.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/width.css')}}">
-</head>
+@include('home.common.partials.head')
 <body>
 
-    
     <!-- header-start -->
     <header class="header d-blue-bg">
         
@@ -38,7 +13,9 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-8">
                             <div class="header__info">
                                 <div class="logo">
-                                    <a href="index.html" class="logo-image"><img src="assets/img/logo/logo1.svg" alt="logo"></a>
+                                    <a href="index.html" class="logo-image">
+                                        {{-- <img src="" alt="logo"> --}}
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +23,10 @@
                             <div class="header__search">
                                 <form action="#">
                                     <div class="header__search-box">
-                                        <input class="search-input" type="text" id="searchInput"  placeholder="Escribe para buscar">
-                                        <button class="button" type="submit"><i class="far fa-search"></i></button>
+                                        <input class="search-input" type="text" id="searchInput" placeholder="Escribe para buscar">
+                                        <button class="button" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
                                         <div id="autocompleteContainer" class="bg-light"></div>
                                     </div>
                                 </form>
@@ -56,7 +35,7 @@
                         <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4">
                             <div class="header-action">
                                 <div class="block-userlink">
-                                    <a class="icon-link" href="my-account.html">
+                                    <a class="icon-link" href="{{ route('login') }}">
                                     <i class="flaticon-user"></i>
                                     <span class="text d-sm-block d-none">
                                     <span class="sub">Login </span>
@@ -106,7 +85,7 @@
                                                       </div>
                                                     </div>
                                                     <div class="cart__del">
-                                                        <a href="#"><i class="fal fa-times"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
                                                     </div>
                                                   </div>
                                                 </li>
@@ -130,13 +109,15 @@
                 </div>
             </div>
         </div>
+
         <div class="header__bottom">
             <div class="container">
                 <div class="row g-0 align-items-center">
                     <div class="col-lg-3">                        
                         <div class="cat__menu-wrapper side-border d-none d-lg-block">
                             <div class="cat-toggle">
-                                <button type="button" class="cat-toggle-btn cat-toggle-btn-1"><i class="fal fa-bars"></i> categorías</button>
+                                <button type="button" class="cat-toggle-btn cat-toggle-btn-1">
+                                    <i class="fa-solid fa-bars-staggered"></i> categorías</button>
                                 <div class="cat__menu-2 cat__menu">
                                     <nav id="mobile-menu" style="display: block;">
                                         <ul>
@@ -198,7 +179,7 @@
                             <form action="#">
                                 <div class="header__search-box">
                                     <input class="search-input" type="text" id="searchInput"  placeholder="Escribe para buscar">
-                                    <button class="button" type="submit"><i class="far fa-search"></i></button>
+                                    <button class="button" type="submit"><i class="fa fa-search"></i></button>
                                     <div id="autocompleteContainer" class="bg-light"></div>
                                 </div>
                             </form>
@@ -213,6 +194,7 @@
                 </div>
             </div>
         </div>
+
     </header>
     <!-- header-end -->
 
@@ -229,19 +211,19 @@
         <div class="offcanvas__wrapper">
         <div class="offcanvas__close">
             <button class="offcanvas__close-btn" id="offcanvas__close-btn">
-                <i class="fal fa-times"></i>
+                <i class="fa fa-times"></i>
             </button>
         </div>
         <div class="offcanvas__content">
             <div class="offcanvas__logo mb-40">
                 <a href="index.html">
-                <img src="assets/img/logo/logo-white.png" alt="logo">
+                <img src="" alt="logo">
                 </a>
             </div>
             <div class="offcanvas__search mb-25">
                 <form action="#">
                     <input type="text" placeholder="¿Que estás buscando?">
-                    <button type="submit" ><i class="far fa-search"></i></button>
+                    <button type="submit" ><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <div class="mobile-menu fix"></div>
@@ -258,29 +240,8 @@
 
     @yield('content')
 
-
-    
-    @include('home.common.footer')
-
+    @include('home.common.partials.footer')
     <!-- JS here -->
-    <script src="{{asset('assets/customer/js/vendor/jquery.js')}}"></script>    
-    <script src="{{asset('assets/customer/js/vendor/waypoints.js')}}"></script>
-    <script src="{{asset('assets/customer/js/bootstrap-bundle.js')}}"></script>
-    <script src="{{asset('assets/customer/js/meanmenu.js')}}"></script>
-    <script src="{{asset('assets/customer/js/swiper-bundle.js')}}"></script>
-    <script src="{{asset('assets/customer/js/tweenmax.js')}}"></script>
-    <script src="{{asset('assets/customer/js/owl-carousel.js')}}"></script>
-    <script src="{{asset('assets/customer/js/magnific-popup.js')}}"></script>
-    <script src="{{asset('assets/customer/js/parallax.js')}}"></script>
-    <script src="{{asset('assets/customer/js/backtotop.js')}}"></script>
-    <script src="{{asset('assets/customer/js/nice-select.js')}}"></script>
-    <script src="{{asset('assets/customer/js/countdown.min.js')}}"></script>
-    <script src="{{asset('assets/customer/js/counterup.js')}}"></script>
-    <script src="{{asset('assets/customer/js/wow.js')}}"></script>
-    <script src="{{asset('assets/customer/js/isotope-pkgd.js')}}"></script>
-    <script src="{{asset('assets/customer/js/imagesloaded-pkgd.js')}}"></script>
-    <script src="{{asset('assets/customer/js/ajax-form.js')}}"></script>
-    <script src="{{asset('assets/customer/js/main.js')}}"></script>
-    <script src="{{asset('assets/customer/js/search.js')}}"></script>
+    @include('home.common.partials.scripts')
 </body>
 </html>

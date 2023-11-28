@@ -12,8 +12,8 @@
                                 <div class="footer__widget-content">
                                     <p class="footer-text mb-25">DukaMarket App is now available on App Store & Google Play. Get it now.</p>
                                     <div class="apps-store mb-20">
-                                        <a href="#"><img src="assets/img/brand/app_ios.png" alt=""></a>
-                                        <a href="#"><img src="assets/img/brand/app_android.png" alt=""></a>
+                                        <a href="#"><img src="" alt=""></a>
+                                        <a href="#"><img src="" alt=""></a>
                                     </div>
                                     <div class="social-icon social-icon-2">
                                         <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -119,7 +119,7 @@
                                     </p>
                                 </div>
                                 <div class="payment-image text-center mb-25">
-                                    <a href="#"><img src="assets/img/payment/payment.png" alt=""></a>
+                                    <a href="#"><img src="" alt=""></a>
                                 </div>
                                 <div class="copy-right-area copy-right-area-2 text-center">
                                     <p>Copyright © <span>DukaMarket.</span> All Rights Reserved. Powered by <a href="#"><span class="main-color">SayyamCode</span></a></p>
