@@ -31,13 +31,14 @@
   <link href="{{asset('assets/login/register/css/responsive.css')}}" rel="stylesheet" />
   <!--estilos-->
   <link href="{{asset('assets/login/register/css/estilos.css')}}" rel="stylesheet" />
+
 </head>
 
 <body class="bg-register">
 
   <!-- book section -->
         <div class="book_section layout_padding ">
-            <div class="form_container d-flex justify-content-center">             
+            <div class="form_container d-flex justify-content-center">
                 <div class="bg-white p-5 rounded">
                     <form action="{{ route('register') }}" method="POST">
                         @csrf
@@ -45,9 +46,9 @@
                                 <h2>
                                 REGISTRESE EN LOS ARCHIVOS DEL DUQUE
                                 </h2>
-                            </div>                     
+                            </div>
                             <div class="row mb-3">
-                               
+
 
                                 <div class="col-6">
                                      <label>Nombre *</label>
@@ -72,14 +73,14 @@
                             </div>
 
                             <div class="row mb-3">
-                                <div class="col-6">  
-                                        <label> Género*</label>                           
+                                <div class="col-6">
+                                        <label> Género*</label>
                                         <select name="gender" class="form-control select2 genderSelect" value="{{ old('gender') }}">
-                                            
+
                                             @foreach($genders as $key => $gender)
                                                 <option value="{{ $key }}" {{  old('gender') == $key ? 'selected' : ''  }}> {{ $gender }} </option>
                                             @endforeach
-                                        </select>                                                      
+                                        </select>
                                 </div>
                                 <div class="col-6">
                                     <label> Fecha de nacimiento *</label>
@@ -92,7 +93,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                            </div>     
+                            </div>
                             <div class="row mb-3">
                                 <div class="col-6">
                                     <label>Tipo de documento *</label>
@@ -107,8 +108,8 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>             
-                                </div>   
+                                    </div>
+                                </div>
                                 <div class="col-6">
                                     <label>Nro. de documento *</label>
                                     <div class="input-group">
@@ -118,9 +119,9 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>           
+                                    </div>
                                 </div>
-                               
+
                             </div>
                             <div class="row mb-3">
                                 <div class="col-12">
@@ -169,16 +170,16 @@
                                         </span>
                                     @enderror
                                 </div>
-                                
+
                             </div>
-                            
+
                             <div>
-                                
-                                 ¿Ya tienes una cuenta?   
-                                
+
+                                 ¿Ya tienes una cuenta?
+
                                 <a href="{{ route ('login')}}">
-                                 Ingresa aquí   
-                                </a>  
+                                 Ingresa aquí
+                                </a>
                             </div>
 
                             <div class="custom-control custom-checkbox">
@@ -187,7 +188,7 @@
                                     <a href="#" data-toggle="modal" data-target="#Conditions"> Acepta los términos y condiciones </a>
                                 </label>
                             </div>
-                            
+
                             <!--Términos y Condiciones-->
                             <div class="modal fade" id="Conditions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-lg p-2" role="document">
@@ -210,7 +211,7 @@
 
                                                     </p>
                                                     <br>
-                                                    <p> 
+                                                    <p>
                                                         <strong>  Cláusula informativa sobre el tratamiento de datos personales </strong>  <br>
                                                         DUKESARCHIVES informa al cliente que realizará el tratamiento de los datos personales brindados por cliente (nombre, apellidos, documento de identidad, claves de acceso, dirección, teléfono). Este tratamiento es necesario y tiene la finalidad de ejecutar las prestaciones a nuestro cargo, brindarle al cliente el producto solicitado, realizar la entrega del mismo y poder realizar la atención de solicitudes post venta a través de los siguientes medios: centros de llamada (call centers), envío de mensajes de texto o comunicación por WhatsApp.
                                                         Los proveedores a los que DUKESARCHIVES contrate para realizar el despacho de los productos adquiridos realizarán tratamiento por encargo de los datos personales del cliente.
@@ -231,7 +232,7 @@
                                                         Para el registro, el cliente debe proporcionar sus datos de identificación fidedignos y necesarios (como nombre completo, número de documento de identidad, correo electrónico, teléfonos, entre otros) los cuales podrán ser validados posteriormente. En caso Tienda Virtual detecte alguna inconsistencia en la información brindada por el cliente al momento del registro o durante el proceso de compra, podrá anular la compra y realizar la devolución/liberación del monto cobrado al medio de pago utilizado.
                                                         Los datos brindados por el cliente y su interacción con la Tienda Virtual serán utilizados, además, para mostrarle al cliente ofertas, promociones y/o productos de manera personalizada según sus preferencias, siempre que el cliente se encuentre con una sesión iniciada en su navegador.
                                                         El cliente inscrito en Tienda Virtual puede disponer el acceso, rectificación, cancelación u oposición de sus datos cuando lo estime conveniente y según el procedimiento establecido en nuestra Política de Privacidad.
-                                                        
+
                                                     </p>
                                                     <br>
                                                     <p> <strong> 1.2. Clave secreta</strong> <br>
@@ -250,7 +251,7 @@
                                                             Se realizará un cargo a la tarjeta afiliada a la billetera móvil. En caso el cliente desista de la compra y/o esta no pase por el proceso de validación de stock, la devolución se realizará a la tarjeta de débito asociada según el plazo y procedimientos establecidos por la entidad bancaria emisora.<br>
                                                             e.  Código primera compra sin tarjeta: Es una modalidad de pago en la cual el cliente realiza una validación de datos previa y se le genera un código de único uso asociado a una tarjeta de crédito emitida por Banco DUKESARCHIVES. Los contratos y términos asociados a dicha tarjeta serán responsabilidad de Banco DUKESARCHIVES, así como los reclamos por transacciones no reconocidas por los clientes que provengan de esta modalidad.<br>
                                                             f.  Gift Card DUKESARCHIVES: Modalidad de pago mediante la cual el cliente utiliza el saldo de una Gift Card virtual adquirida en DUKESARCHIVES.com o mediante compras comparativas. Las Gift Cards contienen tres datos que habilitan la posibilidad de realizar la transacción: (i) número de la tarjeta, fecha de vencimiento y código de seguridad. Se podrá hacer uso de este medio de pago en la opción de Tarjetas Bancarias. Las Gift Cards son documentos al portador, en caso de pérdida o robo deberán comunicarse de manera inmediata con nuestros servicios de atención al cliente.<br>
-                                                            
+
                                                     </p>
                                                     <br>
                                                     <p>
@@ -258,7 +259,7 @@
                                                         Debido a las acciones de mejoría constante en la web www.DUKESARCHIVES.com.pe, en el caso surja alguna falla técnica u otros motivos, DUKESARCHIVES se reserva el derecho de ocultar temporalmente o determinar cómo no disponible, alguno o todos los medios de pago mencionados sin previo aviso.
                                                         Tienda Virtual considerará como no válida la transacción cuando se evidencie o notifique algún tipo de fraude, cuando se produzca un error sistémico que distorsione el precio de las ofertas o cuando concurra alguna otra causa justificada, y procederá a anular la transacción, cancelar el despacho del producto y solicitar al banco emisor de la tarjeta para que la devolución del importe comprometido.
                                                         Los aspectos relativos al funcionamiento de las tarjetas de crédito aceptadas en la Tienda Virtual están sujetos al contrato existente entre el cliente y el banco emisor de esta, sin que DUKESARCHIVES tenga responsabilidad alguna sobre los aspectos señalados en dichos contratos. Sin perjuicio de lo cual, antes declara que las órdenes de pago se emitieron y se ejecutaron en la provincia y departamento de Lima, República del Perú.
-                                                        
+
                                                     </p>
                                                     <br>
                                                     <p> <strong> 1.4 Anulaciones de compra</strong> <br>
@@ -268,7 +269,7 @@
                                                         En caso la compra haya sido realizada con tarjeta de crédito y/o débito o billetera QR el tiempo de la devolución/liberación de fondos es responsabilidad de la entidad financiera que emitió la tarjeta. Tiendas DUKESARCHIVES, no es responsable por ninguna demora o incidencia que presente la Entidad Financiera para la ejecución de la operación de reembolso.
                                                         En el supuesto de una anulación de compra pagada a través de Pago Efectivo, la devolución de los fondos se realizará únicamente en efectivo en cualquiera de los módulos de cajas de nuestras tiendas.
                                                         En caso la devolución corresponda a compras realizadas con Gift Card DUKESARCHIVES, la atención del requerimiento se realizará en máximo 5 a 10 días contados desde la fecha de solicitud de devolución.
-                                                        
+
                                                     </p>
                                                     <br>
                                                     <p> <strong>1.5. Validez, precio y stock de las ofertas contenidas en este sitio.</strong> <br>
@@ -326,16 +327,16 @@
                                                         El cliente deberá decidir correctamente el tipo de documento electrónico que solicitará como comprobante de pago de su compra, ya que de acuerdo al Reglamento de Comprobantes de Pago aprobado por Resolución de Superintendencia N° 007-99/SUNAT (RCP) y al Texto Único Ordenado de la Ley del Impuesto General a las Ventas e Impuesto Selectivo al Consumo, aprobado mediante Decreto Supremo N° 055-99-EF y normas modificatorias, no procederá cambio alguno:
                                                         “No existe ningún procedimiento vigente que permita el canje de boletas de venta por facturas, más aún las notas de crédito no se encuentran previstas para modificar al adquirente o cliente que figura en el comprobante de pago original”.
                                                         Al aceptar estos términos y condiciones, el cliente autoriza a DUKESARCHIVES a que envíe el comprobante electrónico al correo electrónico consignado en el proceso de compra, el mismo que podrá visualizarse a través de la Tienda Virtual (http://asp402r.paperless.com.pe/BoletaDUKESARCHIVES/).
-                                                        
+
                                                     </p>
-                                                    
+
                                                     <p> <strong> 1.9. Mailing </strong> <br>
                                                         Todos los precios de los productos recibidos por mailing y de remitente “DUKESARCHIVES Perú” tienen una vigencia de 24 horas desde recibido el mismo.
                                                     </p>
                                                     <p> <strong> 2. MERCADO DUKESARCHIVES</strong> <br>
                                                         Las transacciones que se efectúen a través del sitio web https://simple.DUKESARCHIVES.com.pe/ (el “Sitio Web), en la modalidad “Mercado DUKESARCHIVES.com”, en adelante “Mercado DUKESARCHIVES”, se encuentran sujetas a los presentes Términos y Condiciones, así como, de forma supletoria, a los Términos y Condiciones de la “Tienda Virtual” y a la legislación peruana vigente.
                                                         Es requisito obligatorio y previo para comprar en la modalidad Mercado DUKESARCHIVES, la aceptación de los Términos y Condiciones descritos a continuación, así como de los Términos y Condiciones de la “Tienda Virtual”:
-                                                        
+
                                                     </p>
                                                     <p> <strong> 2.1. Descripción del servicio </strong> <br>
                                                         Mercado DUKESARCHIVES es una plataforma virtual por medio de la cual, distintos proveedores bajo su propia cuenta y riesgo (en adelante, “Proveedor”), ofrecen sus productos y/o servicios, informan las características de los mismos y realicen la venta de éstos a los consumidores que visiten el sitio web.
@@ -346,12 +347,12 @@
                                                     <p> <strong>2.2. Validez, precio y stock de las ofertas contenidas en este sitio </strong> <br>
                                                         El Cliente entiende que es entera responsabilidad del Proveedor la actualización de la información contenida en el sitio web respecto de los productos y/o servicios que comercializa, brinda, a través de Mercado DUKESARCHIVES.
                                                         Siendo, que DUKESARCHIVES no es responsable de cualquier (i) error, (ii) omisión o (iii) falta de actualización del sitio web puesto a disposición del Proveedor para la oferta de sus productos y/o de los servicios, respecto de los precios, validez de ofertas, condiciones y/o stock de productos.
-                                                        
+
                                                     </p>
                                                     <p> <strong>2.3. Medios de pago aceptados</strong> <br>
                                                         Salvo que se indique lo contrario, los medios de pago que los consumidores podrán utilizar son los siguientes: <br>
                                                         a.  Cualquier tarjeta de crédito: Visa, MasterCard, American Express y Diners Club, vigente y activa. <br>
-                                                        b.  Gift Cards DUKESARCHIVES virtuales que cuenten con los datos necesarios para realizar la transacción; (i) número de tarjeta, (ii) fecha de vencimiento y código de seguridad. <br> 
+                                                        b.  Gift Cards DUKESARCHIVES virtuales que cuenten con los datos necesarios para realizar la transacción; (i) número de tarjeta, (ii) fecha de vencimiento y código de seguridad. <br>
                                                         c.  Cupones de descuento puestos a disposición del consumidor por DUKESARCHIVES de manera física o virtual, que indiquen específicamente que pueden ser redimidos en Mercado DUKESARCHIVES, asimismo el cliente deberá considerar los procedimientos específicos indicados en los términos y condiciones de redención del cupón para que estos puedan ser redimidos en la web.
 
                                                     </p>
@@ -398,9 +399,9 @@
                                 </div>
                             </div>
 
-                            
-                            
-                                                  
+
+
+
                             <div class="btn_box mb-3">
                                 <button type="submit" class="btn btn-warning text-white col-12" name="submit">
                                     REGÍSTRESE
@@ -408,10 +409,10 @@
                             </div>
                         </form>
                 </div>
-                        
+
             </div>
         </div>
-      
+
   <!-- end book section -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

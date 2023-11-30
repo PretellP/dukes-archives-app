@@ -20,16 +20,14 @@ Route::controller(HomeController::class)->group(function () {
 
 Route::group(["prefix" => "inicio", "as" => "home."], function () {
 
+
     Route::controller(ProductsController::class)->group(function () {
+
         Route::group(["prefix" => "productos", "as" => "products."], function () {
              //----- products.* -----
              Route::get('/', 'index')->name('index');
         });
-
     });
-
-    
-
 });
 
 
@@ -80,8 +78,5 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::delete('/eliminar/{label}', 'destroy')->name('destroy');
             });
         });
-
-
     });
-
 });

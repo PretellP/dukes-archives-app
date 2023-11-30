@@ -41,7 +41,7 @@ class RegisterController extends Controller
     {
         $roles = Role::get(['id', 'name']);
         $genders = array_reverse(config('parameters.genders'), true);
-        $document_types = config('parameters.document_types');       
+        $document_types = config('parameters.document_types');
 
         return view('auth.register', compact(
             'roles',
@@ -73,7 +73,7 @@ class RegisterController extends Controller
             'birthdate' => ['required', 'date'],
             'document_type' => ['required', 'integer'],
             'document_number' => ['required', 'string', 'max:255'],
-            'phone' => ['nullable', 'string', 'max:255'],         
+            'phone' => ['nullable', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -87,20 +87,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([          
+        return User::create([
             'nickname'=> $data['nickname'],
             'name'=> $data['name'],
-            'lastname'=> $data['lastname'], 
-            'gender'=> $data['gender'], 
-            'birthdate'=> $data['birthdate'], 
+            'lastname'=> $data['lastname'],
+            'gender'=> $data['gender'],
+            'birthdate'=> $data['birthdate'],
             'document_type'=> $data['document_type'],
             'document_number'=> $data['document_number'],
             'phone'=> $data['phone'],
             'status'=> 1,
             'role_id'=> 3,
-            'email' => $data['email'],            
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            
         ]);
     }
 
