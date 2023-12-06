@@ -101,7 +101,7 @@
                 <div class="form-group col-md-6">
                     <label for="telephone">Teléfono (opcional)</label>
                     <input type="text" name="phone" class="form-control"
-                        placeholder="Ingrese teléfono">
+                        placeholder="Ingrese teléfono" onkeypress="return(event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                 </div>
 
                 <div class="form-group col-md-6">

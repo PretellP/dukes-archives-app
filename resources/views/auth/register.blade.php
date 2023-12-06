@@ -37,6 +37,7 @@
 <body class="bg-register">
 
   <!-- book section -->
+
         <div class="book_section layout_padding ">
             <div class="form_container d-flex justify-content-center">
                 <div class="bg-white p-5 rounded">
@@ -52,7 +53,7 @@
 
                                 <div class="col-6">
                                      <label>Nombre *</label>
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -62,7 +63,7 @@
                                 </div>
                                 <div class="col-6">
                                     <label>Apellido *</label>
-                                    <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+                                    <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" autocomplete="lastname" autofocus>
 
                                     @error('lastname')
                                         <span class="invalid-feedback" role="alert">
@@ -126,7 +127,7 @@
                             <div class="row mb-3">
                                 <div class="col-12">
                                     <label>Nombre de usuario *</label>
-                                    <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" autofocus>
+                                    <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" autocomplete="nickname" autofocus>
 
                                     @error('nickname')
                                         <span class="invalid-feedback" role="alert">
@@ -138,7 +139,7 @@
                             <div class="row mb-3">
                                 <div class="col-6">
                                     <label> Contraseña *</label>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -148,13 +149,13 @@
                                 </div>
                                 <div class="col-6">
                                     <label> Confirmar contraseña *</label>
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-6">
                                     <label>Correo *</label>
-                                    <input id="email" type="text" class="form-control" name="email"  required autocomplete="email" value="{{ old('email') }}" autofocus>
+                                    <input id="email" type="text" class="form-control" name="email" autocomplete="email" value="{{ old('email') }}" autofocus>
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -398,9 +399,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
 
                             <div class="btn_box mb-3">
                                 <button type="submit" class="btn btn-warning text-white col-12" name="submit">

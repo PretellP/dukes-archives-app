@@ -14,7 +14,7 @@
                 </button>
             </div>
 
-            <form action="" id="editUserForm" method="POST" enctype="multipart/form-data"
+            <form action="" class="userForm" id="editUserForm" method="POST" enctype="multipart/form-data"
                 data-validatenickname="{{ route('admin.users.validateEdit', ['column' => 'nickname']) }}"
                 data-validateemail="{{ route('admin.users.validateEdit', ['column' => 'email']) }}">
                 @csrf

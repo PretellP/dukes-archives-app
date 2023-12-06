@@ -16,6 +16,7 @@
 
 <script src="{{asset('assets/common/modules/nicescroll/jquery.nicescroll.min.js')}}"></script>
 <script src="{{asset('assets/common/modules/moment.min.js')}}"></script>
+<script src="{{asset('assets/common/js/moment_tz.js')}}"></script>
 <script src="{{asset('assets/common/js/stisla.js')}}"></script>
 
 

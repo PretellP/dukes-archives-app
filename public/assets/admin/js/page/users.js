@@ -96,6 +96,8 @@ $(function () {
             },
             birthdate: {
                 required: true,
+                birthdate: true,
+                minAge: 18,
             },
             document_type: {
                 required: true
@@ -105,7 +107,10 @@ $(function () {
                 maxlength: 255
             },
             phone: {
-                maxlength: 255
+                maxlength: 9,
+                digits: true,
+                step: 1,
+                minlength: 5,
             },
             role_id: {
                 required: true,
@@ -149,6 +154,10 @@ $(function () {
             },
             email: {
                 remote: 'Este correo ya está registrado'
+            },
+            birthdate: {
+                minAge: 'No es posible registrar a un usuario menor de edad.',
+                birthdate: 'No puede ingresar una fecha mayor a la actual'
             }
         },
         submitHandler: function (form, event) {
@@ -201,6 +210,28 @@ $(function () {
                     ToastError.fire()
                 }
             })
+        }
+    })
+
+
+    /* ----------- VALIDATE DOCUMENT ----------*/
+
+    $('html').on('change', '#registerUserForm select[name=document_type]', function () {
+
+        var input = $('#registerUserForm').find('input[name=document_number]')
+
+        input.val('')
+
+        if ($(this).val() == 1){
+            $('#registerUserForm').validate();
+            input.rules('add',  { digits: true, maxlength: 11, minlength: 8});
+            input.attr('onkeypress', 'return(event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))')
+        }
+        else {
+            input.rules('remove',  'digits');
+            input.rules('remove',  'maxlength');
+            input.rules('remove',  'minlength');
+            input.removeAttr('onkeypress')
         }
     })
 
@@ -277,6 +308,8 @@ $(function () {
             },
             birthdate: {
                 required: true,
+                birthdate: true,
+                minAge: 18,
             },
             document_type: {
                 required: true
@@ -286,7 +319,10 @@ $(function () {
                 maxlength: 255
             },
             phone: {
-                maxlength: 255
+                maxlength: 9,
+                digits: true,
+                step: 1,
+                minlength: 5,
             },
             role_id: {
                 required: true,
@@ -332,6 +368,10 @@ $(function () {
             },
             email: {
                 remote: 'Este correo ya está registrado'
+            },
+            birthdate: {
+                minAge: 'No es posible registrar a un usuario menor de edad.',
+                birthdate: 'No puede ingresar una fecha mayor a la actual'
             }
         },
         submitHandler: function (form, event) {
@@ -410,6 +450,8 @@ $(function () {
                 var password_text = form.find('label.password_text')
                 password_text.html('Actualizar contraseña (opcional)')
 
+                console.log(user)
+
                 form.find('input[name=password]').attr('placeholder', 'Ingrese una nueva contraseña')
                 form.find('input[name=id]').val(user.id)
                 form.find('input[name=name]').val(user.name);
@@ -447,6 +489,22 @@ $(function () {
         })
     })
 
+    $('html').on('change', '#editUserForm select[name=document_type]', function () {
+
+        var input = $('#editUserForm').find('input[name=document_number]')
+
+        if ($(this).val() == 1){
+            $('#editUserForm').validate();
+            input.rules('add',  { digits: true, maxlength: 11, minlength: 8});
+            input.attr('onkeypress', 'return(event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))')
+        }
+        else {
+            input.rules('remove',  'digits');
+            input.rules('remove',  'maxlength');
+            input.rules('remove',  'minlength');
+            input.removeAttr('onkeypress')
+        }
+    })
 
     /* ----------- ELIMINAR ---------------*/
 
@@ -488,6 +546,5 @@ $(function () {
             return false;
         });
     })
-
 
 })
