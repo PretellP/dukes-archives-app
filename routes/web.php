@@ -30,6 +30,8 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
     });
 });
 
+Route::post('/registro-usuario/validar-registro/{column}', [UsersController::class, 'registerValidate'])->name('users.validateRegister');
+
 
 Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
 
@@ -45,7 +47,7 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::get('/', 'index')->name('index');
             });
         });
-        
+
         // --------------- USERS -------------------------
         // ---- admin.users.* ------
         Route::group(['prefix' => 'usuarios', 'as' => 'users.'], function () {
@@ -57,7 +59,6 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::get('/editar/{user}', 'edit')->name('edit');
                 Route::post('/registrar', 'store')->name('store');
                 Route::post('/actualizar/{user}', 'update')->name('update');
-                Route::post('/validar-registro/{column}', 'registerValidate')->name('validateRegister');
                 Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
 
                 Route::delete('/eliminar/{user}', 'destroy')->name('destroy');

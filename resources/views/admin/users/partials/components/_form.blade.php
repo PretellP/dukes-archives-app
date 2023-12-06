@@ -9,7 +9,7 @@
             <div class="form-row">
 
                 <div class="form-group col-md-6">
-                    <label for="inputCompanyName">Nombre *</label>
+                    <label for="">Nombre *</label>
                     <input type="text" name="name" class="form-control name" placeholder="Ingrese los nombres">
                 </div>
 

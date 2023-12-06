@@ -24,26 +24,26 @@
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 	{{-- Date range picker --}}
-	<link rel="stylesheet" href="{{asset('assets/common/modules/bootstrap-daterangepicker/daterangepicker.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/common/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/bootstrap-daterangepicker/daterangepicker.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
 
-	<link rel="stylesheet" href="{{asset('assets/common//modules/izitoast/css/iziToast.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common//modules/izitoast/css/iziToast.min.css') }}">
 
 	{{-- DropZone --}}
 
-	<link rel="stylesheet" href="{{asset('assets/common/modules/dropzonejs/dropzone.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/modules/dropzonejs/dropzone.css') }}">
 
 	<!-- Template CSS -->
-	<link rel="stylesheet" href="{{asset('assets/common/css/style.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/common/css/components.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/common/css/components.css') }}">
 
-	<link rel="stylesheet" href="{{asset('assets/common/css/style.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/common/css/style.css') }}">
 
 	@yield('extra-head')
 
 
-	<link rel="stylesheet" href="{{asset('assets/admin/css/custom.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/common/css/fonts.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/admin/css/custom.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/common/css/fonts.css') }}">
 
 	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
 

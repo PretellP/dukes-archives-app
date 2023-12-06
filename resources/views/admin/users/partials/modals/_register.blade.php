@@ -16,8 +16,8 @@
             </div>
 
             <form action="{{ route('admin.users.store') }}" class="userForm" id="registerUserForm" method="POST" enctype="multipart/form-data"
-                data-validatenickname="{{ route('admin.users.validateRegister', ['column' => 'nickname']) }}"
-                data-validateemail="{{ route('admin.users.validateRegister', ['column' => 'email']) }}">
+                data-validatenickname="{{ route('users.validateRegister', ['column' => 'nickname']) }}"
+                data-validateemail="{{ route('users.validateRegister', ['column' => 'email']) }}">
                 @csrf
 
                 @include('admin.users.partials.components._form')

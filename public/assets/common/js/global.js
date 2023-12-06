@@ -6,36 +6,7 @@ $(function () {
         }
     });
 
-    /* ---- DROPDOWN BUTTON -------*/
 
-    $('html').on('click', '.btn-dropdown-container', function () {
-
-        var button = $(this)
-        var txtCont = button.find('.text-dropdown-cont')
-        var parent = button.closest('.principal-inner-container')
-        var dropdownContainer = parent.find('.related-dropdown-container')
-        var actionButtonContainer = parent.find('.action-btn-dropdown-container.outside')
-
-        if (button.hasClass('show')) {
-            txtCont.html('Mostrar')
-            actionButtonContainer.slideToggle(300)
-            actionButtonContainer.addClass('hide')
-        } else {
-            if (actionButtonContainer.hasClass('hide')) {
-                actionButtonContainer.slideToggle(300)
-            }
-
-            txtCont.html('Ocultar')
-        }
-
-        if (button.hasClass('vertical')) {
-            dropdownContainer.slideToggle(300)
-        } else {
-            dropdownContainer.toggle('slide')
-        }
-
-        button.toggleClass('show')
-    })
 
     function isValidDate(dateString) {
         var regEx = /^\d{4}-\d{2}-\d{2}$/
@@ -55,23 +26,26 @@ $(function () {
         minlength: jQuery.validator.format("Por favor, Ingrese al menos {0} caracteres.")
     });
 
-
     jQuery.validator.addMethod("minAge",
         function (value, element, param) {
             date = moment(new Date(value))
             date_reach = moment().subtract(param, 'years')
+
             return date <= date_reach
     });
 
     jQuery.validator.addMethod("birthdate",
         function (value, element) {
             if (isValidDate(value)) {
+
                 date_value = new Date(value)
                 date = moment(moment(date_value).add(1, 'days').format('YYYY-MM-DD'))
                 now = moment(moment().tz('America/Lima').format('YYYY-MM-DD'))
+
                 return date <= now
             } else {
                 return false
             }
     });
-})
+
+});

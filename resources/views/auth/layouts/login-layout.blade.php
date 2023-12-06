@@ -29,12 +29,16 @@
 </head>
 
 <body class="bg-gray-200">
-    
+
     @yield('content')
 
 
 <script src="{{asset('assets/common/modules/jquery.min.js')}}"></script>
 <script src="{{asset('assets/common/js/jquery.validator.js')}}"></script>
+<script src="{{asset('assets/common/js/global.js')}}"></script>
+
+<script src="{{asset('assets/common/modules/moment.min.js')}}"></script>
+<script src="{{asset('assets/common/js/moment_tz.js')}}"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
