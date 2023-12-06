@@ -48,4 +48,8 @@ $(function () {
             }
     });
 
+    jQuery.validator.addMethod("lettersOnly",
+    function (value, element) {
+        return this.optional(element) || /^[a-z," ", áéíóúñ]+$/i.test(value);
+    });
 });
