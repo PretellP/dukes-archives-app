@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\{
     LabelsController
 };
 
-use App\Http\Controllers\Home\{HomeController, ProductsController};
+use App\Http\Controllers\Home\{AboutController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
 
 use Illuminate\Support\Facades\{Auth, Route};
 
@@ -28,6 +28,49 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
              Route::get('/', 'index')->name('index');
         });
     });
+
+    Route::controller(ShopController::class)->group(function () {
+        Route::group(["prefix" => "tienda", "as" => "shop."], function(){
+            //----- shop.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+
+    Route::controller(ProductDetailsController::class)->group(function () {
+        Route::group(["prefix" => "detalles-de-producto", "as" => "product-details."], function(){
+            //----- product-details.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    }); 
+    
+    Route::controller(CartController::class)->group(function () {
+        Route::group(["prefix" => "carrito", "as" => "cart."], function () {
+            //----- cart.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+
+    Route::controller(AboutController::class)->group(function () {
+        Route::group(["prefix" => "nosotros", "as" => "about."], function () {
+            //----- about.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+
+    Route::controller(ContactController::class)->group(function () {
+        Route::group(["prefix" => "contactanos", "as" => "contact."], function () {
+            //----- contact.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+
+    Route::controller(WishlistController::class)->group(function () {
+        Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
+            //----- wishlist.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+
 });
 
 
