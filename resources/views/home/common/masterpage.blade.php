@@ -13,7 +13,7 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-8">
                             <div class="header__info">
                                 <div class="logo">
-                                    <a href="index.html" class="logo-image">
+                                    <a href="{{route('home.index')}}" class="logo-image">
                                         {{-- <img src="" alt="logo"> --}}
                                     </a>
                                 </div>
@@ -43,7 +43,7 @@
                                     </a>
                                 </div>
                                 <div class="block-wishlist action">
-                                    <a class="icon-link" href="wishlist.html">
+                                    <a class="icon-link" href="{{route('home.wishlist.index')}}">
                                     <i class="flaticon-heart"></i>
                                     <span class="count">0</span>
                                     <span class="text d-sm-block d-none">
@@ -52,7 +52,7 @@
                                     </a>
                                 </div>
                                 <div class="block-cart action">
-                                    <a class="icon-link" href="cart.html">
+                                    <a class="icon-link" href="{{route('home.cart.index')}}">
                                     <i class="flaticon-shopping-bag"></i>
                                     <span class="count">1</span>
                                     <span class="text d-sm-block d-none">
@@ -73,12 +73,12 @@
                                                   <div class="cart__item d-flex justify-content-between align-items-center">
                                                     <div class="cart__inner d-flex">
                                                       <div class="cart__thumb">
-                                                        <a href="product-details.html">
+                                                        <a href="{{route ('home.product-details.index')}}">
                                                           <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788416604500_sn4ssnorvcune4rb.jpg" style="object-fit: cover;" alt="">
                                                         </a>
                                                       </div>
                                                       <div class="cart__details">
-                                                        <h6><a href="product-details.html"> One Punch-Man 1  </a></h6>
+                                                        <h6><a href="{{route ('home.product-details.index')}}"> One Punch-Man 1  </a></h6>
                                                         <div class="cart__price">
                                                           <span>S/ 49.00</span>
                                                         </div>
@@ -96,7 +96,7 @@
                                                   </div>
                                                 </li>
                                                 <li>
-                                                    <a href="cart.html" class="wc-cart mb-10">Ver Carrito</a>
+                                                    <a href="{{route('home.cart.index')}}" class="wc-cart mb-10">Ver Carrito</a>
                                                     <a href="checkout.html" class="wc-checkout">Pagar</a>
                                                 </li>
                                             </ul>
@@ -122,26 +122,26 @@
                                     <nav id="mobile-menu" style="display: block;">
                                         <ul>
                                             <li>
-                                                <a href="product.html">Juveniles</a>
+                                                <a href="{{route ('home.shop.index')}}">Juveniles</a>
                                             </li>
 
                                             <li>
-                                                <a href="product.html">Infantiles
+                                                <a href="{{route ('home.shop.index')}}">Infantiles
                                                     <span class="cat-label">¡vamos!</span>
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="product.html">Comics &amp; Mangas
+                                                <a href="{{route ('home.shop.index')}}">Comics &amp; Mangas
                                                     <span class="cat-label green">¡nuevo!</span>
                                                 </a>
                                             </li>
                                             
-                                            <li><a href="product.html">Misterio</a></li>
-                                            <li><a href="product.html">Ciencia Ficción</a></li>
-                                            <li class="d-laptop-none"><a href="product.html">Literatura</a></li>
-                                            <li class="d-laptop-none"><a href="product.html">Novelas</a></li>
-                                            <li><a href="product.html">Ciencias</a></li>
+                                            <li><a href="{{route ('home.shop.index')}}">Misterio</a></li>
+                                            <li><a href="{{route ('home.shop.index')}}">Ciencia Ficción</a></li>
+                                            <li class="d-laptop-none"><a href="{{route ('home.shop.index')}}">Literatura</a></li>
+                                            <li class="d-laptop-none"><a href="{{route ('home.shop.index')}}">Novelas</a></li>
+                                            <li><a href="{{route ('home.shop.index')}}">Ciencias</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -159,13 +159,13 @@
                             <nav class="d-flex justify-content-center align-items-center">
                                 <ul>
                                     <li>
-                                        <a href="index.html" class="active">Inicio</a>
+                                        <a href="{{route('home.index')}}" class="active">Inicio</a>
                                         
                                     </li>
 
-                                    <li><a href="about.html">Nosotros</a></li>
-                                    <li class="has-mega"><a href="shop.html">Productos</a></li>
-                                    <li><a href="about.html">Contacto</a></li>
+                                    <li><a href="{{route('home.about.index')}}">Nosotros</a></li>
+                                    <li class="has-mega"><a href="{{route ('home.shop.index')}}">Productos</a></li>
+                                    <li><a href="{{route('home.contact.index')}}">Contacto</a></li>
 
                                    
 
@@ -216,7 +216,7 @@
         </div>
         <div class="offcanvas__content">
             <div class="offcanvas__logo mb-40">
-                <a href="index.html">
+                <a href="{{route('home.index')}}">
                 <img src="" alt="logo">
                 </a>
             </div>

@@ -85,11 +85,13 @@ $(function () {
         rules: {
             name: {
                 required: true,
-                maxlength: 100
+                maxlength: 100,
+                lettersOnly: true
             },
             lastname: {
                 required: true,
-                maxlength: 100
+                maxlength: 100,
+                lettersOnly: true
             },
             gender: {
                 required: true,
@@ -158,6 +160,12 @@ $(function () {
             birthdate: {
                 minAge: 'No es posible registrar a un usuario menor de edad.',
                 birthdate: 'No puede ingresar una fecha mayor a la actual'
+            },
+            name:{
+                lettersOnly: 'Ingrese solo letras'
+            },
+            lastname:{
+                lettersOnly: 'Ingrese solo letras'
             }
         },
         submitHandler: function (form, event) {
