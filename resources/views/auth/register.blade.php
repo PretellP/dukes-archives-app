@@ -183,7 +183,7 @@
                             </a>
                         </div>
 
-                        <div class="custom-control custom-checkbox">
+                        <div class="custom-control custom-checkbox d-flex flex-column-reverse">
                             <input type="checkbox" name="check_authorize" class="custom-control-input" id="checked">
                             <label class="custom-control-label" for="checked">
                                 <a href="#" data-toggle="modal" data-target="#Conditions"> Acepta los términos y

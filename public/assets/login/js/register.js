@@ -74,6 +74,9 @@ $(function () {
                     maxlength: 255,
                     minlength: 8
                 },
+                check_authorize: {
+                    required: true
+                }
             },
             messages: {
                 nickname: {
