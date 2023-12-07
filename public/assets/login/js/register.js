@@ -71,7 +71,8 @@ $(function () {
                 },
                 password: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 255,
+                    minlength: 8
                 },
             },
             messages: {
@@ -94,8 +95,8 @@ $(function () {
             },
             submitHandler: function (form, event) {
                 event.preventDefault()
-                var form = $(form)
-                form.submit()
+
+                $('#registerUserForm')[0].submit()
             }
         })
 
