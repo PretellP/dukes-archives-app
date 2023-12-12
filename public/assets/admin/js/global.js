@@ -6,6 +6,9 @@ $(function () {
         }
     });
 
+    $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+    $.fn.filepond.registerPlugin(FilePondPluginFileValidateType);
+
     /* ---- DROPDOWN BUTTON -------*/
 
     $('html').on('click', '.btn-dropdown-container', function () {
@@ -47,7 +50,7 @@ $(function () {
         email: 'Ingrese un email válido',
         number: 'Por favor, ingresa un número válido',
         url: 'Por favor, ingresa una URL válida',
-        digits: 'Por favor, ingresa solo números',
+        digits: 'Por favor, ingresa solo números enteros',
         max: jQuery.validator.format('Por favor, ingrese un valor menor o igual a {0}'),
         min: jQuery.validator.format('Por favor, ingrese un valor mayor o igual a {0}'),
         step: jQuery.validator.format("Ingrese un número múltiplo de {0}"),
@@ -76,7 +79,7 @@ $(function () {
     });
 
     jQuery.validator.addMethod("lettersOnly",
-        function (value, element) {
-            return this.optional(element) || /^[a-z," ", áéíóúñ]+$/i.test(value);
+        function (value, element, param) {
+            return this.optional(element) || (/^[a-z," ", áéíóúñ]+$/i.test(value) == param);
     });
 })

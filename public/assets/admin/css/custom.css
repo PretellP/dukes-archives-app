@@ -404,6 +404,12 @@ div.dataTables_wrapper div.dataTables_processing {
     overflow-x: auto;
 }
 
+table.dataTable ul
+{
+    list-style: none;
+    padding: 0;
+}
+
 table.dataTable span.status,
 span.status {
     color: white;
@@ -1106,6 +1112,90 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 
 
+
+/* ------- FILEPOND -------------*/
+
+.filepond--credits
+{
+    display: none !important;
+}
+
+.filepond--browser ~ label.error
+{
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: -2px;
+}
+
+.filepond--root
+{
+    max-height: 612px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/*-------------  PRODUCTS MODULE  ---------------*/
+
+
+table.dataTable ul.categories-list-table
+li
+{
+    width: fit-content;
+    padding: .15em .45em;
+    margin: .3em 0;
+    border-radius: .6em;
+    white-space: nowrap;
+    color: white;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.164);
+}
+
+table.dataTable ul.categories-list-table
+li:first-child
+{
+    margin-top: 0;
+}
+
+table.dataTable ul.categories-list-table
+li:nth-child(1n)
+{
+    background-color: rgba(0, 136, 204, 0.623);
+}
+
+table.dataTable ul.categories-list-table
+li:nth-child(2n)
+{
+    background-color: rgba(0, 160, 0, 0.603);
+}
+
+table.dataTable ul.categories-list-table
+li:nth-child(3n)
+{
+    background-color: rgba(230, 122, 0, 0.74);
+}
+
+table.dataTable div.label-price
+{
+    color: white;
+    width: fit-content;
+    padding: .4em .45em;
+    white-space: nowrap;
+    border-radius: .6em;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.164);
+    font-weight: bold;
+}
+
+
+table.dataTable div.label-price.sale
+{
+    background-color: rgb(0, 212, 113);
+}
+
+table.dataTable div.label-price.purchase
+{
+    background-color: #08c;
+}
 
 
 

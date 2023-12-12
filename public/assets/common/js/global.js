@@ -6,6 +6,8 @@ $(function () {
         }
     });
 
+    $.fn.filepond.registerPlugin(FilePondPluginImagePreview);
+
 
 
     function isValidDate(dateString) {

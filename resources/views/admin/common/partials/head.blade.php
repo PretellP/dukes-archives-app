@@ -16,6 +16,11 @@
 
 	<link href="https://cdn.datatables.net/v/bs4/dt-1.13.7/r-2.5.0/datatables.min.css" rel="stylesheet">
 
+    {{-- FILEPOND --}}
+
+    <link rel="stylesheet" href="{{ asset('assets/common/css/filepond/filepond.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/common/css/filepond/filepond-image-preview.css') }}">
+
 	<!-- CSS Libraries -->
 	<link rel="stylesheet" href="{{ asset('assets/common/modules/jqvmap/dist/jqvmap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('assets/common/modules/summernote/summernote-bs4.css') }}">

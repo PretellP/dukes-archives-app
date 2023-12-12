@@ -8,7 +8,7 @@
         <div class="card page-title-container">
             <div class="card-header">
                 <div class="total-width-container">
-                    <h4>CATEGORÍAS</h4>
+                    <h4>ANUNCIOS</h4>
                 </div>
             </div>
         </div>
@@ -16,25 +16,29 @@
         <div class="card-body card z-index-2 principal-container container-dashboard">
 
             <div class="mb-4">
-                <button class="btn btn-primary" id="btn-register-label-modal"
-                    data-toggle='modal' data-target='#RegisterLabelModal'>
-                    <i class="fa-solid fa-square-plus"></i> &nbsp; Registrar
+                <button class="btn btn-primary" id="btn-register-product-modal" data-url=''
+                    data-toggle='modal' data-target='#RegisterProductModal'>
+                    <i class="fa-solid fa-square-plus"></i>  &nbsp; Registrar
                 </button>
             </div>
 
-            <table id="labels-table" class="table table-hover" data-url="">
+            {{-- <table id="products-table" class="table table-hover" data-url="">
                 <thead>
                     <tr>
                         <th>N°</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
+                        <th>Sexo</th>
+                        <th>Email</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Tipo de documento</th>
+                        <th>Nro. documento</th>
+                        <th>Teléfono</th>
+                        <th>Rol</th>
                         <th>Estado</th>
-                        <th>Creado el</th>
-                        <th>Actualizado el</th>
                         <th>Acción</th>
                     </tr>
                 </thead>
-            </table>
+            </table> --}}
 
         </div>
 
@@ -45,11 +49,9 @@
 @endsection
 
 @section('modals')
-@include('admin.labels.partials.modals._register')
-@include('admin.labels.partials.modals._edit')
-@include('admin.labels.partials.modals._view')
+
 @endsection
 
 @section('extra-script')
-<script type="module" src="{{ asset('assets/admin/js/page/labels.js') }}"></script>
+
 @endsection

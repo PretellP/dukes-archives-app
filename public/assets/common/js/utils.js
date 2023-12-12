@@ -1,16 +1,12 @@
-function setActiveCheckbox (ele, txtClass) {
+function setActiveCheckbox(ele, txtClass) {
     $('html').on('change', ele, function () {
         var txtDesc = $(this).closest('form').find(txtClass)
-        if (this.checked) {
-            txtDesc.html('Activo');
-        } else {
-            txtDesc.html('Inactivo')
-        }
+        txtDesc.html(`${this.checked ? 'Activo' : 'Inactivo'}`)
     })
-    
+
 }
 
-function initImageChange (inputEle, formEle, Toast) {
+function initImageChange(inputEle, formEle, Toast) {
 
     inputEle.val('');
     inputEle.on("change", function () {
@@ -41,11 +37,41 @@ function initImageChange (inputEle, formEle, Toast) {
     })
 }
 
-function setActiveSubmitButton (buttonEle) {
+function setActiveSubmitButton(buttonEle) {
     buttonEle.click(function () {
         $('button[type=submit]', $(this).parents('form')).removeAttr('clicked').removeAttr('name')
         $(this).attr('clicked', 'true').attr('name', 'verifybtn')
     })
 }
 
-export {setActiveCheckbox, initImageChange, setActiveSubmitButton};
+
+function InitSelect2(ele_class, config = {}){
+
+    $(ele_class).each(function () {
+
+        let select_cnf = {
+            dropdownParent: $(this).closest('form')
+        }
+
+        for (let key in config) {
+            select_cnf[key] = config[key]
+        }
+
+        $(this).select2(select_cnf)
+    })
+}
+
+export {
+    setActiveCheckbox,
+    initImageChange,
+    setActiveSubmitButton,
+    InitSelect2
+};
+
+
+
+
+
+
+
+

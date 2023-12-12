@@ -6,7 +6,7 @@
                 <img src="" class="w-100" alt="">
             </a>
         </div>
-        
+
         <div class="sidebar-brand hidden sidebar-brand-sm p-1 align-items-center">
             <a href="{{ route('admin.dashboard.index') }}">
                 <img src="" class="w-100" alt="">
@@ -36,8 +36,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="" class="nav-link">
+            <li class="{{setActive('admin.products.*')}}">
+                <a href="{{route('admin.products.index')}}" class="nav-link">
                     <i class="fa-solid fa-boxes-stacked"></i>
                     <span>Productos</span>
                 </a>
@@ -82,7 +82,7 @@
 
 
             <li class="logout mt-5">
-                <a href="#" class="nav-link" onclick="event.preventDefault(); 
+                <a href="#" class="nav-link" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                    <i class="fa-solid fa-right-from-bracket"></i>
                     <span>Cerrar sesión</span>

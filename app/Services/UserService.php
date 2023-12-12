@@ -20,7 +20,7 @@ class UserService
 
         $allUsers = DataTables::of($query)
             ->editColumn('name', function ($user) {
-                return ' <a class="view_user_btn" href="javascript:void(0);" 
+                return ' <a class="view_user_btn" href="javascript:void(0);"
                             data-toggle="modal" data-target="#viewUserModal"
                             data-url="'. route('admin.users.show', $user) .'">' .
                         $user->full_name
@@ -43,7 +43,7 @@ class UserService
             })
             ->addColumn('action', function ($user) {
                 $btn = '<button data-toggle="modal" data-id="' .
-                    $user->id . '" data-url="' . route('admin.users.update', $user) . '" 
+                    $user->id . '" data-url="' . route('admin.users.update', $user) . '"
                                 data-send="' . route('admin.users.edit', $user) . '"
                                 data-original-title="edit" class="me-3 edit btn btn-warning btn-sm
                                 editUser"><i class="fa-solid fa-pen-to-square"></i></button>';

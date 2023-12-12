@@ -3,7 +3,8 @@
 use App\Http\Controllers\Admin\{
     UsersController,
     DashboardController,
-    LabelsController
+    LabelsController,
+    ProductController
 };
 
 use App\Http\Controllers\Home\{AboutController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
@@ -41,8 +42,8 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             //----- product-details.* -----
             Route::get('/', 'index') -> name('index');
         });
-    }); 
-    
+    });
+
     Route::controller(CartController::class)->group(function () {
         Route::group(["prefix" => "carrito", "as" => "cart."], function () {
             //----- cart.* -----
@@ -120,6 +121,16 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::post('/registrar', 'store')->name('store');
                 Route::post('/actualizar/{label}', 'update')->name('update');
                 Route::delete('/eliminar/{label}', 'destroy')->name('destroy');
+            });
+        });
+
+        // ------ admin.products.* -----------------
+        Route::group(['prefix' => 'productos', 'as' => 'products.'], function () {
+
+            Route::controller(ProductController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
+                Route::post('/registrar', 'store')->name('store');
             });
         });
     });

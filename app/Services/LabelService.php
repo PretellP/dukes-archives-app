@@ -16,7 +16,7 @@ class LabelService
 
         $allLabels = DataTables::of($query)
             ->editColumn('name', function ($label) {
-                return ' <a class="view_label_btn" href="javascript:void(0);" 
+                return ' <a class="view_label_btn" href="javascript:void(0);"
                             data-url="'. route('admin.labels.show', $label) .'">' .
                     $label->name
                     . '</a>';
@@ -35,7 +35,7 @@ class LabelService
             })
             ->addColumn('action', function ($label) {
                 $btn = '<button data-toggle="modal" data-id="' .
-                    $label->id . '" data-url="'. route('admin.labels.update', $label) .'" 
+                    $label->id . '" data-url="'. route('admin.labels.update', $label) .'"
                                 data-send="'. route('admin.labels.edit', $label) .'"
                                 data-original-title="edit" class="me-3 edit btn btn-warning btn-sm
                                 editLabel"><i class="fa-solid fa-pen-to-square"></i></button>';
@@ -56,7 +56,7 @@ class LabelService
         return $allLabels;
     }
 
-    public function store($request) 
+    public function store($request)
     {
         $data = normalizeInputStatus($request->validated());
 

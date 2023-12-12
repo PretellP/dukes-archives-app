@@ -1,16 +1,11 @@
 
 <script src="{{asset('assets/common/modules/jquery.min.js')}}"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script> --}}
+
 <script src="{{asset('assets/common/js/jquery.validator.js')}}"></script>
+<script src="{{ asset('assets/common/js/jquery.validator.add.methods.min.js') }}"></script>
 <script src="{{asset('assets/common/modules/popper.js')}}"></script>
 <script src="{{asset('assets/common/modules/tooltip.js')}}"></script>
 <script src="{{asset('assets/common/modules/bootstrap/js/bootstrap.min.js')}}"></script>
-
-
-
-{{-- <script src="{{asset('assets/common/modules/datatables/datatables.min.js')}}"></script>
-<script src="{{asset('assets/common/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script> --}}
 
 <script src="https://cdn.datatables.net/v/bs4/dt-1.13.7/r-2.5.0/datatables.min.js"></script>
 
@@ -18,6 +13,14 @@
 <script src="{{asset('assets/common/modules/moment.min.js')}}"></script>
 <script src="{{asset('assets/common/js/moment_tz.js')}}"></script>
 <script src="{{asset('assets/common/js/stisla.js')}}"></script>
+
+
+{{-- FILEPOND --}}
+
+<script src="{{ asset('assets/common/js/filepond/filepond.min.js') }}"></script>
+<script src="{{ asset('assets/common/js/filepond/filepond-plugin-image-preview.js') }}"></script>
+<script src="{{ asset('assets/common/js/filepond/filepond-file-valildate-type.js') }}"></script>
+<script src="{{ asset('assets/common/js/filepond/filepond-jquery.js') }}"></script>
 
 
 {{-- Date range picker  --}}
