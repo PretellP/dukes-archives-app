@@ -22,7 +22,7 @@
                 </button>
             </div>
 
-            <table id="products-table" class="table table-hover" data-url="{{route('admin.products.index')}}">
+            <table id="products-table" class="table table-hover" data-url="{{ route('admin.products.index') }}">
                 <thead>
                     <tr>
                         <th>N°</th>
@@ -50,6 +50,7 @@
 @section('modals')
 
 @include('admin.products.partials.modals._register')
+@include('admin.products.partials.modals._edit')
 
 @endsection
 
