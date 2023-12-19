@@ -27,6 +27,8 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "productos", "as" => "products."], function () {
              //----- products.* -----
              Route::get('/', 'index')->name('index');
+             Route::get('/search', 'search')->name('search');
+             
         });
     });
 
