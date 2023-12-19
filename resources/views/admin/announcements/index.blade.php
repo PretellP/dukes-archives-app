@@ -17,8 +17,8 @@
 
             <div class="mb-4">
                 <button class="btn btn-primary" id="btn-register-product-modal" data-url=''
-                    data-toggle='modal' data-target='#RegisterProductModal'>
-                    <i class="fa-solid fa-square-plus"></i>  &nbsp; Registrar
+                    data-toggle='modal' data-target='#RegisterAnnouncementsModal'>
+                    <i class="fa-solid fa-square-plus"></i>  &nbsp; Añadir imagen
                 </button>
             </div>
 
