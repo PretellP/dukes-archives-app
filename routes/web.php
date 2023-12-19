@@ -130,7 +130,10 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
             Route::controller(ProductController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
+                Route::get('/editar/{product}', 'edit')->name('edit');
                 Route::post('/registrar', 'store')->name('store');
+                Route::post('/actualizar/{product}', 'update')->name('update');
+                Route::delete('/eliminar/{product}', 'destroy')->name('destroy');
             });
         });
     });

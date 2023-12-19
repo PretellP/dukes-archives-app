@@ -22,7 +22,7 @@ class ProductService
 
         $allProducts = DataTables::of($query)
         ->addColumn('image', function ($product) {
-            return '<img class="img-fluid" src="' . $product->files->first()->file_url . '">';
+            return '<img class="img-table-preview" src="' . $product->files->first()->file_url . '">';
         })
         ->editColumn('name', function ($product) {
             return ' <a class="view_product_btn" href="javascript:void(0);"
@@ -61,16 +61,17 @@ class ProductService
         })
         ->addColumn('action', function ($product) {
             $btn = '<button data-toggle="modal" data-id="' .
-                $product->id . '" data-url=""
-                            data-send=""
+                $product->id . '" data-url="'. route('admin.products.update', $product) .'"
+                            data-send="'. route('admin.products.edit', $product) .'"
                             data-original-title="edit" class="me-3 edit btn btn-warning btn-sm
                             editProduct"><i class="fa-solid fa-pen-to-square"></i></button>';
             if (
-                $product->sales_count == 0
+                $product->sales_count == 0 &&
+                $product->inventory->quantity == 0
             ) {
                 $btn .= '<a href="javascript:void(0)" data-id="' .
                     $product->id . '" data-original-title="delete"
-                                data-url="" class="ms-3 edit btn btn-danger btn-sm
+                                data-url="'. route('admin.products.destroy', $product) .'" class="ms-3 edit btn btn-danger btn-sm
                                 deleteProduct"><i class="fa-solid fa-trash-can"></i></a>';
             }
 
@@ -82,7 +83,7 @@ class ProductService
         return $allProducts;
     }
 
-    public function store($request, $storage)
+    public function store($request, string $storage)
     {
         $data = normalizeInputStatus($request->validated());
 
@@ -113,5 +114,63 @@ class ProductService
         };
 
         throw new Exception(config('parameters.exception_message'));
+    }
+
+    public function update($request, Product $product, string $storage)
+    {
+        $data = normalizeInputStatus($request->validated());
+
+        if ($product->update($data)) {
+
+            $product->labels()->sync($request['categories']);
+            $product->inventory()->update(['quantity' => $request['stock'] ?? 0]);
+
+            return $this->updateImages($request, $product, $storage);
+        }
+
+        throw new Exception(config('parameters.exception_message'));
+    }
+
+    public function destroy(Product $product, string $storage)
+    {
+        if ($product->inventory()->delete()) {
+
+            $product->labels()->detach();
+
+            foreach ($product->files as $file) {
+                app(FileService::class)->destroy($file, $storage);
+            }
+
+            return $product->delete();
+        };
+
+        throw new Exception(config('parameters.exception_message'));
+    }
+
+    public function updateImages($request, Product $product, string $storage)
+    {
+        foreach ($product->files as $file) {
+            app(FileService::class)->destroy($file, $storage);
+        }
+
+        foreach ($request->file('images') as $file) {
+
+            $file_type = 'imagenes';
+            $category = 'productos';
+            $belongsTo = 'productos';
+            $relation = 'one_many';
+
+            app(FileService::class)->store(
+                $product,
+                $file_type,
+                $category,
+                $file,
+                $storage,
+                $belongsTo,
+                $relation
+            );
+        }
+
+        return true;
     }
 }

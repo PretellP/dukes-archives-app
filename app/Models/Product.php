@@ -63,4 +63,9 @@ class Product extends Model
                     ->withPivot(['description', 'quantity'])
                     ->withTimestamps();
     }
+
+    public function loadFiles()
+    {
+        return $this->load(['files' => fn ($q) => $q->where('file_type', 'imagenes')]);
+    }
 }

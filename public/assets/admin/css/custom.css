@@ -1197,6 +1197,12 @@ table.dataTable div.label-price.purchase
     background-color: #08c;
 }
 
+.img-table-preview
+{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
 
 
 

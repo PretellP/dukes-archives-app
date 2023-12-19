@@ -20,7 +20,7 @@ class CreateInventoriesTable extends Migration
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      *
