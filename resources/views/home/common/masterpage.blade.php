@@ -34,14 +34,39 @@
                         </div>
                         <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4">
                             <div class="header-action">
-                                <div class="block-userlink">
-                                    <a class="icon-link" href="{{ route('login') }}">
-                                    <i class="flaticon-user"></i>
-                                    <span class="text d-sm-block d-none">
-                                    <span class="sub">Login </span>
-                                    Mi cuenta </span>
-                                    </a>
-                                </div>
+                                @guest
+                                    <div class="block-userlink">
+                                        <a class="icon-link" href="{{ route('login') }}">
+                                        <i class="flaticon-user"></i>
+                                        <span class="text d-sm-block d-none">
+                                        <span class="sub">Login </span>
+                                        Mi cuenta </span>
+                                        </a>
+                                    </div>
+                                @else
+
+                                     <div class="block-userlink">
+                                        <a class="icon-link">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                <span class="text">{{ Auth::user()->name }}</span>
+                                            </a>
+                                        </a>
+                                        
+        
+                                        <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                                {{ __('cerrar sesión') }}
+                                            </a>
+        
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </div>
+                                @endguest
+
                                 <div class="block-wishlist action">
                                     <a class="icon-link" href="{{route('home.wishlist.index')}}">
                                     <i class="flaticon-heart"></i>
