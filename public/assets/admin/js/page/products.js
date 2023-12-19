@@ -134,11 +134,16 @@ $(function () {
                 success: function (data) {
                     if (data.success) {
 
+                        let select = form.find('.cotegories_select')
+                        let imageInput = form.find('.product-image-input')
                         registerProductForm.resetForm()
                         productsTable.ajax.reload(null, false)
 
                         form.trigger('reset')
                         modal.modal('hide')
+
+                        select.val('').change()
+                        imageInput.filepond('removeFiles')
 
                         Toast.fire({
                             icon: 'success',

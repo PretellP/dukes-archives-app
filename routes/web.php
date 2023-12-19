@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\{
+    AnnouncementsController,
     UsersController,
     DashboardController,
     LabelsController,
@@ -126,6 +127,7 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
             });
         });
 
+        // ---------------- PRODUCTS ...................
         // ------ admin.products.* -----------------
         Route::group(['prefix' => 'productos', 'as' => 'products.'], function () {
 
@@ -136,6 +138,16 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
                 Route::post('/registrar', 'store')->name('store');
                 Route::post('/actualizar/{product}', 'update')->name('update');
                 Route::delete('/eliminar/{product}', 'destroy')->name('destroy');
+            });
+        });
+
+        // ---------------- ANNOUNCEMENTS -------------------
+        // ------ admin.announcements.* -----------------
+        Route::group(['prefix' => 'anuncios', 'as' => 'announcements.'], function () {
+
+            Route::controller(AnnouncementsController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
             });
         });
     });

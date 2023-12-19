@@ -51,6 +51,7 @@
 
 <script src="{{ asset('assets/admin/js/global.js') }}"></script>
 
+
 @yield('extra-script')
 
 

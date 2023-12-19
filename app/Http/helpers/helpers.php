@@ -23,8 +23,8 @@ function getMessageFromSuccess($success, $context)
 
 function getStatusButton($status)
 {
-    return '<span class="status ' . ($status == 1 ? 'active' : 'inactive') . '">' . 
-                ($status == 1 ? 'Activo' : 'Inactivo') . 
+    return '<span class="status ' . ($status == 1 ? 'active' : 'inactive') . '">' .
+                ($status == 1 ? 'Activo' : 'Inactivo') .
             '</span>';
 }
 
@@ -113,10 +113,10 @@ function getCurrentMonth()
 // ----------------------------------
 
 function restrictMaxLengthText(string $description, int $length)
-{   
-    return strlen($description) > $length ? 
+{
+    return strlen($description) > $length ?
             mb_substr($description, 0, $length, 'UTF-8') . ' ...'
-            : 
+            :
             $description;
 }
 

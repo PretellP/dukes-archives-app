@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class File extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'files';
 
     protected $fillable = [
         'file_path',
         'file_url',
-        'file_type', 
-        'category', 
-        'fileable_id', 
+        'file_type',
+        'category',
+        'fileable_id',
         'fileable_type',
     ];
 
@@ -25,7 +25,6 @@ class File extends Model
         return $this->morphTo();
     }
 
-    
 
     // ------ MUTATORS Y ACCESSORS -------
 
