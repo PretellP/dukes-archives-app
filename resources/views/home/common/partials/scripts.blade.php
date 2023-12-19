@@ -17,3 +17,5 @@
 <script src="{{asset('assets/customer/js/ajax-form.js')}}"></script>
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
 <script src="{{asset('assets/customer/js/search.js')}}"></script>
+<!-- custom js -->
+<script src="{{asset('assets/customer/js/custom.js')}}"></script>
