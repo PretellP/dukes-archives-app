@@ -8,7 +8,7 @@
 
                 <div class="form-group col-12">
                     <label>Nombre *</label>
-                    <input type="text" name="name" class="form-control name" placeholder="Ingrese el nombre de la categoría">
+                    <input type="text" name="name" class="form-control name" placeholder="Ingrese el nombre del libro">
                 </div>
 
             </div>

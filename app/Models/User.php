@@ -16,9 +16,9 @@ class User extends Authenticatable
     protected $fillable = [
         'nickname',
         'name',
-        'lastname', 
-        'gender', 
-        'birthdate', 
+        'lastname',
+        'gender',
+        'birthdate',
         'document_type',
         'document_number',
         'phone',
@@ -70,7 +70,7 @@ class User extends Authenticatable
     }
 
     public function productRatings()
-    {   
+    {
         return $this->belongsToMany(Product::class, 'product_ratings', 'user_id', 'product_id')
                     ->withPivot(['description', 'quantity'])
                     ->withTimestamps();
@@ -78,6 +78,8 @@ class User extends Authenticatable
 
 
     // --------- MUTATORS Y ACCESSORS ---------
+
+
 
     public function getFullNameAttribute()
     {

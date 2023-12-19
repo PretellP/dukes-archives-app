@@ -43,8 +43,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="" class="nav-link">
+            <li class="{{setActive('admin.announcements.*')}}">
+                <a href="{{route('admin.announcements.index')}}" class="nav-link">
                     <i class="fa-solid fa-bullhorn"></i>
                     <span>Anuncios</span>
                 </a>
