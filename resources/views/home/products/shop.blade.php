@@ -11,95 +11,24 @@
                             <h5 class="pt-title">Product categories</h5>
                             <div class="widget-category-list mt-20">
 
+                                    @foreach ($labels as $label)
+
                                     <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-1" name="cat-item" data-filter=".ciencia-ficcion">
-                                        <label for="cat-item-1">Ciencia Ficción </label>
+                                        <input type="checkbox" id="cat-item-{{ $loop->iteration }}" name="cat-item" data-filter=".{{ str_replace(' ', '-', mb_strtolower($label->name ?? '', 'UTF-8')) }}">
+                                        <label for="cat-item-{{ $loop->iteration }}"> {{ ucwords(mb_strtolower($label->name ?? '', 'UTF-8')) }} </label>
                                     </div>
+
+                                    @endforeach
+
                                     <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-2" name="cat-item" data-filter=".aventura">
-                                        <label for="cat-item-2"> Aventura </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-3" name="cat-item" data-filter=".misterio">
-                                        <label for="cat-item-3"> Misterio </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-4" name="cat-item" data-filter=".fantasia">
-                                        <label for="cat-item-4"> Fantasía </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-6" name="cat-item" data-filter=".novela">
-                                        <label for="cat-item-6"> Novela </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-7" name="cat-item" data-filter=".cuento-corto">
-                                        <label for="cat-item-7"> Cuento Corto </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-8" name="cat-item" data-filter=".historia">
-                                        <label for="cat-item-8"> Historia </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-9" name="cat-item" data-filter=".ciencia">
-                                        <label for="cat-item-9"> Ciencia </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-10" name="cat-item" data-filter=".politica">
-                                        <label for="cat-item-10">Política </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-11" name="cat-item" data-filter=".psicologia">
-                                        <label for="cat-item-11"> Psicología </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-12" name="cat-item" data-filter=".filosofia">
-                                        <label for="cat-item-12"> Filosofía </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-13" name="cat-item" data-filter=".horror">
-                                        <label for="cat-item-13"> Horror </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-14" name="cat-item" data-filter=".suspenso">
-                                        <label for="cat-item-14"> Suspenso </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-15" name="cat-item" data-filter=".humor">
-                                        <label for="cat-item-15"> Humor </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-16" name="cat-item" data-filter=".comedia">
-                                        <label for="cat-item-16"> Comedia </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-17" name="cat-item" data-filter=".infantil">
-                                        <label for="cat-item-17"> Infantil </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-18" name="cat-item" data-filter=".juvenil">
-                                        <label for="cat-item-18"> Juvenil </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-19" name="cat-item" data-filter=".autoayuda">
-                                        <label for="cat-item-19"> Autoayuda </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-20" name="cat-item" data-filter=".romance">
-                                        <label for="cat-item-20"> Romance </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-21" name="cat-item" data-filter=".clasico">
-                                        <label for="cat-item-21"> Clásico </label>
-                                    </div>
-                                    <div class="single-widget-category">
-                                        <input type="checkbox" id="cat-item-22" name="cat-item" data-filter="*">
-                                        <label for="cat-item-22"> Todo </label>
+                                        <input type="checkbox" id="cat-item-all" name="cat-item" data-filter="*">
+                                        <label for="cat-item-all"> Todo </label>
                                     </div>
 
                             </div>
-                        </div>                    
+                        </div>
                     </div>
-                    <div class="col-xl-9 col-lg-8">                      
+                    <div class="col-xl-9 col-lg-8">
                         <div class="product-lists-top">
                             <div class="product__filter-wrap">
                                 <div class="row align-items-center">
@@ -148,14 +77,18 @@
                             <div class="tab-pane fade  show active" id="FourCol" role="tabpanel"
                                 aria-labelledby="FourCol-tab">
                                 <div class="tp-wrapper">
-                                    <div class="row g-0 grid">
+                                    <div class="row g-0 products_container">
+
                                         @foreach ($products as $product)
-                                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 all suspenso">
+
+                                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 product-item {{ implode(' ', ($product->labels->map(function ($label) { return str_replace(' ', '-', mb_strtolower($label->name ?? '', 'UTF-8')); })->toArray())) }}">
+
                                                 <div class="product__item product__item-d">
+
                                                     <div class="product__thumb fix">
                                                         <div class="product-image w-img">
                                                             <a href="{{ route('home.product-details.index') }}">
-                                                                <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg"
+                                                                <img src="{{ verifyImage($product->files->first()) }}"
                                                                     alt="product">
                                                             </a>
                                                         </div>
@@ -176,11 +109,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__content-3">
-                                                    
+
                                                             <h6 class="product-category pt-2">
-                                                                <a href="#">{{ $product->labels->first()->description }}</a>
+                                                                <a href="#">{{ restrictMaxLengthText($product->labels->first()->description, 45) }}</a>
                                                             </h6>
-                                                    
+
 
                                                         <h6><a href="{{ route('home.product-details.index') }}">{{ $product->description }}</a></h6>
                                                         <div class="rating mb-5">
@@ -208,7 +141,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endforeach  
+
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

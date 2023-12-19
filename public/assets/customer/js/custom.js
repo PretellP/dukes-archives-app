@@ -1,24 +1,24 @@
-$(document).ready(function () {
-    var $grid = $('.grid').isotope({
-        itemSelector: '.all',
-/*         percentPosition: false,
+$(function () {
+
+    var $grid = $('.products_container').isotope({
+        itemSelector: '.product-item',
+        percentPosition: false,
         masonry: {
-            columnWidth: '.all'
-        } */
+            columnWidth: '.product-item'
+        }
     });
 
     // Manejar el cambio en los checkboxes
     $('input[type="checkbox"]').change(function () {
-        // Obtener todas las categorías seleccionadas
+
         var selectedCategories = $('input[type="checkbox"]:checked').map(function () {
             return $(this).data('filter');
         }).get();
-       
-        // Crear el filtro para Isotope
-        var filterValue = selectedCategories.length > 0 ? selectedCategories.join(' ') : '*';
-        console.log(filterValue)
-        // Aplicar el filtro en Isotope y animar los cambios
-        $grid.isotope({ filter: ".romance" });
+
+        var filterValue = selectedCategories.length > 0 ? selectedCategories.join(', ') : '*';
+
+        $grid.isotope({ filter: filterValue});
+
         console.log('Elementos filtrados:', $grid.data('isotope').filteredItems.length);
     });
 });
