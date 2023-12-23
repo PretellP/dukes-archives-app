@@ -1,7 +1,7 @@
 @extends('home.common.masterpage')
 
 @section('content')
-    <main>
+    <main class="p-4">
         <!-- shop-area-start -->
         <div class="shop-area mb-20">
             <div class="container">
@@ -29,50 +29,6 @@
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-8">
-                        <div class="product-lists-top">
-                            <div class="product__filter-wrap">
-                                <div class="row align-items-center">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                        <div class="product__filter d-sm-flex align-items-center">
-                                            <div class="product__col">
-                                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                    <li class="nav-item" role="presentation">
-                                                        <button class="nav-link active" id="FourCol-tab"
-                                                            data-bs-toggle="tab" data-bs-target="#FourCol" type="button"
-                                                            role="tab" aria-controls="FourCol" aria-selected="true">
-                                                            <i class="fa fa-th"></i>
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="product__result pl-60">
-                                                <p>Showing 1-20 of 29 relults</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                        <div
-                                            class="product__filter-right d-flex align-items-center justify-content-md-end">
-                                            <div class="product__sorting product__show-no">
-                                                <select>
-                                                    <option>10</option>
-                                                    <option>20</option>
-                                                    <option>30</option>
-                                                    <option>40</option>
-                                                </select>
-                                            </div>
-                                            <div class="product__sorting product__show-position ml-20">
-                                                <select>
-                                                    <option>Latest</option>
-                                                    <option>New</option>
-                                                    <option>Up comeing</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="tab-content" id="productGridTabContent">
                             <div class="tab-pane fade  show active" id="FourCol" role="tabpanel"
                                 aria-labelledby="FourCol-tab">
@@ -81,7 +37,7 @@
 
                                         @foreach ($products as $product)
 
-                                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 product-item {{ implode(' ', ($product->labels->map(function ($label) { return str_replace(' ', '-', mb_strtolower($label->name ?? '', 'UTF-8')); })->toArray())) }}">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-4 product-item {{ implode(' ', ($product->labels->map(function ($label) { return str_replace(' ', '-', mb_strtolower($label->name ?? '', 'UTF-8')); })->toArray())) }}">
 
                                                 <div class="product__item product__item-d">
 
@@ -148,37 +104,8 @@
                             </div>
 
                         </div>
-                        <div class="tp-pagination text-center">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="basic-pagination pt-30 pb-30">
-                                        <nav>
-                                            <ul>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}" class="active">1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}">2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}">3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}">5</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}">6</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('home.shop.index') }}">
-                                                        <i class="fa fa-angle-double-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="text-center pt-30 pb-30">
+                            {{ $products->links('pagination::bootstrap-4') }}    
                         </div>
                     </div>
                 </div>
