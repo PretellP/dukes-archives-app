@@ -58,10 +58,6 @@
                                                                 <i class="fa fa-heart"></i>
                                                                 <i class="fa fa-heart"></i>
                                                             </a>
-                                                            <a href="#" class="icon-box icon-box-1">
-                                                                <i class="fa fa-layer-group"></i>
-                                                                <i class="fa fa-layer-group"></i>
-                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="product__content-3">
