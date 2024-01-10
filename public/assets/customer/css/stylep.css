@@ -42,7 +42,7 @@
 }
 
 /*---------------------------------
-    typography css start 
+    typography css start
 ---------------------------------*/
 body {
   font-family: "Rubik", sans-serif;
@@ -216,7 +216,7 @@ input {
 }
 
 /*---------------------------------
-    common classes css start 
+    common classes css start
 ---------------------------------*/
 .w-img img {
   width: 100%;
@@ -283,6 +283,7 @@ input {
   border-radius: 20px;
 }
 
+
 .z-tooltip {
   position: absolute;
   top: -22px;
@@ -327,7 +328,7 @@ input {
   }
 }
 /*----------------------------------------
-    Body Overlay 
+    Body Overlay
 -----------------------------------------*/
 .body-overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -875,7 +876,7 @@ input {
 }
 .product__modal .nav-tabs {
   border: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .product__modal .nav-link {
   border: 1px solid #e5e5e5;
@@ -897,6 +898,14 @@ input {
   border: 6px solid transparent;
   border-top-color: transparent;
   border-bottom-color: #fcbe00;
+}
+
+.product__modal .nav.nav-tabs li {
+    width: 150px;
+}
+
+.product__modal .nav.nav-tabs li img{
+    width: 100%;
 }
 
 /*----------------------------------------*/

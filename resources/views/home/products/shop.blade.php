@@ -49,10 +49,8 @@
                                                             </a>
                                                         </div>
                                                         <div class="product-action">
-                                                            <a href="#" class="icon-box icon-box-1" 
-                                                            data-bs-toggle="modal"
+                                                            <a href="#" class="icon-box icon-box-1 openProductDetailModal"
                                                             data-url="{{ url('/shop/product/'.$product->id) }}"
-                                                            data-bs-target="#productModal" 
                                                             data-send="{{ route('home.shop.show', $product )}}">
 
                                                                 <i class="fa fa-eye"></i>
@@ -105,7 +103,7 @@
 
                         </div>
                         <div class="text-center pt-30 pb-30">
-                            {{ $products->links('pagination::bootstrap-4') }}    
+                            {{ $products->links('pagination::bootstrap-4') }}
                         </div>
                     </div>
                 </div>

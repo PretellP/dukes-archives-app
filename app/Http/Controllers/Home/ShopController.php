@@ -26,12 +26,17 @@ class ShopController extends Controller
     }
     public function show(Product $product)
     {
-        $productDetails = Product::with([
+        $productDetails = $product->load([
             'labels',
             'files' => fn ($q) => $q->where('file_type', 'imagenes')
-        ])
-        ->find($product->id);
-        return response()->json($productDetails);
+        ]);
+
+        $htmlImages = view('home.products.components._product-view-images', compact('productDetails'))->render();
+
+        return response()->json([
+            "product" => $productDetails,
+            "html" => $htmlImages
+        ]);
     }
 
 }

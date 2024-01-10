@@ -1,65 +1,64 @@
+
+
 $(function () {
-    $('#productModal').on('shown.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
+
+    $('html').on('click', '.openProductDetailModal', function () {
+
+        var button = $(this);
         var url = button.data('url');
         var getDataUrl = button.data('send');
-        var modal = $(this);
+        var modal = $('#productModal');
+
+        var labelsContainer = modal.find('.labels');
+        labelsContainer.empty();
+
+        var imagesContainer = modal.find('#modalTabContent'); // El contenedor de imágenes en el modal
+        imagesContainer.empty();
 
         $.ajax({
             type: 'GET',
             url: getDataUrl,
             dataType: 'JSON',
             success: function (data) {
-                var name = data.name;
-                var description = data.description;
-                var author = data.author;
-                var sale_price = data.sale_price;
-                var labels = data.labels;  // Un conjunto de etiquetas
-                var images = data.files;   // Una lista de imágenes
+                var product_images_container = modal.find('#product__modal-box')
+                product_images_container.empty()
 
-                // Actualizar elementos con las etiquetas
-                var labelsContainer = modal.find('.labels'); // El contenedor de etiquetas en el modal
-                labelsContainer.empty(); // Limpiar el contenedor antes de agregar nuevas etiquetas
 
-                // Iterar sobre la lista de etiquetas y agregarlas al modal
-                labels.forEach(function (label) {
-                    var labelElement = $('<span>').text(label.name).addClass('label');
+                var product = data.product
+
+                var name = product.name;
+                var description = product.description;
+                var author = product.author;
+                var sale_price = product.sale_price;
+                var labels = product.labels;  // Un conjunto de etiquetas  // Una lista de imágenes
+
+                // // Actualizar elementos con las etiquetas
+                 // El contenedor de etiquetas en el modal
+                 // Limpiar el contenedor antes de agregar nuevas etiquetas
+
+                labels.forEach(function (label, i) {
+                    let labelName = label.name
+                    if (!(labels.length == (i+1))) {
+                        labelName += ', '
+                    } else {
+                        labelName += '.'
+                    }
+                    var labelElement = $('<span>').text(labelName).addClass('label');
                     labelsContainer.append(labelElement);
                 });
 
-                // Manejar las imágenes (si hay varias)
-                var imagesContainer = modal.find('.tab-content'); // El contenedor de imágenes en el modal
-                imagesContainer.empty(); // Limpiar el contenedor antes de agregar nuevas imágenes
-
-                // Iterar sobre la lista de imágenes y agregarlas al modal
-                images.forEach(function (image, index) {
-                    var tabPane = $('<div>').addClass('tab-pane fade').attr('id', 'nav' + (index + 1)).attr('role', 'tabpanel');
-                    var imgContainer = $('<div>').addClass('product__modal-img w-img');
-                    var imgElement = $('<img>').attr('src', image.file_url).attr('alt', 'Image');
-
-                    imgContainer.append(imgElement);
-                    tabPane.append(imgContainer);
-                    imagesContainer.append(tabPane);
-
-                    // También actualizamos las pestañas (si hay varias)
-                    var navLink = $('<button>').addClass('nav-link').attr('id', 'nav' + (index + 1) + '-tab').attr('data-bs-toggle', 'tab').attr('data-bs-target', '#nav' + (index + 1)).attr('type', 'button').attr('role', 'tab').attr('aria-controls', 'nav' + (index + 1)).attr('aria-selected', (index === 0));
-
-                    var imgNav = $('<img>').attr('src', image.file_url).attr('alt', 'Navigation Image');
-
-                    navLink.append(imgNav);
-                    modal.find('#modalTab').append(navLink);
-                });
-
-                // Resto del código...
                 modal.find('.name').text(name);
                 modal.find('.description').text(description);
                 modal.find('.author').text(author);
                 modal.find('.sale_price').text(sale_price);
+
+                product_images_container.html(data.html)
             },
-            error: function (xhr, status, error) {
-                console.error("XHR: ", xhr);
-                console.error("Status: ", status);
-                console.error("Error: ", error);
+            complete: function (data) {
+                modal.modal('show')
+            },
+            error: function (data) {
+                console.log(data)
             }
         });
 
