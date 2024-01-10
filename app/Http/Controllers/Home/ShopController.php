@@ -24,4 +24,14 @@ class ShopController extends Controller
             'labels'
         ));
     }
+    public function show(Product $product)
+    {
+        $productDetails = Product::with([
+            'labels',
+            'files' => fn ($q) => $q->where('file_type', 'imagenes')
+        ])
+        ->find($product->id);
+        return response()->json($productDetails);
+    }
+
 }

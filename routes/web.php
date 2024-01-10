@@ -37,6 +37,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "tienda", "as" => "shop."], function(){
             //----- shop.* -----
             Route::get('/', 'index') -> name('index');
+            Route::get('/product/{product}', 'show') -> name('show');
         });
     });
 

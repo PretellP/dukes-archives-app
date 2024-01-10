@@ -132,3 +132,5 @@
         </div>
     </footer>
     <!-- footer-end -->
+
+    @yield('modals')
