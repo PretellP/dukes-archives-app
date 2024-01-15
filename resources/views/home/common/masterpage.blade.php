@@ -270,9 +270,13 @@
     <!-- offcanvas area end -->
 
     @yield('content')
-
+    
     @include('home.common.partials.footer')
+    
+   
     <!-- JS here -->
     @include('home.common.partials.scripts')
+
+ 
 </body>
 </html>
