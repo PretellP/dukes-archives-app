@@ -103,7 +103,7 @@
               </div>
            </div>
         </div>
-     </section>
+    </section>
      <!-- cart-area-end -->
 
     <!-- cta-area-start -->

@@ -21,3 +21,5 @@
 
 <!-- custom js -->
 <script src="{{ asset('assets/customer/js/custom.js') }}"></script>
+
+@yield('extra-script')
