@@ -24,4 +24,5 @@
     <link rel="stylesheet" href="{{asset('assets/customer/css/width.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://kit.fontawesome.com/469f55554f.js" crossorigin="anonymous"></script>
+    @yield('extra-head')
 </head>

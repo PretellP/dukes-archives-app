@@ -63,7 +63,13 @@
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                 @csrf
                                             </form>
+
+                                            <a class="dropdown-item" href="{{ route('home.profile.index') }}">
+                                                {{ __('Mi perfil') }}
+                                            </a>
                                         </div>
+
+                                        
                                     </div>
                                 @endguest
 

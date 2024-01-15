@@ -104,4 +104,19 @@ class UserService
     {
         return Str::random(8);
     }
+
+    public function actualizarContrasena(User $usuario, $contrasenaActual, $nuevaContrasena)
+    {
+        // Verificar si la contraseña actual es correcta
+        if (Hash::check($contrasenaActual, $usuario->password)) {
+            // Actualizar la contraseña directamente en la base de datos
+            $usuario->update([
+                'password' => bcrypt($nuevaContrasena),
+            ]);
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
