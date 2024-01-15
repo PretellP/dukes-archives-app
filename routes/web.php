@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\{
     ProductController
 };
 
-use App\Http\Controllers\Home\{AboutController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
+use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
 
 use Illuminate\Support\Facades\{Auth, Route};
 
@@ -38,6 +38,14 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             //----- shop.* -----
             Route::get('/', 'index') -> name('index');
             Route::get('/product/{product}', 'show') -> name('show');
+        });
+    });
+
+    Route::controller(ProfileController::class)->group(function () {
+        Route::group(["prefix" => "perfil", "as" => "profile."], function(){
+            //----- shop.* -----
+            Route::get('/', 'index') -> name('index');
+            Route::patch('/user/{user}', 'update') -> name('update');
         });
     });
 

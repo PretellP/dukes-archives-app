@@ -45,7 +45,7 @@
                                                         <div class="product-image w-img">
                                                             <a>
                                                                 <img src="{{ verifyImage($product->files->first()) }}"
-                                                                    alt="product">
+                                                                    alt="product" class="img-shop">
                                                             </a>
                                                         </div>
                                                         <div class="product-action">

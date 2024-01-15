@@ -3,33 +3,6 @@
 @section('content')
 
 <main>
-    <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height-2" data-background="assets/img/banner/page-banner-4.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-banner-content text-center">
-                        <h4 class="breadcrumb-title">Wishlist</h4>
-                        <div class="breadcrumb-two">
-                            <nav>
-                               <nav class="breadcrumb-trail breadcrumbs">
-                                  <ul class="breadcrumb-menu">
-                                     <li class="breadcrumb-trail">
-                                        <a href="{{route ('home.index')}}"><span>Home</span></a>
-                                     </li>
-                                     <li class="trail-item">
-                                        <span>Wishlist</span>
-                                     </li>
-                                  </ul>
-                               </nav> 
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-banner-area-end -->
 
     <!-- cart-area-start -->
     <section class="cart-area pb-120 pt-120">
