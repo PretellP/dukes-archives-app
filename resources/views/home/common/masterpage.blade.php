@@ -65,7 +65,7 @@
                                                 @csrf
                                             </form>
 
-                                            
+
                                         </div>
 
 
@@ -103,12 +103,12 @@
                                                   <div class="cart__item d-flex justify-content-between align-items-center">
                                                     <div class="cart__inner d-flex">
                                                       <div class="cart__thumb">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                           <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788416604500_sn4ssnorvcune4rb.jpg" style="object-fit: cover;" alt="">
                                                         </a>
                                                       </div>
                                                       <div class="cart__details">
-                                                        <h6><a href="{{route ('home.product-details.index')}}"> One Punch-Man 1  </a></h6>
+                                                        <h6><a href="#"> One Punch-Man 1  </a></h6>
                                                         <div class="cart__price">
                                                           <span>S/ 49.00</span>
                                                         </div>
@@ -232,7 +232,7 @@
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"  />
-           
+
         </svg>
     </div>
     <!-- back to top end -->

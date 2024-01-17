@@ -20,13 +20,14 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 
+
 Route::group(["prefix" => "inicio", "as" => "home."], function () {
 
 
     Route::controller(ProductsController::class)->group(function () {
 
         Route::group(["prefix" => "productos", "as" => "products."], function () {
-             //----- products.* -----
+             //----- home.products.* -----
              Route::get('/', 'index')->name('index');
              Route::get('/search', 'search')->name('search');
 
@@ -52,7 +53,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
     Route::controller(ProductDetailsController::class)->group(function () {
         Route::group(["prefix" => "detalles-de-producto", "as" => "product-details."], function(){
             //----- product-details.* -----
-            Route::get('/', 'index') -> name('index');
+            Route::get('/{product}', 'index') -> name('index');
         });
     });
 
@@ -105,6 +106,10 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
 
 
 });
+
+
+
+
 
 Route::post('/registro-usuario/validar-registro/{column}', [UsersController::class, 'registerValidate'])->name('users.validateRegister');
 

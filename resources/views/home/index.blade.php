@@ -17,7 +17,7 @@
                                 <div class="col-xl-5">
                                     <div class="slider-content">
                                         <div class="slider-top-btn" data-animation="fadeInLeft" data-delay="0.1s">
-                                            <a href="{{route ('home.product-details.index')}}" class="st-btn b-radius">Nuevas historias</a>
+                                            <a href="" class="st-btn b-radius">Nuevas historias</a>
                                         </div>
                                         <h2 data-animation="fadeInLeft" data-delay="0.1s" class="pt-15 slider-title pb-5">Embárcate en la magia<br> Hechizos y aventuras te esperan </h2>
                                         <p class="pr-20 slider_text" data-animation="fadeInLeft" data-delay="0.1s">Desde Hogwarts hasta el último horrocrux: Encuentra tus libros de Harry Potter favoritos</p>
@@ -35,7 +35,7 @@
                                 <div class="col-xl-5">
                                     <div class="slider-content">
                                         <div class="slider-top-btn" data-animation="fadeInLeft" data-delay="0.1s">
-                                            <a href="{{route ('home.product-details.index')}}" class="st-btn b-radius">Nuevas historias</a>
+                                            <a href="" class="st-btn b-radius">Nuevas historias</a>
                                         </div>
                                         <h2 data-animation="fadeInLeft" data-delay="0.1s" class="pt-15 slider-title pb-5">Lecturas que te mantendrán en vilo<br> SUSPENSO </h2>
                                         <p class="pr-20 slider_text" data-animation="fadeInLeft" data-delay="0.1s">Explora nuestro catálogo de libros de misterio</p>
@@ -117,10 +117,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="banner__item p-relative w-img mb-30">
                             <div class="banner__img">
-                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner-1.png')}}" alt=""></a>
+                                <a href=""><img src="{{asset('assets/customer/img/banner/banner-1.png')}}" alt=""></a>
                             </div>
                             <div class="banner__content">
-                                <h6><a href="{{route ('home.product-details.index')}}">Nuevas <br> Agendas 2023</a></h6>
+                                <h6><a href="#">Nuevas <br> Agendas 2023</a></h6>
                                 <div class="bottom-btn">
                                     <a href="{{route ('home.shop.index')}}" class="st-btn-border-2 b-radius">Vamos</a>
                                 </div>
@@ -130,10 +130,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="banner__item p-relative mb-30 w-img">
                             <div class="banner__img">
-                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner-2.png')}}" alt=""></a>
+                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner-2.png')}}" alt=""></a>
                             </div>
                             <div class="banner__content">
-                                <h6><a href="{{route ('home.product-details.index')}}">Historias <br> para el día</a></h6>
+                                <h6><a href="#">Historias <br> para el día</a></h6>
                                 <div class="bottom-btn">
                                     <a href="{{route ('home.shop.index')}}" class="st-btn-border-2 b-radius">Vamos</a>
                                 </div>
@@ -143,10 +143,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="banner__item p-relative mb-30 w-img">
                             <div class="banner__img">
-                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner-3.png')}}" alt=""></a>
+                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner-3.png')}}" alt=""></a>
                             </div>
                             <div class="banner__content">
-                                <h6><a href="{{route ('home.product-details.index')}}">Misterios <br> por resolver </a></h6>
+                                <h6><a href="#">Misterios <br> por resolver </a></h6>
                                 <div class="bottom-btn">
                                     <a href="{{route ('home.shop.index')}}" class="st-btn-border-2 b-radius">Vamos</a>
                                 </div>
@@ -180,7 +180,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -204,7 +204,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -228,7 +228,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -252,7 +252,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -276,7 +276,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -300,7 +300,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -324,7 +324,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -348,7 +348,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -372,7 +372,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -396,7 +396,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -417,7 +417,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                          <!-- If we need navigation buttons -->
@@ -438,7 +438,7 @@
                             <div class="section__title">
                                 <h5 class="st-titile">MANGAS</h5>
                             </div>
-                            <div class="product__nav-tab"> 
+                            <div class="product__nav-tab">
                                 <ul class="nav nav-tabs" id="flast-sell-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                       <button class="nav-link active" id="computer-tab" data-bs-toggle="tab" data-bs-target="#computer" type="button" role="tab" aria-controls="computer" aria-selected="false">acción</button>
@@ -471,7 +471,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                                         </a>
                                                     </div>
@@ -495,7 +495,7 @@
                                                 </div>
                                                 <div class="product__content">
                                                     <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                                    <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                                    <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -519,7 +519,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                                         </a>
                                                     </div>
@@ -543,7 +543,7 @@
                                                 </div>
                                                 <div class="product__content">
                                                     <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                                    <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                                    <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -567,7 +567,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                                         </a>
                                                     </div>
@@ -591,7 +591,7 @@
                                                 </div>
                                                 <div class="product__content">
                                                     <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                                    <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                                    <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -615,7 +615,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                                         </a>
                                                     </div>
@@ -639,7 +639,7 @@
                                                 </div>
                                                 <div class="product__content">
                                                     <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                                    <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                                    <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -663,7 +663,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img h-img ">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                                         </a>
                                                     </div>
@@ -687,7 +687,7 @@
                                                 </div>
                                                 <div class="product__content">
                                                     <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                                    <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                                    <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -708,7 +708,7 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                     <!-- If we need navigation buttons -->
@@ -724,7 +724,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -747,7 +747,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                                    <h6><a href="#">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -767,11 +767,11 @@
                                                     Add to Cart
                                                     </button>
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -791,7 +791,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Wireless Bluetooth Over-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -815,7 +815,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -838,7 +838,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Solo3 Wireless On-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -862,7 +862,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -882,7 +882,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
+                                                    <h6><a href="#">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -906,7 +906,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -926,7 +926,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Men Size Yellow Basketball Jerseys</a></h6>
+                                                    <h6><a href="#">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -950,7 +950,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -973,7 +973,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Xbox Wireless Game Controller Pink</a></h6>
+                                                    <h6><a href="#">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1008,7 +1008,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1028,7 +1028,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Wireless Bluetooth Over-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1052,7 +1052,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1075,7 +1075,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Solo3 Wireless On-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1099,7 +1099,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1119,7 +1119,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
+                                                    <h6><a href="#">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1143,7 +1143,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1166,7 +1166,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                                    <h6><a href="#">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1190,7 +1190,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1210,7 +1210,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Men Size Yellow Basketball Jerseys</a></h6>
+                                                    <h6><a href="#">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1234,7 +1234,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1257,7 +1257,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Xbox Wireless Game Controller Pink</a></h6>
+                                                    <h6><a href="#">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1292,7 +1292,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1315,7 +1315,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                                    <h6><a href="#">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1339,7 +1339,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1359,7 +1359,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Men Size Yellow Basketball Jerseys</a></h6>
+                                                    <h6><a href="#">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1383,7 +1383,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1406,7 +1406,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Xbox Wireless Game Controller Pink</a></h6>
+                                                    <h6><a href="#">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1430,7 +1430,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1450,7 +1450,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Wireless Bluetooth Over-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1474,7 +1474,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1497,7 +1497,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Solo3 Wireless On-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1521,7 +1521,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1541,7 +1541,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
+                                                    <h6><a href="#">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1576,7 +1576,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-1.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1599,7 +1599,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                                    <h6><a href="#">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1623,7 +1623,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-2.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1643,7 +1643,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Men Size Yellow Basketball Jerseys</a></h6>
+                                                    <h6><a href="#">Men Size Yellow Basketball Jerseys</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1667,7 +1667,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-3.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1690,7 +1690,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Xbox Wireless Game Controller Pink</a></h6>
+                                                    <h6><a href="#">Xbox Wireless Game Controller Pink</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1714,7 +1714,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-4.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1734,7 +1734,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Wireless Bluetooth Over-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Wireless Bluetooth Over-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1758,7 +1758,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-5.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1781,7 +1781,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Solo3 Wireless On-Ear Headphones</a></h6>
+                                                    <h6><a href="#">Solo3 Wireless On-Ear Headphones</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1805,7 +1805,7 @@
                                             <div class="product__item swiper-slide">
                                                 <div class="product__thumb fix">
                                                     <div class="product-image w-img">
-                                                        <a href="{{route ('home.product-details.index')}}">
+                                                        <a href="#">
                                                             <img src="{{ asset('assets/customer/img/product/tp-6.jpg') }}" alt="product">
                                                         </a>
                                                     </div>
@@ -1825,7 +1825,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__content">
-                                                    <h6><a href="{{route ('home.product-details.index')}}">Vifa Bluetooth Portable Wireless Speaker</a></h6>
+                                                    <h6><a href="#">Vifa Bluetooth Portable Wireless Speaker</a></h6>
                                                     <div class="rating mb-5">
                                                         <ul>
                                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1859,7 +1859,7 @@
             </div>
         </section>
         <!-- product__area-end SLIDER 2-->
-     
+
         <!-- banner__area-start -->
         <section>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -1894,7 +1894,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -1918,7 +1918,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1942,7 +1942,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -1966,7 +1966,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -1990,7 +1990,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -2014,7 +2014,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -2038,7 +2038,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -2062,7 +2062,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -2086,7 +2086,7 @@
                                 <div class="product__item swiper-slide">
                                     <div class="product__thumb fix">
                                         <div class="product-image w-img h-img ">
-                                            <a href="{{route ('home.product-details.index')}}">
+                                            <a href="#">
                                                 <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788417490324_lmskevq12j7c8eiw.jpg" alt="product">
                                             </a>
                                         </div>
@@ -2110,7 +2110,7 @@
                                     </div>
                                     <div class="product__content">
                                         <h6 class="product-category pt-2"><a href="#">Manga</a></h6>
-                                        <h6 class="text-truncate"><a href="{{route ('home.product-details.index')}}">Boku No Hero Academy</a></h6>
+                                        <h6 class="text-truncate"><a href="#">Boku No Hero Academy</a></h6>
                                         <div class="rating mb-5">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -2131,7 +2131,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                          <!-- If we need navigation buttons -->
@@ -2155,22 +2155,22 @@
         </section>
         <!-- banner__area-end-->
 
-        
+
         <!-- banner-category-area-start -->
         <div class="slider-area light-bg-s pt-60">
             <div class="container 0">
                 <div class="row">
                     <div class="col-xl-6">
-                        <div class="row">    
+                        <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-sm-6 col-6">
                                         <div class="banner__item p-relative w-img mb-30">
                                             <div class="banner__img banner__img-2 b-radius-2">
-                                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner1.png')}}" alt=""></a>
+                                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner1.png')}}" alt=""></a>
                                             </div>
                                             <div class="banner__content">
-                                                <h6><a href="{{route ('home.product-details.index')}}">Descifra secretos</h6>
+                                                <h6><a href="#">Descifra secretos</h6>
                                                 <div class="banner-df-btn mb-15">
                                                     <a href="#" class="st-btn b-radius">Misterio</a>
                                                 </div>
@@ -2180,10 +2180,10 @@
                                     <div class="col-xl-12 col-lg-12 col-sm-6 col-6">
                                         <div class="banner__item p-relative w-img mb-30">
                                             <div class="banner__img banner__img-2 b-radius-2">
-                                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner2.png')}}" alt=""></a>
+                                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner2.png')}}" alt=""></a>
                                             </div>
                                             <div class="banner__content">
-                                                <h6><a href="{{route ('home.product-details.index')}}">Juventud en cada página</h6>
+                                                <h6><a href="#">Juventud en cada página</h6>
                                                     <div class="banner-df-btn mb-15">
                                                         <a href="#" class="st-btn b-radius">Juveniles</a>
                                                     </div>
@@ -2195,34 +2195,34 @@
                             <div class="col-xl-6 col-lg-6">
                                 <div class="banner__item p-relative w-img mb-30">
                                     <div class="banner__img banner__img-3  b-radius-2">
-                                        <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner3.png')}}" alt=""></a>
+                                        <a href="#"><img src="{{asset('assets/customer/img/banner/banner3.png')}}" alt=""></a>
                                     </div>
                                     <div class="banner__content banner__content-3">
                                         <div class="banner-df-btn mb-15">
                                             <a href="#" class="st-btn b-radius">Mangas</a>
                                         </div>
                                         <p>Nuevos</p>
-                                        <h6 class="df-title"><a href="{{route ('home.product-details.index')}}">Aventuras dibujadas</a></h6>
+                                        <h6 class="df-title"><a href="#">Aventuras dibujadas</a></h6>
                                         <div class="bottom-btn">
                                             <a href="{{route ('home.shop.index')}}" class="st-btn-border-2 b-radius">Leer Ahora</a>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
-                        <div class="row">    
+                        <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-sm-6 col-6">
                                         <div class="banner__item p-relative w-img mb-30">
                                             <div class="banner__img banner__img-2 b-radius-2">
-                                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner4.png')}}" alt=""></a>
+                                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner4.png')}}" alt=""></a>
                                             </div>
                                             <div class="banner__content">
-                                                <h6><a href="{{route ('home.product-details.index')}}">Un universo diferente</a></h6>
+                                                <h6><a href="#">Un universo diferente</a></h6>
                                                 <div class="banner-df-btn mb-15">
                                                     <a href="#" class="st-btn b-radius">Ciencia Ficción</a>
                                                 </div>
@@ -2232,10 +2232,10 @@
                                     <div class="col-xl-12 col-lg-12 col-sm-6 col-6">
                                         <div class="banner__item p-relative w-img mb-30">
                                             <div class="banner__img banner__img-2 b-radius-2">
-                                                <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner5.png')}}" alt=""></a>
+                                                <a href="#"><img src="{{asset('assets/customer/img/banner/banner5.png')}}" alt=""></a>
                                             </div>
                                             <div class="banner__content">
-                                                <h6><a href="{{route ('home.product-details.index')}}">Cuentos <br> coloridos</a></h6>
+                                                <h6><a href="#">Cuentos <br> coloridos</a></h6>
                                                 <div class="banner-df-btn mb-15">
                                                     <a href="#" class="st-btn b-radius">Infantiles</a>
                                                 </div>
@@ -2247,14 +2247,14 @@
                             <div class="col-xl-6 col-lg-6">
                                 <div class="banner__item p-relative w-img mb-30">
                                     <div class="banner__img banner__img-3  b-radius-2">
-                                        <a href="{{route ('home.product-details.index')}}"><img src="{{asset('assets/customer/img/banner/banner6.png')}}" alt=""></a>
+                                        <a href="#"><img src="{{asset('assets/customer/img/banner/banner6.png')}}" alt=""></a>
                                     </div>
                                     <div class="banner__content banner__content-3">
                                         <div class="banner-df-btn mb-15">
                                             <a href="#" class="st-btn b-radius">Terror</a>
                                         </div>
                                         <p>Suspenso mortal</p>
-                                        <h6 class="df-title"><a href="{{route ('home.product-details.index')}}">Miedo entre viñetas</a></h6>
+                                        <h6 class="df-title"><a href="#">Miedo entre viñetas</a></h6>
                                         <div class="bottom-btn">
                                             <a href="{{route ('home.shop.index')}}" class="st-btn-border-2 b-radius">Leer Ahora</a>
                                         </div>
@@ -2296,9 +2296,9 @@
         </section>
         <!-- banner__area-end -->
 
-        
 
-        
+
+
 
         <!-- brand-area-start-->
         <section class="brand-area brand-area-d mt-5 mb-5">
@@ -2327,8 +2327,8 @@
             </div>
         </section>
         <!-- brand-area-end -->
-        
-       
+
+
 
         <!-- shop modal start -->
 
@@ -2391,7 +2391,7 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product__modal-content">
-                                    <h4><a href="{{route ('home.product-details.index')}}">Samsung C49J89: £875, Debenhams Plus</a></h4>
+                                    <h4><a href="#">Samsung C49J89: £875, Debenhams Plus</a></h4>
                                     <div class="product__review d-sm-flex">
                                         <div class="rating rating__shop mb-10 mr-30">
                                         <ul>
@@ -2460,7 +2460,7 @@
         <!-- shop modal end -->
 
 
-        
+
     </main>
 
 
