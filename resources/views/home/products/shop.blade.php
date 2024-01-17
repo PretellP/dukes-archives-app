@@ -49,13 +49,13 @@
                                                             </a>
                                                         </div>
                                                         <div class="product-action">
-                                                            <a href="#" class="icon-box icon-box-1 openProductDetailModal"
-                                                            data-url="{{ url('/shop/product/'.$product->id) }}"
-                                                            data-send="{{ route('home.shop.show', $product )}}">
-
-                                                                <i class="fa fa-eye"></i>
-                                                                <i class="fa fa-eye"></i>
-                                                            </a>
+                                                           
+                                                                <a href="{{ route('home.product-details.index', $product) }}" class="icon-box icon-box-1">
+                                                                    <i class="fa fa-eye"></i>
+                                                                    <i class="fa fa-eye"></i>
+                                                                </a>
+                                                           
+                                                            
                                                             <a href="#" class="icon-box icon-box-1">
                                                                 <i class="fa fa-heart"></i>
                                                                 <i class="fa fa-heart"></i>
@@ -88,8 +88,9 @@
                                                         <button type="button" class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
                                                             Add to Cart
                                                         </button>
-                                                        <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100"
-                                                            data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                        <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100 openProductDetailModal"
+                                                            data-url="{{ url('/shop/product/'.$product->id) }}"
+                                                            data-send="{{ route('home.shop.show', $product )}}">
                                                             Quick View
                                                         </button>
                                                     </div>
@@ -117,6 +118,7 @@
 @section('extra-script')
 <!-- MODAL SHOP -->
 <script src="{{asset('assets/customer/js/ajax-modal-shop.js')}}" ></script>
+
 @endsection
 @section('modals')
 @include('home.products.product-details')

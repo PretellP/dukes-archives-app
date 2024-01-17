@@ -84,7 +84,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
-    Route::controller(ProfileController::class)->group(function () {
+    /* Route::controller(ProfileController::class)->group(function () {
 
         Route::group(["prefix" => "perfil", "as" => "profile."], function () {
              //----- profile.* -----
@@ -101,7 +101,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             //Route::get('/editar/{user}', 'edit')->name('edit');
             //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit'); 
         });
-    });
+    }); */
 
 
 });
