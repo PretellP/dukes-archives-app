@@ -5,7 +5,7 @@
 
     <!-- header-start -->
     <header class="header d-blue-bg">
-        
+
         <div class="header-mid">
             <div class="container">
                 <div class="heade-mid-inner"><!--d-none d-lg-block-->
@@ -51,15 +51,15 @@
                                                 <span class="text">{{ Auth::user()->name }}</span>
                                             </a>
                                         </a>
-                                        
-        
+
+
                                         <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
                                                 {{ __('cerrar sesión') }}
                                             </a>
-        
+
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                 @csrf
                                             </form>
@@ -69,7 +69,7 @@
                                             </a>
                                         </div>
 
-                                        
+
                                     </div>
                                 @endguest
 
@@ -88,7 +88,7 @@
                                     <span class="count">1</span>
                                     <span class="text d-sm-block d-none">
                                         <span class="sub">Carrito:</span>
-                                        $00.00 
+                                        $00.00
                                     </span>
                                     </a>
                                     <div class="cart">
@@ -144,7 +144,7 @@
         <div class="header__bottom">
             <div class="container">
                 <div class="row g-0 align-items-center">
-                    <div class="col-lg-3">                        
+                    <div class="col-lg-3">
                         <div class="cat__menu-wrapper side-border d-none d-lg-block">
                             <div class="cat-toggle">
                                 <button type="button" class="cat-toggle-btn cat-toggle-btn-1">
@@ -167,7 +167,7 @@
                                                     <span class="cat-label green">¡nuevo!</span>
                                                 </a>
                                             </li>
-                                            
+
                                             <li><a href="{{route ('home.shop.index')}}">Misterio</a></li>
                                             <li><a href="{{route ('home.shop.index')}}">Ciencia Ficción</a></li>
                                             <li class="d-laptop-none"><a href="{{route ('home.shop.index')}}">Literatura</a></li>
@@ -184,21 +184,21 @@
                         <div class="side-menu d-lg-none mr-20">
                           <button type="button" class="side-menu-btn offcanvas-toggle-btn"><i class="fas fa-bars"></i></button>
                         </div>
-                        
+
 
                         <div class="main-menu d-none d-lg-block">
                             <nav class="d-flex justify-content-center align-items-center">
                                 <ul>
                                     <li>
                                         <a href="{{route('home.index')}}" class="active">Inicio</a>
-                                        
+
                                     </li>
 
                                     <li><a href="{{route('home.about.index')}}">Nosotros</a></li>
                                     <li class="has-mega"><a href="{{route ('home.shop.index')}}">Productos</a></li>
                                     <li><a href="{{route('home.contact.index')}}">Contacto</a></li>
 
-                                   
+
 
                                 </ul>
                             </nav>
@@ -264,19 +264,19 @@
         </div>
         </div>
     </div>
-    
-    <!-- offcanvas area end -->      
+
+    <!-- offcanvas area end -->
     <div class="body-overlay"></div>
     <!-- offcanvas area end -->
 
     @yield('content')
-    
+
     @include('home.common.partials.footer')
-    
-   
+
+
     <!-- JS here -->
     @include('home.common.partials.scripts')
 
- 
+
 </body>
 </html>

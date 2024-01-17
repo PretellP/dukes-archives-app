@@ -12,7 +12,7 @@
                         <img src="{{asset('assets/customer/img/profile/user.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Información de perfil</p>
                     </a>
-                    
+
                 </li>
                 <li>
                     <a href="{{ route('home.wishlist.index') }}" class="d-flex gap-2 align-items-center pt-2 pb-2">

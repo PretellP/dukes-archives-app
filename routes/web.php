@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\{
     UsersController,
     DashboardController,
     LabelsController,
-    ProductController  
+    ProductController
 };
 
 use App\Http\Controllers\Home\{AboutController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController, ProfileController};
@@ -29,7 +29,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
              //----- products.* -----
              Route::get('/', 'index')->name('index');
              Route::get('/search', 'search')->name('search');
-             
+
         });
     });
 
@@ -91,7 +91,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             //Route::get('/', 'lista-de-deseos')->name('list');
             //Route::get('/ver/{user}', 'show')->name('show');
             //Route::get('/editar/{user}', 'edit')->name('edit');
-            //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit'); 
+            //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
         });
     });
 

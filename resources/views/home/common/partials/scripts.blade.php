@@ -1,5 +1,9 @@
-<script src="{{asset('assets/customer/js/vendor/jquery.js')}}"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="{{asset('assets/common/modules/jquery.min.js')}}"></script>
+<script src="{{asset('assets/common/js/jquery.validator.js')}}"></script>
+<script src="{{ asset('assets/common/js/jquery.validator.add.methods.min.js') }}"></script>
+<script src="{{asset('assets/common/modules/popper.js')}}"></script>
+{{-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
+
 <script src="{{asset('assets/customer/js/isotope-pkgd.min.js')}}"></script>
 <script src="{{asset('assets/customer/js/vendor/waypoints.js')}}"></script>
 <script src="{{asset('assets/customer/js/bootstrap-bundle.js')}}"></script>
@@ -18,6 +22,14 @@
 <script src="{{asset('assets/customer/js/ajax-form.js')}}"></script>
 <script src="{{asset('assets/customer/js/main.js')}}"></script>
 <script src="{{asset('assets/customer/js/search.js')}}"></script>
+
+
+
+
+<!-- JS Libraies -->
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- custom js -->
 <script src="{{ asset('assets/customer/js/custom.js') }}"></script>

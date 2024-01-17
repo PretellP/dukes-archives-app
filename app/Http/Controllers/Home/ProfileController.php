@@ -24,7 +24,7 @@ class ProfileController extends Controller
 
     public function index(Request $user)
     {
-        if($user->ajax()){   
+        if($user->ajax()){
             $user = Auth::user();
         }else{
             $roles = Role::get(['id', 'name']);
@@ -48,13 +48,13 @@ class ProfileController extends Controller
         return $user == null || $user->id == $id ? 'true' : 'false';
     }
 
-    
+
 
     public function order(Request $user)
     {
         return view('home.profile.order');
     }
-    
+
     public function password(Request $user)
     {
         return view('home.profile.password');
@@ -87,7 +87,7 @@ class ProfileController extends Controller
 
         $usuario = auth()->user();
 
-       
+
         if ($this->userService->actualizarContrasena($usuario, $request->contrasena_actual, $request->nueva_contrasena)) {
             return redirect()->route('home.profile.password')->with('mensaje', 'Contraseña actualizada correctamente');
         } else {

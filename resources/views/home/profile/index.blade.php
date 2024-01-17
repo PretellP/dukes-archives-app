@@ -1,4 +1,5 @@
 @extends('home.common.masterpage')
+
 @section('extra-head')
 
 <link rel="stylesheet" href="{{ asset('assets/admin/css/custom.css') }}">
@@ -13,45 +14,53 @@
 
 {{-- DropZone --}}
 
-<link rel="stylesheet" href="{{ asset('assets/common/css/components.css') }}"
+<link rel="stylesheet" href="{{ asset('assets/common/css/components.css') }}">
+
 @endsection
 
 @section('content')
+
 <div class="pt-4 pb-4" style="background-color: rgb(216, 215, 215)">
+
     <div class="container">
+
         <div class="row">
-            
+
 
             @include('home.profile.menu')
 
 
             <div class="col-md-9 col-9 p-1">
-                <form action="" class="userForm" id="editUserForm" method="POST" enctype="multipart/form-data"
-                data-validatenickname="{{ route('home.profile.validateEdit', ['column' => 'nickname']) }}"
-                data-validateemail="{{ route('home.profile.validateEdit', ['column' => 'email']) }}">
-                    @csrf 
+
+                <form action="#" class="userForm" id="editUserForm" method="POST" enctype="multipart/form-data"
+                    data-validateemail="{{ route('home.profile.validateEdit', ['column' => 'email']) }}">
+                        @csrf
+
+                    <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+
                     <div class="p-4" style="background-color: white">
+
                         <div class="col-12">
 
                             <p class="fs-6 fw-semibold text-dark">PERFIL</p>
-                
+
                             <div class="form-row">
-                                  
+
                                 <div class="form-group col-md-12">
                                     <label for="">Nombre *</label>
                                     <input type="text" name="name" class="form-control name" placeholder="Ingrese los nombres" value="{{ Auth::user()->name }}">
                                 </div>
-                
+
                                 <div class="form-group col-md-12">
                                     <label for="inputCompanyName">Apellidos *</label>
                                     <input type="text" name="lastname" class="form-control lastname"
                                         placeholder="Ingrese sus apellidos" value="{{ Auth::user()->lastname }}">
                                 </div>
-                
+
                             </div>
-                
+
                             <div class="form-row">
-                
+
                                 <div class="form-group col-md-6">
                                     <label for="inputPhone">Género *</label>
                                     <div class="input-group">
@@ -62,7 +71,7 @@
                                         </select>
                                     </div>
                                 </div>
-                
+
                                 <div class="form-group col-md-6">
                                     <label for="inputName">Fecha de nacimiento *</label>
                                     <div class="input-group">
@@ -74,9 +83,9 @@
                                         </div>
                                     </div>
                                 </div>
-                
+
                             </div>
-                
+
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail">Email *</label>
@@ -91,9 +100,9 @@
                                     </div>
                                 </div>
                             </div>
-                
+
                             <div class="form-row">
-                
+
                                 <div class="form-group col-md-5">
                                     <label>Tipo de documento *</label>
                                     <div class="input-group">
@@ -104,7 +113,7 @@
                                         </select>
                                     </div>
                                 </div>
-                
+
                                 <div class="form-group col-md-7">
                                     <label>Nro. de documento *</label>
                                     <div class="input-group">
@@ -117,28 +126,32 @@
                                         </div>
                                     </div>
                                 </div>
-                
+
                             </div>
 
                             <button type="submit" class="btn btn-primary">
                                 Actualizar
                             </button>
-                
+
                         </div>
-                        
-                        
+
+
                     </div>
 
-                    
+
                 </form>
+
             </div>
+
         </div>
+
     </div>
+
 </div>
-      
+
 @endsection
 
 
 @section('extra-script')
-<script src="{{asset('assets/admin/js/page/users.js')}}"></script>
+<script type="module" src="{{asset('assets/customer/js/page/users.js')}}"></script>
 @endsection
