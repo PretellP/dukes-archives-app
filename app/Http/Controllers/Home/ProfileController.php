@@ -9,6 +9,7 @@ use App\Services\UserService;
 use Auth;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
