@@ -36,21 +36,22 @@ $(function () {
                  // El contenedor de etiquetas en el modal
                  // Limpiar el contenedor antes de agregar nuevas etiquetas
 
-                labels.forEach(function (label, i) {
+                 labels.forEach(function (label, i) {
                     let labelName = label.name
                     if (!(labels.length == (i+1))) {
                         labelName += ', '
                     } else {
                         labelName += '.'
                     }
-                    var labelElement = $('<span>').text(labelName).addClass('label');
+                    var labelElement = $('<span>').text(labelName.toUpperCase()).addClass('label');
                     labelsContainer.append(labelElement);
                 });
+                
 
                 modal.find('.name').text(name);
                 modal.find('.description').text(description);
                 modal.find('.author').text(author);
-                modal.find('.sale_price').text(sale_price);
+                modal.find('.sale_price').text('S/' + sale_price);
 
                 product_images_container.html(data.html)
             },

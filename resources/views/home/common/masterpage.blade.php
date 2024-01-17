@@ -54,19 +54,18 @@
 
 
                                         <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{route('home.profile.index')}}"> Datos del Perfil</a>
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
-                                                {{ __('cerrar sesión') }}
+                                                {{ __('Cerrar Sesión') }}
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                 @csrf
                                             </form>
 
-                                            <a class="dropdown-item" href="{{ route('home.profile.index') }}">
-                                                {{ __('Mi perfil') }}
-                                            </a>
+                                            
                                         </div>
 
 
@@ -232,7 +231,8 @@
     <!-- back to top start -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"  />
+           
         </svg>
     </div>
     <!-- back to top end -->

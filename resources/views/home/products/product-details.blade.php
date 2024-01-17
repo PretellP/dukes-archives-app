@@ -55,14 +55,8 @@
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <span class="sku mr-10">SKU:</span>
-                                                <span>Samsung C49J89: £875, Debenhams Plus</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
                                                 <span class="cat mr-10">Etiquetas:</span>
-                                                <span class="labels"></span>
+                                                <span class="labels"> </span>
                                             </a>
                                         </li>
                                     </ul>

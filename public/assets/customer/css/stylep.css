@@ -180,7 +180,10 @@ button:focus {
 .capitalize {
   text-transform: capitalize;
 }
-
+.mid{
+  width: fit-content;
+  margin: auto;
+}
 input {
   outline: none;
 }
@@ -218,8 +221,32 @@ input {
 /*---------------------------------
     common classes css start
 ---------------------------------*/
+.img-gallery{
+  height: 85px;
+  width: 85px;
+  padding: 4px;
+  
+}
+.img-shop{
+  height: 231px;
+  width: 231px;
+  padding: 4px;
+  
+}
+.img-show-gallery{
+  height: 400px;
+  width: 400px;
+  padding: 3px;
+  
+}
 .w-img img {
   width: 100%;
+}
+
+select[disabled] {
+  color: #cb1f1f; /* Color de texto atenuado */
+  background-color: #eee; /* Fondo atenuado */
+  cursor: not-allowed; /* Cambiar el cursor para indicar que no se puede interactuar */
 }
 
 /*
@@ -901,7 +928,7 @@ input {
 }
 
 .product__modal .nav.nav-tabs li {
-    width: 150px;
+    width: 90px;
 }
 
 .product__modal .nav.nav-tabs li img{

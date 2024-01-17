@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\home;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\User\{UserStoreRequest, UserUpdateRequest};
 use Illuminate\Http\Request;
 use App\Models\{Role, User};
 use App\Services\UserService;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Auth;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
