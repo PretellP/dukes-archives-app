@@ -82,6 +82,9 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----
             Route::get('/', 'index') -> name('index');
+            Route::post('/actualizar-cantidad/{p}','updateQ')->name('updateQuantity');
+            Route::get('agregandoProducto/{p}', 'agregar')->name('agregarProducto');
+            Route::get('eliminando/{p}', 'eliminar')->name('eliminarProducto');
         });
     });
 

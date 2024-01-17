@@ -75,7 +75,9 @@
                                 <div class="block-wishlist action">
                                     <a class="icon-link" href="{{route('home.wishlist.index')}}">
                                     <i class="flaticon-heart"></i>
-                                    <span class="count">0</span>
+                                    <span class="count">
+                                        {{ $wishlistCount }}
+                                    </span>
                                     <span class="text d-sm-block d-none">
                                     <span class="sub">Favorito</span>
                                     Mi Lista </span>

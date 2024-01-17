@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="{{ asset('assets/common/css/fonts.css') }}">
 <!-- General CSS Files -->
 <link rel="stylesheet" href="{{ asset('assets/common/modules/bootstrap/css/bootstrap.min.css') }}">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 	
 
 	
@@ -22,67 +23,94 @@
 
             <div class="col-md-9 col-9 p-1">
                 
-                    <div class="p-4" style="background-color: white">
-                        <div class="col-12 d-flex justify-content-between border-bottom pb-4">
+                <div class="p-4" style="background-color: white">
+                    <div class="col-12 d-flex justify-content-between border-bottom pb-4">
 
-                            <p class="fs-6 fw-semibold text-dark">LISTA DE DESEOS</p>
+                        <p class="fs-6 fw-semibold text-dark">LISTA DE DESEOS</p>
 
-                            <button class="btn btn-primary">
-                                Añadir todo al carrito
-                            </button>
-                
-                        </div>
-                        
-                        <!-- cart-area-start -->
-                        <section class="cart-area pt-4 pb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <form action="#">
-                                            <div class="table-content table-responsive">
-                                                <table class="table">
-                                                        <thead>
-                                                        <tr>
-                                                            <th class="product-thumbnail">Images</th>
-                                                            <th class="cart-product-name">Product</th>
-                                                            <th class="product-price">Unit Price</th>
-                                                            <th class="product-quantity">Quantity</th>
-                                                            <th class="product-subtotal">Total</th>
-                                                            <th class="product-remove">Remove</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <tr>
-                                                            <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-10.jpg" alt=""></a></td>
-                                                            <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket light</a></td>
-                                                            <td class="product-price"><span class="amount">$130.00</span></td>
-                                                            <td class="product-quantity">
-                                                                    <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
-                                                            </td>
-                                                            <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-11.jpg" alt=""></a></td>
-                                                            <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket Pink</a></td>
-                                                            <td class="product-price"><span class="amount">$120.50</span></td>
-                                                            <td class="product-quantity">
-                                                                    <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
-                                                            </td>
-                                                            <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                        </tr>
-                                                        </tbody>
-                                                </table>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                        </section>
-                        <!-- cart-area-end -->
-                        
+                        <button class="btn btn-primary">
+                            Añadir todo al carrito
+                        </button>
+            
                     </div>
-                
-            </div>
+                    
+                    <!-- cart-area-start -->
+                    <section class="cart-area pt-4 pb-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <form action="#">
+                                        <div class="table-content table-responsive">
+                                            <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="product-thumbnail">Images</th>
+                                                        <th class="cart-product-name">Product</th>
+                                                        <th class="product-price">Unit Price</th>
+                                                        <th class="product-quantity">Quantity</th>
+                                                        <th class="product-subtotal">Total</th>
+                                                        <th class="product-remove">Remove</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach ($desired as $item)
+                                                            <tr>
+                                                                
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="" alt="" style="width: 45px; height: 45px"
+                                                                            class="rounded-circle imgPm" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>{{ $item->name }}</td>
+                                                                <td>{{ $item->sale_price }}</td>
+                                                                <td>
+                                                                    <input class="quantity-input" type="number" step="1" min="1" value="{{$item->pivot->quantity}}"
+                                                                    data-url="{{route('home.wishlist.updateQuantity', $item)}}"
+                                                                    name="quantity-{{$item->id}}">
+
+                                                                    
+                                                                </td>
+
+                                                                <td class="total-price-container total-price" id='total-price'>
+                                                                    @php
+                                                                        $totalPrice = $item->sale_price * $item->pivot->quantity
+                                                                    @endphp
+                                                                    {{$totalPrice}}
+                                                                    <input id='' type="hidden" value='{{$totalPrice}}'>
+                                                                
+                                                                </td>
+
+                                                                
+                                                               
+                                            
+                                            
+                                                                <!--BOTONES CRUD-->
+                                                                <td>
+                                                                    <a href="{{route('home.wishlist.eliminarProducto', $item)}}"
+                                                                        class='text-decoration-none text-light'>
+                                                                        <button type="button" class="btn btn-danger btn-sm">
+                                                                            <i class="bi bi-trash3 "></i>
+                                                                        </button>
+                                                                    </a>
+                                                                </td>
+                                            
+                                                                
+                                            
+                                                            </tr>
+                                                        @endforeach
+                                            
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                    </section>
+                    <!-- cart-area-end -->
+                    
+                </div>
+            
+        </div>
         </div>
     </div>
 </div>
@@ -91,5 +119,5 @@
 
 
 @section('extra-script')
-<script type="module" src="{{ asset('assets/admin/js/page/users.js') }}"></script>
+<script src="{{asset('assets/customer/js/desiredProducts.js')}}"></script>
 @endsection
