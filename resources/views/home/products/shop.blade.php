@@ -44,7 +44,7 @@
                                                     <div class="product__thumb fix">
                                                         <div class="product-image w-img">
                                                             <a>
-                                                                <img src="{{ verifyImage($product->files->first()) }}"
+                                                                <img src=""
                                                                     alt="product" class="img-shop">
                                                             </a>
                                                         </div>
@@ -56,7 +56,7 @@
                                                                 </a>
                                                            
                                                             
-                                                            <a href="#" class="icon-box icon-box-1">
+                                                            <a href="{{route('home.wishlist.agregarProducto', $product)}}" class="icon-box icon-box-1">
                                                                 <i class="fa fa-heart"></i>
                                                                 <i class="fa fa-heart"></i>
                                                             </a>

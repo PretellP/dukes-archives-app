@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\home;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Http\Controllers\Controller;
-use App\Models\{Label, Product};
+use App\Models\{Label, Product, User};
+use Auth;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -19,9 +20,15 @@ class ShopController extends Controller
             );
         $labels = Label::get(['id', 'name']);
 
+        if (Auth::check()) {
+            $user = Auth::user();
+            $wishlistCount = $user->desired()->count();
+        }    
+
         return view('home.products.shop', compact(
             'products',
-            'labels'
+            'labels',
+            'wishlistCount'
         ));
     }
     public function show(Product $product)
@@ -33,9 +40,17 @@ class ShopController extends Controller
 
         $htmlImages = view('home.products.components._product-view-images', compact('productDetails'))->render();
 
+        $wishlistCount = 0;
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            $wishlistCount = $user->desired()->count();
+        }
+
         return response()->json([
             "product" => $productDetails,
-            "html" => $htmlImages
+            "html" => $htmlImages,
+            'wishlistCount' => $wishlistCount
         ]);
     }
 

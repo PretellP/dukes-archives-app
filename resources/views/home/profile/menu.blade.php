@@ -8,7 +8,7 @@
         <div class="ps-1">
             <ul>
                 <li>
-                    <a href="{{ route('home.profile.index') }}" class="d-flex gap-2 align-items-center pt-2 pb-2">
+                    <a href="" class="d-flex gap-2 align-items-center pt-2 pb-2">
                         <img src="{{asset('assets/customer/img/profile/user.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Información de perfil</p>
                     </a>
@@ -21,19 +21,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('home.profile.order') }}" class="d-flex gap-2 align-items-center pt-2 pb-2">
+                    <a href="" class="d-flex gap-2 align-items-center pt-2 pb-2">
                         <img src="{{asset('assets/customer/img/profile/orders.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Mis pedidos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('home.profile.password') }}" class="d-flex gap-2 align-items-center pt-2 pb-2">
+                    <a href="" class="d-flex gap-2 align-items-center pt-2 pb-2">
                         <img src="{{asset('assets/customer/img/profile/password.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Contraseña</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('home.profile.pay') }}" class="d-flex gap-2 align-items-center pt-2 pb-2">
+                    <a href="" class="d-flex gap-2 align-items-center pt-2 pb-2">
                         <img src="{{asset('assets/customer/img/profile/pay.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Información de pago</p>
                     </a>
