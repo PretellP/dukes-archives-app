@@ -14,7 +14,7 @@ class WishlistController extends Controller
         $wishlistCount = 0;
         $user = Auth::user();
 
-        $desired = NULL;
+        $desired = collect();
         $CartProductsIds = array();
 
         $wishlistCount = 0;
@@ -30,24 +30,22 @@ class WishlistController extends Controller
                 {
                     array_push($CartProductsIds, $product->id);
                 }
+
+                $total_amount = $desired->sum(function ($product) {
+                    return $product->sale_price;
+                });
+                $total_qtty = $desired->sum(function ($product) {
+                    return $product->pivot->quantity;
+                });
+
+                $total_price = $total_amount * $total_qtty;
+
             }
 
             $wishlistCount = $user->desired()->count();
         }
 
         $products=Product::whereNotIn('id', $CartProductsIds)->get();
-
-        if ($desired)
-        {
-            $total_amount = $desired->sum(function ($product) {
-                                return $product->sale_price;
-                            });
-            $total_qtty = $desired->sum(function ($product) {
-                return $product->pivot->quantity;
-            });
-
-            $total_price = $total_amount * $total_qtty;
-        }
 
         return view('home.profile.wishlist',[
                 'products' => $products,
