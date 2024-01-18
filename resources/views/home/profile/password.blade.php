@@ -15,24 +15,24 @@
 
 {{-- DropZone --}}
 
-<link rel="stylesheet" href="{{ asset('assets/common/css/components.css') }}"
+<link rel="stylesheet" href="{{ asset('assets/common/css/components.css') }}">
 
-	
 
-	
+
+
 @endsection
 
 @section('content')
 <div class="pt-4 pb-4" style="background-color: rgb(216, 215, 215)">
     <div class="container">
         <div class="row">
-            
+
 
             @include('home.profile.menu')
 
 
             <div class="col-md-9 col-9 p-1">
-                
+
                 <!-- resources/views/editar-contrasena-form.blade.php -->
 
                 <form action="{{ route('home.profile.editar-contrasena') }}" method="post">
@@ -44,7 +44,7 @@
                             <p class="fs-6 fw-semibold text-dark">CAMBIAR CONTRASEÑA</p>
 
                             <div class="form-row">
-                                  
+
                                 <div class="form-group col-md-12">
                                     <!-- Input para la contraseña actual -->
                                     <label for="contrasena_actual">Contraseña Actual:</label>
@@ -54,7 +54,7 @@
                                         <div class="error">{{ $message }}</div>
                                     @enderror
                                 </div>
-                
+
                                 <div class="form-group col-md-12">
                                     <!-- Input para la nueva contraseña -->
                                     <label for="nueva_contrasena">Nueva Contraseña:</label>
@@ -63,13 +63,13 @@
                                         <div class="error">{{ $message }}</div>
                                     @enderror
                                 </div>
-                
+
                             </div>
 
 
-                            
 
-                            
+
+
 
                             <!-- Botón para actualizar cambios -->
                             <button type="submit" class="btn btn-primary">Actualizar Cambios</button>
@@ -77,19 +77,19 @@
                             @if(session('mensaje'))
                             <div class="mensaje">{{ session('mensaje') }}</div>
                             @endif
-                        </div>  
-                    </div>        
+                        </div>
+                    </div>
 
                 </form>
-                
-               
+
+
 
 
             </div>
         </div>
     </div>
 </div>
-      
+
 <style>
     /* public/css/styles.css */
 

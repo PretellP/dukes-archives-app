@@ -100,11 +100,11 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             Route::post('/editar-contrasena', 'editarContrasena')->name('editar-contrasena');
             Route::post('/verificar-contrasena', 'verificarContrasena')->name('verificar-contrasena');
 
-            Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
-            //Route::get('/', 'lista-de-deseos')->name('list');
-            //Route::get('/ver/{user}', 'show')->name('show');
-            //Route::get('/editar/{user}', 'edit')->name('edit');
-            //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
+            // Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
+            // Route::get('/', 'lista-de-deseos')->name('list');
+            // Route::get('/ver/{user}', 'show')->name('show');
+            // Route::get('/editar/{user}', 'edit')->name('edit');
+            // Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
         });
     });
 
