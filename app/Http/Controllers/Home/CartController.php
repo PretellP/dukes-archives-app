@@ -18,5 +18,6 @@ class CartController extends Controller
         return view('home.cart', compact(
             'wishlistCount'
         ));
+
     }
 }

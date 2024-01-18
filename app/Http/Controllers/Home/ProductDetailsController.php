@@ -11,6 +11,7 @@ class ProductDetailsController extends Controller
     public function index(Product $product)
     {
         $wishlistCount = 0;
+
         $productDetails = $product->load([
             'labels',
             'files' => fn ($q) => $q->where('file_type', 'imagenes')
@@ -20,7 +21,7 @@ class ProductDetailsController extends Controller
             $user = Auth::user();
             $wishlistCount = $user->desired()->count();
         } 
-
+      
         return view('home.products.product-details-view', compact(
             'productDetails',
             'wishlistCount'

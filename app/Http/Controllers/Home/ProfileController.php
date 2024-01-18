@@ -55,12 +55,24 @@ class ProfileController extends Controller
 
     public function order(Request $user)
     {
-        return view('home.profile.order');
+        $wishlistCount = 0;
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            $wishlistCount = $user->desired()->count();
+        }
+        return view('home.profile.order', compact('wishlistCount'));
     }
 
     public function password(Request $user)
     {
-        return view('home.profile.password');
+        $wishlistCount = 0;
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            $wishlistCount = $user->desired()->count();
+        }
+        return view('home.profile.password', compact('wishlistCount'));
     }
 
     public function verificarContrasena(Request $request)
@@ -88,13 +100,19 @@ class ProfileController extends Controller
             'nueva_contrasena' => 'required|min:8',
         ]);
 
-        $usuario = auth()->user();
+        //$usuario = auth()->user();
 
+        $wishlistCount = 0;
+
+        if (Auth::check()) {
+            $usuario = Auth::user();
+            $wishlistCount = $usuario->desired()->count();
+        }
 
         if ($this->userService->actualizarContrasena($usuario, $request->contrasena_actual, $request->nueva_contrasena)) {
-            return redirect()->route('home.profile.password')->with('mensaje', 'Contraseña actualizada correctamente');
+            return redirect()->route('home.profile.password')->with('mensaje', 'Contraseña actualizada correctamente')->with('wishlistCount', $wishlistCount);;
         } else {
-            return redirect()->route('home.profile.password')->withErrors(['contrasena_actual' => 'La contraseña actual no es correcta']);
+            return redirect()->route('home.profile.password')->withErrors(['contrasena_actual' => 'La contraseña actual no es correcta'])->with('wishlistCount', $wishlistCount);;
         }
     }
 }
