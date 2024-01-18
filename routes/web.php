@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\{
     AnnouncementsController,
+    CustomerController,
     UsersController,
     DashboardController,
     LabelsController,
@@ -82,7 +83,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----
             Route::get('/', 'index') -> name('index');
-            Route::post('/actualizar-cantidad{p}','update')->name('updateQuantity');
+            Route::post('/actualizar-cantidad/{product}','update')->name('updateQuantity');
             Route::get('agregandoProducto/{p}', 'agregar')->name('agregarProducto');
             Route::get('eliminando/{p}', 'eliminar')->name('eliminarProducto');
         });
@@ -183,6 +184,17 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
         Route::group(['prefix' => 'anuncios', 'as' => 'announcements.'], function () {
 
             Route::controller(AnnouncementsController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
+            });
+        });
+
+         // ---------------- CUSTOMERS -------------------
+
+         // ------ admin.customers.* -----------------
+        Route::group(['prefix' => 'clientes', 'as' => 'customers.'], function () {
+
+            Route::controller(CustomerController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
             });

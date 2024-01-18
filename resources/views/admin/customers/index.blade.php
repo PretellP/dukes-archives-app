@@ -8,21 +8,15 @@
         <div class="card page-title-container">
             <div class="card-header">
                 <div class="total-width-container">
-                    <h4>USUARIOS</h4>
+                    <h4>CLIENTES</h4>
                 </div>
             </div>
         </div>
 
         <div class="card-body card z-index-2 principal-container container-dashboard">
 
-            <div class="mb-4">
-                <button class="btn btn-primary" id="btn-register-user-modal" data-url=''
-                    data-toggle='modal' data-target='#RegisterUserModal'>
-                    <i class="fa-solid fa-user-plus"></i> &nbsp; Registrar
-                </button>
-            </div>
 
-            <table id="users-table" class="table table-hover" data-url="{{route('admin.users.index')}}">
+            <table id="customers-table" class="table table-hover" data-url="">
                 <thead>
                     <tr>
                         <th>N°</th>
@@ -35,7 +29,6 @@
                         <th>Teléfono</th>
                         <th>Rol</th>
                         <th>Estado</th>
-                        <th>Acción</th>
                     </tr>
                 </thead>
             </table>
@@ -49,11 +42,9 @@
 @endsection
 
 @section('modals')
-@include('admin.users.partials.modals._register')
-@include('admin.users.partials.modals._edit')
 @include('admin.users.partials.modals._view')
 @endsection
 
 @section('extra-script')
-<script type="module" src="{{ asset('assets/admin/js/page/users.js') }}"></script>
+<script type="module" src="{{ asset('assets/admin/js/page/customers.js') }}"></script>
 @endsection
