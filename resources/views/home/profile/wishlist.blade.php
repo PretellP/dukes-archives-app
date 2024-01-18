@@ -57,32 +57,25 @@
                                                                 
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
-                                                                        <img src="" alt="" style="width: 45px; height: 45px"
+                                                                        <img src="{{ verifyImage($item->files->first()) }}" alt="" style="width: 45px; height: 45px"
                                                                             class="rounded-circle imgPm" />
                                                                     </div>
                                                                 </td>
                                                                 <td>{{ $item->name }}</td>
                                                                 <td>{{ $item->sale_price }}</td>
                                                                 <td>
-                                                                    <input class="quantity-input" type="number" step="1" min="1" value="{{$item->pivot->quantity}}"
-                                                                    data-url="{{route('home.wishlist.updateQuantity', $item)}}"
-                                                                    name="quantity-{{$item->id}}">
-
-                                                                    
+                                                                    <input class="quantity-input_{{$item->pivot->product_id}}" 
+                                                                        type="number" 
+                                                                        value="{{ $item->pivot->quantity }}"                               
+                                                                        data-product-id="{{ $item->pivot->product_id }}">
                                                                 </td>
-
-                                                                <td class="total-price-container total-price" id='total-price'>
+                                                                <td class="subtotal" data-product-id="{{ $item->pivot->product_id }}">
                                                                     @php
-                                                                        $totalPrice = $item->sale_price * $item->pivot->quantity
+                                                                    $totalPrice = $item->sale_price * $item->pivot->quantity
                                                                     @endphp
                                                                     {{$totalPrice}}
                                                                     <input id='' type="hidden" value='{{$totalPrice}}'>
-                                                                
                                                                 </td>
-
-                                                                
-                                                               
-                                            
                                             
                                                                 <!--BOTONES CRUD-->
                                                                 <td>
@@ -98,7 +91,21 @@
                                             
                                                             </tr>
                                                         @endforeach
-                                            
+                                                        <tr>
+                                                            <tr>
+                                                                <td id="total" colspan="2"> Total </td>
+                                                                <td id="total-value">
+                                                                   
+                                                                    @php
+                                                                        $totalPrice = $item->sale_price * $item->pivot->quantity
+                                                                    @endphp
+                                                                    {{$totalPrice}}
+                                                                    <input id='' type="hidden" value='{{$totalPrice}}'>
+
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </tr>
                                                     </tbody>
                                             </table>
                                         </div>
@@ -115,8 +122,9 @@
     </div>
 </div>
       
-@endsection
 
+
+@endsection
 
 @section('extra-script')
 <script src="{{asset('assets/customer/js/desiredProducts.js')}}"></script>

@@ -42,13 +42,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
-    Route::controller(ProfileController::class)->group(function () {
+    /* Route::controller(ProfileController::class)->group(function () {
         Route::group(["prefix" => "perfil", "as" => "profile."], function(){
             //----- shop.* -----
             Route::get('/', 'index') -> name('index');
             Route::patch('/user/{user}', 'update') -> name('update');
         });
-    });
+    }); */
 
     Route::controller(ProductDetailsController::class)->group(function () {
         Route::group(["prefix" => "detalles-de-producto", "as" => "product-details."], function(){
@@ -82,13 +82,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----
             Route::get('/', 'index') -> name('index');
-            Route::post('/actualizar-cantidad/{p}','updateQ')->name('updateQuantity');
+            Route::post('/actualizar-cantidad{p}','update')->name('updateQuantity');
             Route::get('agregandoProducto/{p}', 'agregar')->name('agregarProducto');
             Route::get('eliminando/{p}', 'eliminar')->name('eliminarProducto');
         });
     });
 
-    /* Route::controller(ProfileController::class)->group(function () {
+    Route::controller(ProfileController::class)->group(function () {
 
         Route::group(["prefix" => "perfil", "as" => "profile."], function () {
              //----- profile.* -----
@@ -105,7 +105,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             //Route::get('/editar/{user}', 'edit')->name('edit');
             //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
         });
-    }); */
+    });
 
 
 });
