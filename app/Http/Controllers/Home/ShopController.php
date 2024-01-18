@@ -11,6 +11,7 @@ class ShopController extends Controller
 {
     public function index()
     {
+        $wishlistCount = 0;
         $products= Product::with([
                 'labels',
                 'files' => fn ($q) => $q->where('file_type', 'imagenes')

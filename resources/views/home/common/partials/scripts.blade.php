@@ -33,5 +33,5 @@
 
 <!-- custom js -->
 <script src="{{ asset('assets/customer/js/custom.js') }}"></script>
-<script src="{{ asset('assets/customer/js/contador.js') }}"></script>
+
 @yield('extra-script')

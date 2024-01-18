@@ -44,7 +44,7 @@
                                                     <div class="product__thumb fix">
                                                         <div class="product-image w-img">
                                                             <a>
-                                                                <img src=""
+                                                                <img src="{{ verifyImage($product->files->first()) }}"
                                                                     alt="product" class="img-shop">
                                                             </a>
                                                         </div>

@@ -67,7 +67,7 @@
                         <div class="details-meta">
                             <div class="d-meta-left">
                                 <div class="dm-item mr-20">
-                                    <a href="#"><i class="fas fa-heart"></i>Add to wishlist</a>
+                                    <a href="{{route('home.wishlist.agregarProducto', $productDetails)}}"><i class="fas fa-heart"></i>Add to wishlist</a>
                                 </div>
                                 
                             </div>
