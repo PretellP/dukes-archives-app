@@ -20,6 +20,7 @@ class ShopController extends Controller
             );
         $labels = Label::get(['id', 'name']);
 
+        $wishlistCount = 0;
         if (Auth::check()) {
             $user = Auth::user();
             $wishlistCount = $user->desired()->count();
