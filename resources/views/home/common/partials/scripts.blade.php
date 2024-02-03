@@ -25,6 +25,8 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
 <!-- JS Libraies -->
 
@@ -33,5 +35,6 @@
 
 <!-- custom js -->
 <script src="{{ asset('assets/customer/js/custom.js') }}"></script>
+
 
 @yield('extra-script')
