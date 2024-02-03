@@ -23,26 +23,53 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-10.jpg" alt=""></a></td>
-                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Light Jacket</a></td>
-                                        <td class="product-price"><span class="amount">$130.00</span></td>
-                                        <td class="product-quantity">
-                                            <button class="tp-btn-h1" type="submit">Add To Cart</button>
-                                        </td>
-                                        <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-11.jpg" alt=""></a></td>
-                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Pink Jacket</a></td>
-                                        <td class="product-price"><span class="amount">$120.50</span></td>
-                                        <td class="product-quantity">
-                                            <button class="tp-btn-h1" type="submit">Add To Cart</button>
-                                        </td>
-                                        <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                    </tr>
+                                    @foreach ($desired as $item)
+                                        <tr>
+
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="" alt="" style="width: 45px; height: 45px"
+                                                        class="rounded-circle imgPm" />
+                                                </div>
+                                            </td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->sale_price }}</td>
+                                            <td>
+                                                <input class="quantity-input" type="number" step="1" min="1" value="{{$item->pivot->quantity}}"
+                                                data-url="{{route('home.wishlist.updateQuantity', $item)}}"
+                                                name="quantity-{{$item->id}}">
+
+
+                                            </td>
+
+                                            <td class="total-price-container total-price" id='total-price'>
+                                                @php
+                                                    $totalPrice = $item->sale_price * $item->pivot->quantity
+                                                @endphp
+                                                {{$totalPrice}}
+                                                <input id='' type="hidden" value='{{$totalPrice}}'>
+
+                                            </td>
+
+
+
+
+
+                                            <!--BOTONES CRUD-->
+                                            <td>
+                                                <a href="{{route('home.wishlist.eliminarProducto', $item)}}"
+                                                    class='text-decoration-none text-light'>
+                                                    <button type="button" class="btn btn-danger btn-sm">
+                                                        <i class="bi bi-trash3 "></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+
+
+
+                                        </tr>
+                                    @endforeach
+
                                 </tbody>
                             </table>
                         </div>

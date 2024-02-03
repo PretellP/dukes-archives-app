@@ -61,6 +61,11 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "carrito", "as" => "cart."], function () {
             //----- cart.* -----
             Route::get('/', 'index') -> name('index');
+            Route::post('/actualizar-cantidad/{product}','updateQ')->name('updateQuantity');
+            Route::get('/agregandoProducto/{p}', 'agregar')->name('agregarProducto');
+            Route::get('/eliminando/{p}', 'eliminar')->name('eliminarProducto');
+            Route::get('/cancelando', 'vaciar')->name('cancelando');
+            Route::get('/proceder-al-pago', 'goCheckout')->name('goCheckout');
         });
     });
 

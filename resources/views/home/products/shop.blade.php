@@ -85,9 +85,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__add-cart-s text-center">
-                                                        <button type="button" class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
-                                                            Add to Cart
-                                                        </button>
+                                                        <a href="">
+                                                            <button type="button" class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
+                                                                Add to Cart
+                                                            </button>
+                                                        </a>
                                                         <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100 openProductDetailModal"
                                                             data-url="{{ url('/shop/product/'.$product->id) }}"
                                                             data-send="{{ route('home.shop.show', $product )}}">
