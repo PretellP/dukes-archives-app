@@ -46,6 +46,7 @@
                                 </thead>
                                 <tbody>
                                    <tr>
+
                                       <td class="product-thumbnail ">
                                         <img src="https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9788416604500_sn4ssnorvcune4rb.jpg" style="object-fit: cover;" alt="">                                      </td>
                                       <td class="product-name" colspan='1'>
@@ -56,7 +57,6 @@
                                             <div class="col-12 d-flex flex-start">$130.00</div>
                                         </div> 
                                       </td>
-
                                       
                                       <td class="product-quantity">
                                             <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>

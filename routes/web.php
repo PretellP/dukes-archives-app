@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\{
     AnnouncementsController,
+    CustomerController,
     UsersController,
     DashboardController,
     LabelsController,
@@ -42,13 +43,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
-    Route::controller(ProfileController::class)->group(function () {
+    /* Route::controller(ProfileController::class)->group(function () {
         Route::group(["prefix" => "perfil", "as" => "profile."], function(){
             //----- shop.* -----
             Route::get('/', 'index') -> name('index');
             Route::patch('/user/{user}', 'update') -> name('update');
         });
-    });
+    }); */
 
     Route::controller(ProductDetailsController::class)->group(function () {
         Route::group(["prefix" => "detalles-de-producto", "as" => "product-details."], function(){
@@ -87,13 +88,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----
             Route::get('/', 'index') -> name('index');
-            Route::post('/actualizar-cantidad/{p}','updateQ')->name('updateQuantity');
+            Route::post('/actualizar-cantidad/{product}','update')->name('updateQuantity');
             Route::get('agregandoProducto/{p}', 'agregar')->name('agregarProducto');
             Route::get('eliminando/{p}', 'eliminar')->name('eliminarProducto');
         });
     });
 
-    /* Route::controller(ProfileController::class)->group(function () {
+    Route::controller(ProfileController::class)->group(function () {
 
         Route::group(["prefix" => "perfil", "as" => "profile."], function () {
              //----- profile.* -----
@@ -104,13 +105,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
             Route::post('/editar-contrasena', 'editarContrasena')->name('editar-contrasena');
             Route::post('/verificar-contrasena', 'verificarContrasena')->name('verificar-contrasena');
 
-            Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
-            //Route::get('/', 'lista-de-deseos')->name('list');
-            //Route::get('/ver/{user}', 'show')->name('show');
-            //Route::get('/editar/{user}', 'edit')->name('edit');
-            //Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
+            // Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
+            // Route::get('/', 'lista-de-deseos')->name('list');
+            // Route::get('/ver/{user}', 'show')->name('show');
+            // Route::get('/editar/{user}', 'edit')->name('edit');
+            // Route::post('/validar-edición/{column}', 'editValidate')->name('validateEdit');
         });
-    }); */
+    });
 
 
 });
@@ -188,6 +189,17 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
         Route::group(['prefix' => 'anuncios', 'as' => 'announcements.'], function () {
 
             Route::controller(AnnouncementsController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
+            });
+        });
+
+         // ---------------- CUSTOMERS -------------------
+
+         // ------ admin.customers.* -----------------
+        Route::group(['prefix' => 'clientes', 'as' => 'customers.'], function () {
+
+            Route::controller(CustomerController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
             });

@@ -4,10 +4,9 @@ namespace App\Http\Controllers\home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Models\{Role, User, Product};
 use Auth;
-
-
 class CartController extends Controller
 {
 
@@ -32,6 +31,7 @@ class CartController extends Controller
 
             $wishlistCount = 0;
             $wishlistCount = $user->desired()->count();
+      
             return view('home.cart',[
                     'shoppingCart' => $shoppingCart,
                     'wishlistCount' => $wishlistCount

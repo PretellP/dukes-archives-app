@@ -22,19 +22,23 @@ class ProfileController extends Controller
 
     public function index(Request $user)
     {
+        $wishlistCount = 0;
         if($user->ajax()){
             $user = Auth::user();
         }else{
             $roles = Role::get(['id', 'name']);
             $genders = config('parameters.genders');
             $document_types = config('parameters.document_types');
-
+        if (Auth::check()) {
+            $user = Auth::user();
+            $wishlistCount = $user->desired()->count();
+        }  
             return view('home.profile.index', compact(
                 'user',
                 'roles',
                 'genders',
                 'document_types',
-                'wishlistCount', 
+                'wishlistCount'
             ));
         }
     }

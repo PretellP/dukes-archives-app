@@ -66,8 +66,8 @@
                 </li>
             </ul>
 
-            <li class="">
-                <a href="" class="nav-link">
+            <li class="{{setActive('admin.customers.*')}}">
+                <a href="{{ route('admin.customers.index') }}" class="nav-link">
                     <i class="fa-solid fa-user-tag"></i>
                     <span>Clientes</span>
                 </a>

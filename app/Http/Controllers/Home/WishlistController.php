@@ -11,55 +11,76 @@ class WishlistController extends Controller
     public function index()
     {
         //return view('home.profile.wishlist');
-
+        $wishlistCount = 0;
         $user = Auth::user();
-        $desired=$user->desired;
+
+        $desired = collect();
         $CartProductsIds = array();
 
-       if($desired->isNotEmpty())
+        $wishlistCount = 0;
+        $total_price = 0;
+
+        if ($user) {
+
+            $desired=$user->desired;
+
+            if($desired->isNotEmpty())
             {
                 foreach($desired as $product)
                 {
-                    array_push($CartProductsIds,$product->id);
+                    array_push($CartProductsIds, $product->id);
                 }
+
+                $total_amount = $desired->sum(function ($product) {
+                    return $product->sale_price;
+                });
+                $total_qtty = $desired->sum(function ($product) {
+                    return $product->pivot->quantity;
+                });
+
+                $total_price = $total_amount * $total_qtty;
+
             }
 
-            
-            $products=Product::whereNotIn('id',$CartProductsIds)->get();
-            $wishlistCount = 0;
             $wishlistCount = $user->desired()->count();
+        }
 
-            return view('home.profile.wishlist',[
-                    'products' => $products,
-                    'desired' => $desired,
-                    'wishlistCount' => $wishlistCount
-            ]);
+        $products=Product::whereNotIn('id', $CartProductsIds)->get();
+
+        return view('home.profile.wishlist',[
+                'products' => $products,
+                'desired' => $desired,
+                'total_price' => $total_price,
+                'wishlistCount' => $wishlistCount
+        ]);
     }
 
-    public function updateQ(Request $request, Product $p)
+    public function update(Request $request, Product $product)
     {
         $user = Auth::user();
-
         $quantity = $request['quantity'];
 
-        $user->desired()->updateExistingPivot($p, [
-            'quantity' => $quantity
-        ]);
+        if ($product) {
+            $subtotal = $product->sale_price * $quantity;
+        }
 
-        $total = $p->sale_price * $quantity;
+        $user->desired()->updateExistingPivot($product, ['quantity' => $quantity]);
 
-       
-        $t=0;
-        
-         
+        $desiredItems = $user->desired;
+        $newTotal = $desiredItems->sum(function ($desiredItem) {
+            return $desiredItem->sale_price * $desiredItem->pivot->quantity;
+        });
+
         return response()->json([
-            "success" => "quantity updated",
-            "total" => $total
+            'total' => number_format($newTotal, 2),
+            'subtotal' => number_format($subtotal, 2)
         ]);
     }
 
+
+
     public function agregar(Product $p)
-    {   
+    {
         $user=Auth::user();
 
         //$wishlist = $user->desired()->count()->find($p->id);
@@ -80,10 +101,10 @@ class WishlistController extends Controller
         $wishlist = $user->desired()->sum('quantity');
 
 
-        
+
         //return response()->json(['count' => $wishlist]);
         return redirect()->route('home.shop.index');
-        
+
         //return response()->json([
         //    "success" => "Producto agregado a la lista de deseos",
         //    "wishlistCount" => $wishlistCount
@@ -91,7 +112,7 @@ class WishlistController extends Controller
     }
 
     public function eliminar(Product $p){
-        
+
         $user=Auth::user();
 
         $user->desired()->detach($p);
