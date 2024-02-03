@@ -14,18 +14,26 @@ class CartController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $shoppingCart = $user->shoppingCart()->with('files')->get();
-        $CartProductsIds = array();
+        $shoppingCart = collect();
+        $wishlistCount = 0;
 
-        if ($shoppingCart->isNotEmpty()) {
-            foreach ($shoppingCart as $product) {
-                array_push($CartProductsIds, $product->id);
+        if ($user) {
+
+            $shoppingCart = $user->shoppingCart()->with('files')->get();
+            $CartProductsIds = array();
+
+            if ($shoppingCart->isNotEmpty()) {
+                foreach ($shoppingCart as $product) {
+                    array_push($CartProductsIds, $product->id);
+                }
             }
+
+
+            $wishlistCount = 0;
+            $wishlistCount = $user->desired()->count();
+
         }
 
-
-        $wishlistCount = 0;
-        $wishlistCount = $user->desired()->count();
 
         return view('home.cart', [
             'shoppingCart' => $shoppingCart,
@@ -98,7 +106,7 @@ class CartController extends Controller
     {
         $user = Auth::user();
 
-        
+
     }
 
     public function eliminar(Product $p)
