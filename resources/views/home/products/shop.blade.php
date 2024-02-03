@@ -49,13 +49,13 @@
                                                             </a>
                                                         </div>
                                                         <div class="product-action">
-                                                           
+
                                                                 <a href="{{ route('home.product-details.index', $product) }}" class="icon-box icon-box-1">
                                                                     <i class="fa fa-eye"></i>
                                                                     <i class="fa fa-eye"></i>
                                                                 </a>
-                                                           
-                                                            
+
+
                                                             <a href="{{route('home.wishlist.agregarProducto', $product)}}" class="icon-box icon-box-1">
                                                                 <i class="fa fa-heart"></i>
                                                                 <i class="fa fa-heart"></i>
@@ -85,9 +85,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__add-cart-s text-center">
-                                                        <a href="">
+                                                        <a href="{{ route('home.cart.agregarProducto', ["p" => $product]) }}">
                                                             <button type="button" class="cart-btn d-flex mb-10 align-items-center justify-content-center w-100">
-                                                                Add to Cart
+                                                                Añadir al carrito
                                                             </button>
                                                         </a>
                                                         <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100 openProductDetailModal"

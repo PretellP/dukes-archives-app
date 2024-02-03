@@ -30,6 +30,12 @@
 (function ($) {
 	"use strict";
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
 	var windowOn = $(window);
 	////////////////////////////////////////////////////
 	//01. PreLoader Js
@@ -278,18 +284,19 @@
 
 	////////////////////////////////////////////////////
 	// 21. Cart Plus Minus Js
-	$(".cart-plus-minus").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
+
 	$(".qtybutton").on("click", function () {
 		var $button = $(this);
 		var oldValue = $button.parent().find("input").val();
+        console.log(oldValue)
 		if ($button.text() == "+") {
 			var newVal = parseFloat(oldValue) + 1;
 		} else {
 			// Don't allow decrementing below zero
-			if (oldValue > 0) {
+			if (oldValue > 1) {
 				var newVal = parseFloat(oldValue) - 1;
 			} else {
-				newVal = 0;
+				newVal = 1;
 			}
 		}
 		$button.parent().find("input").val(newVal);
@@ -354,16 +361,16 @@
     // 63. Data Countdown Js
     if (jQuery(".data-countdown").length > 0) {
 		$('[data-countdown]').each(function() {
-	
+
 		  var $this = $(this),
 			  finalDate = $(this).data('countdown');
-	
+
 		  $this.countdown(finalDate, function(event) {
-	
+
 			  $this.html(event.strftime('<span class="cdown days"><span class="time-count">%-D</span> <p>Days</p><span class="colon">:</span></span> <span class="cdown hour"><span class="time-count">%-H</span> <p>Hours</p><span class="colon">:</span></span> <span class="cdown minutes"><span class="time-count">%M</span> <p>Mins</p><span class="colon">:</span></span> <span class="cdown second"> <span><span class="time-count">%S</span> <p>Secs</p></span>'));
-	
+
 		  });
-	
+
 	  });
 	  }
 
@@ -380,7 +387,7 @@
 			autoplay: {
 					delay: 6000,
 				},
-			
+
 			// If we need pagination
 			pagination: {
 				el: '.swiper-pagination',
@@ -391,7 +398,7 @@
 				nextEl: '.bs-button-next',
 				prevEl: '.bs-button-prev',
 			},
-			
+
 			// And if we need scrollbar
 			scrollbar: {
 				el: '.swiper-scrollbar',
@@ -429,7 +436,7 @@
 			autoplay: {
 					delay: 6000,
 				},
-			
+
 			// If we need pagination
 			pagination: {
 				el: '.swiper-pagination',
@@ -440,7 +447,7 @@
 				nextEl: '.bs2-button-next',
 				prevEl: '.bs2-button-prev',
 			},
-			
+
 			// And if we need scrollbar
 			scrollbar: {
 				el: '.swiper-scrollbar',
@@ -476,7 +483,7 @@
 			autoplay: {
 					delay: 6000,
 				},
-			
+
 			// If we need pagination
 			pagination: {
 				el: '.swiper-pagination',
@@ -487,7 +494,7 @@
 				nextEl: '.bs2-button-next',
 				prevEl: '.bs2-button-prev',
 			},
-			
+
 			// And if we need scrollbar
 			scrollbar: {
 				el: '.swiper-scrollbar',
@@ -520,7 +527,7 @@
 			autoplay: {
 					delay: 6000,
 				},
-			
+
 			// If we need pagination
 			pagination: {
 				el: '.swiper-pagination',
@@ -531,7 +538,7 @@
 				nextEl: '.bs-button-next',
 				prevEl: '.bs-button-prev',
 			},
-			
+
 			// And if we need scrollbar
 			scrollbar: {
 				el: '.swiper-scrollbar',
@@ -583,17 +590,17 @@
 		path = [{x:-250, y:0}, {x:-100, y:-90}, {x:0, y:0}],
 		path2 = [{x:250, y:0}, {x:150, y:-80}, {x:60, y:0}],
 		path3 = [{x:-170, y:0}, {x:-80, y:-70}, {x:70, y:0}];
-	  
-	   
-		
+
+
+
 		var setupSequence = function() {
 		  let tl = new TimelineMax({repeat: -1, timeScale: 1.8});
-		  
+
 		  tl.set(mustard, {x:-250})
 		  .set(meat, {x:250})
 		  .set(soda, {x:-170})
-		  .to(cart, 2.1, { 
-			x:750, 
+		  .to(cart, 2.1, {
+			x:750,
 			ease: SlowMo.ease.config(0.5, 0.5, false),
 		  })
 		  .to(mustard, 1, {
@@ -624,10 +631,10 @@
 			scale: 0,
 		  },1.5);
 		}
-		
+
 		setupSequence();
 	}
-	
-	
+
+
 
 })(jQuery);
