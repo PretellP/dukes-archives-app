@@ -21,6 +21,7 @@
                 <div class="col-md-9 col-9 p-1">
 
                     <div class="p-4" style="background-color: white">
+                        
                         <div class="col-12 d-flex justify-content-between border-bottom pb-4">
 
                             <p class="fs-6 fw-semibold text-dark">LISTA DE DESEOS</p>

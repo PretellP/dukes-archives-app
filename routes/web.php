@@ -59,14 +59,10 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
     });
 
     Route::controller(CartController::class)->group(function () {
+
         Route::group(["prefix" => "carrito", "as" => "cart."], function () {
             //----- cart.* -----
             Route::get('/', 'index') -> name('index');
-            Route::post('/actualizar-cantidad/{product}','update')->name('updateQuantity');
-            Route::get('/agregandoProducto/{p}', 'agregar')->name('agregarProducto');
-            Route::get('/eliminando/{p}', 'eliminar')->name('eliminarProducto');
-            Route::get('/cancelando', 'vaciar')->name('cancelando');
-            Route::get('/proceder-al-pago', 'goCheckout')->name('goCheckout');
         });
     });
 
@@ -113,7 +109,22 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
+    // ---------- ONLY CUSTOMERS -----------------
 
+    Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
+
+        Route::group(["prefix" => "carrito", "as" => "cart."], function () {
+
+            Route::controller(CartController::class)->group(function () {
+
+                Route::post('/actualizar-cantidad/{product}','update')->name('updateQuantity');
+                Route::get('/agregandoProducto/{p}', 'agregar')->name('agregarProducto');
+                Route::get('/eliminando/{p}', 'eliminar')->name('eliminarProducto');
+                Route::get('/cancelando', 'vaciar')->name('cancelando');
+                Route::get('/pago-realizado-con-exito', 'paymentSuccess')->name('paymentSuccess');
+            });
+        });
+    });
 });
 
 

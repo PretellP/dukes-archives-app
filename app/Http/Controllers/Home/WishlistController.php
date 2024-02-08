@@ -100,11 +100,12 @@ class WishlistController extends Controller
 
         $wishlist = $user->desired()->sum('quantity');
 
+        $html = view('home')->render();
 
+        
 
         //return response()->json(['count' => $wishlist]);
         return redirect()->route('home.shop.index');
-
         //return response()->json([
         //    "success" => "Producto agregado a la lista de deseos",
         //    "wishlistCount" => $wishlistCount

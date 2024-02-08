@@ -72,7 +72,8 @@
                                     </div>
                                 @endguest
 
-                                <div class="block-wishlist action">
+                                <div class="block-wishlist action" id="">
+
                                     <a class="icon-link" href="{{ route('home.wishlist.index') }}">
                                         <i class="flaticon-heart"></i>
                                         <span class="count">
@@ -87,7 +88,9 @@
                                             Mi Lista
                                         </span>
                                     </a>
+
                                 </div>
+
                                 <div class="block-cart action">
                                     <a class="icon-link" href="{{route('home.cart.index')}}">
                                     <i class="flaticon-shopping-bag"></i>
