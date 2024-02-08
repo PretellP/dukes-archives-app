@@ -105,8 +105,20 @@ class CartController extends Controller
     public function addAll(Request $request)
     {
         $user = Auth::user();
-
-
+        $desiredProducts = $user->desired()->get();
+        $quantities = $request->input('quantities', []);
+    
+        foreach ($desiredProducts as $product) {
+            $quantity = $quantities[$product->id] ?? 0; // Obtiene la cantidad para este producto
+            if ($quantity > 0) {
+                $user->shoppingCart()->attach($product->id, ['quantity' => $quantity]);
+            }
+        }
+    
+        $user->desired()->detach();
+        return response()->json([
+            'success' => true,
+        ]);
     }
 
     public function eliminar(Product $p)

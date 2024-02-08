@@ -19,20 +19,7 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="product__modal-content">
                                 <h4><a class="name"></a></h4>
-                                <div class="product__review d-sm-flex">
-                                    <div class="rating rating__shop mb-10 mr-30">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__add-review mb-15">
-                                        <span>01 review</span>
-                                    </div>
-                                </div>
+                                
                                 <div class="sale_price"></div>
                                 <div class="product__modal-des mt-20 mb-15 description"></div>
                                 <div class="product__stock mb-20">

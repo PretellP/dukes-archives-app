@@ -16,7 +16,8 @@
 
         <div class="container border pt-50 pb-50">
             <div class="row cart">
-                <div class="col-9">
+                @include('home.profile.menu')
+                <div class="col-6">
                     <div class="row me-1 d-flex flex-column gap-1">
                         <div class="col-12 border-bottom" style="background: white">
                             <div>
@@ -41,7 +42,7 @@
                                     <div class="row border-bottom product-cart-row">
                                         <div style="width: 200px;" class="me-4">
                                             <img src="{{ verifyImage($item->files->first()) }}"
-                                                style="object-fit: cover; height:200px; width: 200px;" alt="">
+                                                class="img-cart"alt="">
                                         </div>
                                         <div class="col-6 pt-20 d-flex flex-column align-items-start gap-3">
                                             <div class="name">
@@ -59,7 +60,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-2 pt-20 d-flex flex-column align-items-end align-content-around">
+                                        <div class="col-1 pt-20 d-flex flex-column align-items-end align-content-around">
                                             <div class="total-price subtotal" data-productid="{{ $item->id }}">
                                                 @php
                                                     $totalPrice = $item->sale_price * $item->pivot->quantity;

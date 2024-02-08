@@ -239,21 +239,35 @@ input.disabled[type=number] {
     height: 85px;
     width: 85px;
     padding: 4px;
-
+    object-fit: cover;
 }
 
 .img-shop {
     height: 231px;
     width: 231px;
     padding: 4px;
+    object-fit: cover;
+}
+.img-selected {
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+    object-fit: cover;
 
 }
-
+.img-cart{
+    height:200px;
+    width: 200px;
+    padding: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: cover; 
+}
 .img-show-gallery {
     height: 400px;
     width: 400px;
     padding: 3px;
-
+    object-fit: cover;
 }
 
 .w-img img {
@@ -847,6 +861,7 @@ select[disabled] {
     color: #222;
     border-color: #fcbe00;
 }
+
 
 /*----------------------------------------*/
 /*    05. carousel CSS
