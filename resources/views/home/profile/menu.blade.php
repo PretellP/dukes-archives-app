@@ -1,6 +1,4 @@
 
-
-
 <div class="col-md-3 col-3 p-1">
     <div class="p-2" style="background-color: white">
         <p class="fs-6 fw-semibold text-dark">TU INFORMACIÓN</p>

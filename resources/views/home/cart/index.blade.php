@@ -14,10 +14,12 @@
 
     <main style="background-color: rgb(241, 241, 241)">
 
-
         <div class="container border pt-50 pb-50">
+
             <div class="row cart">
+
                 @include('home.profile.menu')
+
                 <div class="col-6">
                     <div class="row me-1 d-flex flex-column gap-1">
                         <div class="col-12 border-bottom" style="background: white">

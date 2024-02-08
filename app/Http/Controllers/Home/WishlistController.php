@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\{Role, User, Product};
 use Auth;
+
 class WishlistController extends Controller
 {
     public function index()
     {
-        //return view('home.profile.wishlist');
         $wishlistCount = 0;
         $user = Auth::user();
 
@@ -22,12 +22,10 @@ class WishlistController extends Controller
 
         if ($user) {
 
-            $desired=$user->desired;
+            $desired = $user->desired;
 
-            if($desired->isNotEmpty())
-            {
-                foreach($desired as $product)
-                {
+            if ($desired->isNotEmpty()) {
+                foreach ($desired as $product) {
                     array_push($CartProductsIds, $product->id);
                 }
 
@@ -39,19 +37,18 @@ class WishlistController extends Controller
                 });
 
                 $total_price = $total_amount * $total_qtty;
-
             }
 
             $wishlistCount = $user->desired()->count();
         }
 
-        $products=Product::whereNotIn('id', $CartProductsIds)->get();
+        $products = Product::whereNotIn('id', $CartProductsIds)->get();
 
-        return view('home.profile.wishlist',[
-                'products' => $products,
-                'desired' => $desired,
-                'total_price' => $total_price,
-                'wishlistCount' => $wishlistCount
+        return view('home.profile.wishlist', [
+            'products' => $products,
+            'desired' => $desired,
+            'total_price' => $total_price,
+            'wishlistCount' => $wishlistCount
         ]);
     }
 
@@ -69,15 +66,15 @@ class WishlistController extends Controller
             // Actualizar la cantidad en la base de datos
             $user = Auth::user();
 
-        $user->desired()->updateExistingPivot($product, ['quantity' => $quantity]);
-        $user->load('desired');
+            $user->desired()->updateExistingPivot($product, ['quantity' => $quantity]);
+            $user->load('desired');
 
-        $total = $user->desired->sum(function ($product) {
-            return $product->sale_price * $product->pivot->quantity;
-        });
-        // Obtener el nuevo total
-        $subtotal = $product->sale_price * $quantity;
-        $success= true;
+            $total = $user->desired->sum(function ($product) {
+                return $product->sale_price * $product->pivot->quantity;
+            });
+            // Obtener el nuevo total
+            $subtotal = $product->sale_price * $quantity;
+            $success = true;
         }
 
         return response()->json([
@@ -85,13 +82,13 @@ class WishlistController extends Controller
             'total' => number_format($total, 2),
             'success' => $success
         ]);
-        }
+    }
 
- 
+
 
     public function agregar(Product $p)
     {
-        $user=Auth::user();
+        $user = Auth::user();
 
         //$wishlist = $user->desired()->count()->find($p->id);
         $wishlist = $user->desired()->find($p->id);
@@ -110,10 +107,6 @@ class WishlistController extends Controller
 
         $wishlist = $user->desired()->sum('quantity');
 
-        $html = view('home')->render();
-
-        
-
         //return response()->json(['count' => $wishlist]);
         return redirect()->route('home.shop.index');
         //return response()->json([
@@ -122,9 +115,10 @@ class WishlistController extends Controller
         //]);
     }
 
-    public function eliminar(Product $p){
+    public function eliminar(Product $p)
+    {
 
-        $user=Auth::user();
+        $user = Auth::user();
 
         $user->desired()->detach($p);
         return redirect()->back();

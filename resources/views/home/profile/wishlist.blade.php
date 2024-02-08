@@ -9,22 +9,22 @@
 @endsection
 
 @section('content')
-    <div class="pt-4 pb-4" style="background-color: rgb(216, 215, 215)">
-        <div class="container">
-            <div class="row">
 
+
+    <div style="background-color: rgb(216, 215, 215)">
+        <div class="container border pt-50 pb-50">
+            <div class="row cart">
 
                 @include('home.profile.menu')
 
 
-
                 <div class="col-md-9 col-9 pl-3 pt-1">
+                    
                     <div class="row me-1 d-flex flex-column gap-1">
                         <div class="col-12 border-bottom" style="background: white">
                             <div>
                                 <h3 class="pt-4 pb-3" style="font-weight: bold">LISTA DE DESEOS</h3>
                                 <a href="#" class="h6 text-primary" id="addToCartBtn" data-url="{{ route('home.cart.addAll') }}">Añadir todo al carrito</a>
-
 
                             </div>
 
@@ -55,10 +55,10 @@
                                                 <input id='quantity-input_{{ $item->pivot->product_id }}'
                                                     data-productid="{{ $item->pivot->product_id }}"
                                                     data-url="{{ route('home.wishlist.updateQuantity', ["product" => $item]) }}"
-                                                    class="quantity-input" type="text"
-                                                    value="{{ $item->pivot->quantity }}">
-                                                    <div class="dec qtybutton mt-2  margin-l">-</div>
-                                                    <div class="inc qtybutton mt-2  margin-r">+</div>
+                                                    class="quantity-input disabled" type="text"
+                                                    value="{{ $item->pivot->quantity }}" readonly='readonly'>
+                                                    <div class="dec qtybutton">-</div>
+                                                    <div class="inc qtybutton">+</div>
                                             </div>
 
                                         </div>
@@ -92,6 +92,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
