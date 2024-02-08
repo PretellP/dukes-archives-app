@@ -70,16 +70,7 @@
 
 
                                                         <h6><a href="#">{{ $product->name }}</a></h6>
-                                                        <div class="rating mb-5">
-                                                            <ul>
-                                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                            </ul>
-                                                            <span>(01 review)</span>
-                                                        </div>
+                                                       
                                                         <div class="price mb-10">
                                                             <span>S/{{ $product->sale_price }}</span>
                                                         </div>

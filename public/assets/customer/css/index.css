@@ -28,6 +28,15 @@
   }
 
 
+
+   .margin-l{
+    margin-left: 10px;
+
+  }
+  .margin-r{
+      margin-right: 150px;
+  }
+
   .single-slider .imagencita{
     width: 100%;
     height: 100%;

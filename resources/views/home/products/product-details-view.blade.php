@@ -25,7 +25,7 @@
                                     @foreach($productDetails->files as $index => $file)
                                         <div class="tab-pane fade @if($index === 0) show active @endif" id="thumb{{ $index + 1 }}" role="tabpanel" aria-labelledby="thumb{{ $index + 1 }}-tab">
                                             <div class="product__details-nav-thumb w-img">
-                                                <img src="{{ verifyImage($file) }}" alt="{{ $file->alt_text }}">
+                                                <img src="{{ verifyImage($file) }}" alt="{{ $file->alt_text }}" class="img-selected">
                                             </div>
                                         </div>
                                     @endforeach
@@ -41,17 +41,7 @@
                 <div class="col-xl-6">
                     <div class="product__details-content">
                         <h6>{{ $productDetails->name }}</h6>
-                        <div class="pd-rating mb-10">
-                            <ul class="rating">
-                                <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                <li><a href="#"><i class="fas fa-star"></i></a></li>
-                            </ul>
-                            <span>(01 review)</span>
-                            <span><a href="#">Add your review</a></span>
-                        </div>
+                        
                         <div class="price mb-10">
                             <span>S/ {{ $productDetails->sale_price }}</span>
                         </div>

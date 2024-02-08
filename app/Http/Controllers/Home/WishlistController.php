@@ -57,27 +57,37 @@ class WishlistController extends Controller
 
     public function update(Request $request, Product $product)
     {
-        $user = Auth::user();
-        $quantity = $request['quantity'];
+        $quantity = $request['value'];
+        $subtotal = 0;
+        $total = 0;
 
-        if ($product) {
-            $subtotal = $product->sale_price * $quantity;
-        }
+        // Validación de la cantidad (puedes personalizarla según tus necesidades)
+        if ($quantity < 0) {
+            $success = false;
+        } else {
+
+            // Actualizar la cantidad en la base de datos
+            $user = Auth::user();
 
         $user->desired()->updateExistingPivot($product, ['quantity' => $quantity]);
+        $user->load('desired');
 
-        $desiredItems = $user->desired;
-        $newTotal = $desiredItems->sum(function ($desiredItem) {
-            return $desiredItem->sale_price * $desiredItem->pivot->quantity;
+        $total = $user->desired->sum(function ($product) {
+            return $product->sale_price * $product->pivot->quantity;
         });
+        // Obtener el nuevo total
+        $subtotal = $product->sale_price * $quantity;
+        $success= true;
+        }
 
         return response()->json([
-            'total' => number_format($newTotal, 2),
-            'subtotal' => number_format($subtotal, 2)
+            'subtotal' => number_format($subtotal, 2),
+            'total' => number_format($total, 2),
+            'success' => $success
         ]);
-    }
+        }
 
-
+ 
 
     public function agregar(Product $p)
     {

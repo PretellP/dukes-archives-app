@@ -9,17 +9,18 @@
         <div class="header-mid">
             <div class="container">
                 <div class="heade-mid-inner"><!--d-none d-lg-block-->
-                    <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-8">
+                    <div class="row align-items-center col-12">
+{{--                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-8">
                             <div class="header__info">
                                 <div class="logo">
                                     <a href="{{route('home.index')}}" class="logo-image">
-                                        {{-- <img src="" alt="logo"> --}}
+                                         <img src="" alt="logo">
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-4 d-none d-lg-block">
+ --}}
+                        <div class="col-xl-5 col-lg-4  d-lg-block ">
                             <div class="header__search">
                                 <form action="#">
                                     <div class="header__search-box">
@@ -32,47 +33,45 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4">
+                        <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4 ms-auto" >
                             <div class="header-action">
                                 @guest
                                     <div class="block-userlink">
                                         <a class="icon-link" href="{{ route('login') }}">
-                                        <i class="flaticon-user"></i>
-                                        <span class="text d-sm-block d-none">
-                                        <span class="sub">Login </span>
-                                        Mi cuenta </span>
+                                            <i class="flaticon-user"></i>
+                                            <span class="text d-sm-block d-none">
+                                                <span class="sub">Login</span>
+                                                Mi cuenta
+                                            </span>
                                         </a>
                                     </div>
                                 @else
-
-                                     <div class="block-userlink">
-                                        <a class="icon-link">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                <span class="text">{{ Auth::user()->name }}</span>
+                                    <div class="block-userlink">
+                                        <div class="dropdown">
+                                            <a class="icon-link dropdown-toggle text-light" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="flaticon-user"></i> <!-- Icono de usuario -->
+                                                {{ Auth::user()->name }}
                                             </a>
-                                        </a>
-
-
-                                        <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{route('home.profile.index')}}"> Datos del Perfil</a>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                                {{ __('Cerrar Sesión') }}
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-
-
+                                            <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('home.profile.index') }}">
+                                                    <i class="fas fa-user-circle"></i> <!-- Icono de perfil -->
+                                                    Datos del Perfil
+                                                </a>
+                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <i class="fas fa-sign-out-alt"></i> <!-- Icono de cerrar sesión -->
+                                                    Cerrar Sesión
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </div>
                                         </div>
-
-
                                     </div>
                                 @endguest
 
-                                <div class="block-wishlist action" id="">
+
+
+                                <div class="block-wishlist action">
 
                                     <a class="icon-link" href="{{ route('home.wishlist.index') }}">
                                         <i class="flaticon-heart"></i>
@@ -152,88 +151,33 @@
 
         <div class="header__bottom">
             <div class="container">
-                <div class="row g-0 align-items-center">
-                    <div class="col-lg-3">
-                        <div class="cat__menu-wrapper side-border d-none d-lg-block">
-                            <div class="cat-toggle">
-                                <button type="button" class="cat-toggle-btn cat-toggle-btn-1">
-                                    <i class="fa-solid fa-bars-staggered"></i> categorías</button>
-                                <div class="cat__menu-2 cat__menu">
-                                    <nav id="mobile-menu" style="display: block;">
-                                        <ul>
-                                            <li>
-                                                <a href="{{route ('home.shop.index')}}">Juveniles</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="{{route ('home.shop.index')}}">Infantiles
-                                                    <span class="cat-label">¡vamos!</span>
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="{{route ('home.shop.index')}}">Comics &amp; Mangas
-                                                    <span class="cat-label green">¡nuevo!</span>
-                                                </a>
-                                            </li>
-
-                                            <li><a href="{{route ('home.shop.index')}}">Misterio</a></li>
-                                            <li><a href="{{route ('home.shop.index')}}">Ciencia Ficción</a></li>
-                                            <li class="d-laptop-none"><a href="{{route ('home.shop.index')}}">Literatura</a></li>
-                                            <li class="d-laptop-none"><a href="{{route ('home.shop.index')}}">Novelas</a></li>
-                                            <li><a href="{{route ('home.shop.index')}}">Ciencias</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row justify-content-center align-items-center">
                     <div class="col-lg-6 col-md-1 col-1">
-                      <div class="header__bottom-left d-flex d-xl-block">
-                        <div class="side-menu d-lg-none mr-20">
-                          <button type="button" class="side-menu-btn offcanvas-toggle-btn"><i class="fas fa-bars"></i></button>
-                        </div>
-
-
-                        <div class="main-menu d-none d-lg-block">
-                            <nav class="d-flex justify-content-center align-items-center">
-                                <ul>
-                                    <li>
-                                        <a href="{{route('home.index')}}" class="active">Inicio</a>
-
-                                    </li>
-
-                                    <li><a href="{{route('home.about.index')}}">Nosotros</a></li>
-                                    <li class="has-mega"><a href="{{route ('home.shop.index')}}">Productos</a></li>
-                                    <li><a href="{{route('home.contact.index')}}">Contacto</a></li>
-
-
-
-                                </ul>
-                            </nav>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 col-md-11 col-11 d-lg-none d-block">
-                        <div class="header__search">
-                            <form action="#">
-                                <div class="header__search-box">
-                                    <input class="search-input" type="text" id="searchInput"  placeholder="Escribe para buscar">
-                                    <button class="button" type="submit"><i class="fa fa-search"></i></button>
-                                    <div id="autocompleteContainer" class="bg-light"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 d-none d-lg-block">
-                        <div class="shopeing-text text-sm-end">
-                            <p>¡Delivery gratis para todas tus compras!</p>
+                        <div class="header__bottom-left d-flex d-xl-block">
+                            <div class="main-menu d-none d-lg-block">
+                                <nav class="d-flex justify-content-center align-items-center">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ Route::currentRouteName() == 'home.index' ? 'active' : '' }}" href="{{ route('home.index') }}">Inicio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ Route::currentRouteName() == 'home.about.index' ? 'active' : '' }}" href="{{ route('home.about.index') }}">Nosotros</a>
+                                        </li>
+                                        <li class="nav-item has-mega">
+                                            <a class="nav-link {{ Route::currentRouteName() == 'home.shop.index' ? 'active' : '' }}" href="{{ route('home.shop.index') }}">Productos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ Route::currentRouteName() == 'home.contact.index' ? 'active' : '' }}" href="{{ route('home.contact.index') }}">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </header>
     <!-- header-end -->
