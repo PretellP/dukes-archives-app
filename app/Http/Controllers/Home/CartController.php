@@ -5,40 +5,43 @@ namespace App\Http\Controllers\home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\{Role, User, Product};
+use App\Models\{Product};
+use App\Services\ShoppingCartService;
 use Auth;
+use Exception;
 
 class CartController extends Controller
 {
+    private $shoppingCartService;
+
+    public function __construct(ShoppingCartService $service)
+    {
+        $this->shoppingCartService = $service;
+    }
 
     public function index()
     {
-        $user = Auth::user();
         $shoppingCart = collect();
         $wishlistCount = 0;
+
+        $user = Auth::user();
 
         if ($user) {
 
             $shoppingCart = $user->shoppingCart()->with('files')->get();
             $CartProductsIds = array();
 
-            if ($shoppingCart->isNotEmpty()) {
-                foreach ($shoppingCart as $product) {
-                    array_push($CartProductsIds, $product->id);
-                }
-            }
-
-
             $wishlistCount = 0;
             $wishlistCount = $user->desired()->count();
-
         }
 
+        $preference = $this->shoppingCartService->initializeMercadoPago($shoppingCart);
 
-        return view('home.cart', [
-            'shoppingCart' => $shoppingCart,
-            'wishlistCount' => $wishlistCount
-        ]);
+        return view('home.cart.index', compact(
+            'shoppingCart',
+            'wishlistCount',
+            'preference'
+        ));
     }
 
     public function update(Request $request, Product $product)
@@ -47,29 +50,29 @@ class CartController extends Controller
         $subtotal = 0;
         $total = 0;
 
-        // Validación de la cantidad (puedes personalizarla según tus necesidades)
-        if ($quantity < 0) {
+        if ($quantity < 1) {
             $success = false;
         } else {
 
-            // Actualizar la cantidad en la base de datos
-            $user = Auth::user();
-
-            $user->shoppingCart()->updateExistingPivot($product, ['quantity' => $quantity]);
-            $user->load('shoppingCart');
-
-            $total = $user->shoppingCart->sum(function ($product) {
-                return $product->sale_price * $product->pivot->quantity;
-            });
-            // Obtener el nuevo total
-            $subtotal = $product->sale_price * $quantity;
-            $success= true;
+            try {
+                [$total, $subtotal] = $this->shoppingCartService->updateQttyCart($product, $quantity);
+                $success= true;
+            } catch (Exception $e) {
+                $success = false;
+            }
         }
+
+        $user= Auth::user();
+
+        $shoppingCart = $user->shoppingCart()->get();
+        $preference = $this->shoppingCartService->initializeMercadoPago($shoppingCart);
 
         return response()->json([
             'subtotal' => number_format($subtotal, 2),
             'total' => number_format($total, 2),
-            'success' => $success
+            'success' => $success,
+            'key' => config('services.mercadopago.key'),
+            'id' => $preference->id
         ]);
     }
 
@@ -91,8 +94,6 @@ class CartController extends Controller
 
         $shoppingCart = $user->shoppingCart()->sum('quantity');
 
-
-
         //return response()->json(['count' => $wishlist]);
         return redirect()->route('home.shop.index');
 
@@ -107,14 +108,14 @@ class CartController extends Controller
         $user = Auth::user();
         $desiredProducts = $user->desired()->get();
         $quantities = $request->input('quantities', []);
-    
+
         foreach ($desiredProducts as $product) {
             $quantity = $quantities[$product->id] ?? 0; // Obtiene la cantidad para este producto
             if ($quantity > 0) {
                 $user->shoppingCart()->attach($product->id, ['quantity' => $quantity]);
             }
         }
-    
+
         $user->desired()->detach();
         return response()->json([
             'success' => true,
@@ -139,19 +140,12 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function goCheckout()
+    public function paymentSuccess(Request $request)
     {
-        $user = Auth::user();
-        $shoppingCart = $user->shoppingCart;
+        $py_id = $request['payment_id'];
 
-        $total = $shoppingCart->sum(function ($item) {
-            return $item->sale_price * $item->pivot->quantity;
-        });
-
-        dd($shoppingCart, $total);
-        return view('', [
-            'shoppingCart' => $shoppingCart,
-            'total' => $total,
-        ]);
+        return view('home.cart.payment_success', compact(
+            'py_id'
+        ));
     }
 }

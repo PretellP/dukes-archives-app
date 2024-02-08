@@ -17,7 +17,7 @@
                 @include('home.profile.menu')
 
 
-                
+
                 <div class="col-md-9 col-9 pl-3 pt-1">
                     <div class="row me-1 d-flex flex-column gap-1">
                         <div class="col-12 border-bottom" style="background: white">
@@ -27,7 +27,7 @@
 
 
                             </div>
-                            
+
                         </div>
 
                         @php

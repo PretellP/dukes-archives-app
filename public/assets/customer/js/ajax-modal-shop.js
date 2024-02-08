@@ -32,10 +32,6 @@ $(function () {
                 var sale_price = product.sale_price;
                 var labels = product.labels;  // Un conjunto de etiquetas  // Una lista de imágenes
 
-                // // Actualizar elementos con las etiquetas
-                 // El contenedor de etiquetas en el modal
-                 // Limpiar el contenedor antes de agregar nuevas etiquetas
-
                  labels.forEach(function (label, i) {
                     let labelName = label.name
                     if (!(labels.length == (i+1))) {
@@ -46,7 +42,6 @@ $(function () {
                     var labelElement = $('<span>').text(labelName.toUpperCase()).addClass('label');
                     labelsContainer.append(labelElement);
                 });
-                
 
                 modal.find('.name').text(name);
                 modal.find('.description').text(description);

@@ -14,12 +14,12 @@
                             <div class="header__info">
                                 <div class="logo">
                                     <a href="{{route('home.index')}}" class="logo-image">
-                                         <img src="" alt="logo"> 
+                                         <img src="" alt="logo">
                                     </a>
                                 </div>
                             </div>
                         </div>
- --}}                        
+ --}}
                         <div class="col-xl-5 col-lg-4  d-lg-block ">
                             <div class="header__search">
                                 <form action="#">
@@ -70,7 +70,9 @@
                                 @endguest
 
 
+
                                 <div class="block-wishlist action">
+
                                     <a class="icon-link" href="{{ route('home.wishlist.index') }}">
                                         <i class="flaticon-heart"></i>
                                         <span class="count">
@@ -85,7 +87,9 @@
                                             Mi Lista
                                         </span>
                                     </a>
+
                                 </div>
+
                                 <div class="block-cart action">
                                     <a class="icon-link" href="{{route('home.cart.index')}}">
                                     <i class="flaticon-shopping-bag"></i>
@@ -173,7 +177,7 @@
                 </div>
             </div>
         </div>
-        
+
 
     </header>
     <!-- header-end -->
