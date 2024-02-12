@@ -123,6 +123,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
                 Route::get('/eliminando/{p}', 'eliminar')->name('eliminarProducto');
                 Route::get('/cancelando', 'vaciar')->name('cancelando');
                 Route::get('/pago-realizado-con-exito', 'paymentSuccess')->name('paymentSuccess');
+                Route::get('/procesar-venta','processSell')->name('processSell');
             });
         });
     });

@@ -90,6 +90,11 @@ function getCurrentDate()
     return Carbon::now('America/Lima')->format('Y-m-d');
 }
 
+function getCurrentTime()
+{
+    return Carbon::now('America/Lima')->format('h:i:s');
+}
+
 function getDiffForHumansFromTimestamp($timestamp)
 {
     return Carbon::parse($timestamp)->diffForHumans();
