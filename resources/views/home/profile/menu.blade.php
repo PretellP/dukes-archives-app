@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" class="d-flex gap-2 align-items-center pt-2 pb-2">
+                    <a href="{{ route('home.record.index')}}" class="d-flex gap-2 align-items-center pt-2 pb-2">
                         <img src="{{asset('assets/customer/img/profile/orders.png')}}" style="width: 25px; height:25px" alt="">
                         <p class="m-0">Mis pedidos</p>
                     </a>

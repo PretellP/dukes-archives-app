@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\{
     ProductController
 };
 
-use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
+use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController, RecordController};
 
 use Illuminate\Support\Facades\{Auth, Route};
 
@@ -81,6 +81,13 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
+    Route::controller(RecordController::class)->group(function () {
+        Route::group(["prefix" => "historial", "as" => "record."], function () {
+            //----- record.* -----
+            Route::get('/', 'index') -> name('index');
+        });
+    });
+    
     Route::controller(WishlistController::class)->group(function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----

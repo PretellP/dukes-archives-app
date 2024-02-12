@@ -3,34 +3,6 @@
 @section('content')
 
 <main>
-    <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height" data-background="assets/img/banner/page-banner-3.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-banner-content text-center">
-                        <h4 class="breadcrumb-title">Contact Us</h4>
-                        <div class="breadcrumb-two">
-                            <nav>
-                               <nav class="breadcrumb-trail breadcrumbs">
-                                  <ul class="breadcrumb-menu">
-                                     <li class="breadcrumb-trail">
-                                        <a href="{{route('home.index')}}"><span>Home</span></a>
-                                     </li>
-                                     <li class="trail-item">
-                                        <span>Contact Us</span>
-                                     </li>
-                                  </ul>
-                               </nav> 
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-banner-area-end -->
-
     <!-- location-area-start -->
     <div class="location-area pt-70 pb-25">
         <div class="container">

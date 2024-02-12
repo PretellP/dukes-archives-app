@@ -3,35 +3,17 @@
 @section('content')
 
 <main class="p-1">
-    <!-- page-banner-area-start -->
-    <div class="page-banner-area page-banner-height" data-background="assets/img/banner/page-banner-1.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-banner-content text-center">
-                        <h3>About Us</h3>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these <br> sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <div class="page-bottom-btn mt-55">
-                            <a href="{{route('home.shop.index')}}" class="st-btn-4">Discover now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-banner-area-end -->
-
     <!-- about-area-start -->
     <div class="about-area pt-80 pb-80" data-background="assets/img/bg/about-bg.png">
         <div class="container">
             <div class="row align-items-center">
                <div class="col-xl-6 col-lg-6">
                    <div class="about-content">
-                       <span>ABOUT OUR ONLINE STORE</span>
-                       <h4>Hello,</h4>
-                       <h5 class="banner-t mb-30">With 25+ Years Of Experience</h5>
-                       <p class="about-text">Over 25 years Dukamarket helping companies reach their <br> financial and branding goals.</p>
-                       <p>The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. For me, the most important part of improving at photography.</p>
+                       <span>SOBRE NUESTRA TIENDA ONLINE</span>
+                       <h4>LOS ARCHIVOS DEL DUQUE,</h4>
+                       <h5 class="banner-t mb-30">CON MÁS DE 25 AÑOS DE EXPERIENCIA</h5>
+                       <p class="about-text">MÁS DE 25 AÑOS LOS ARCHIVOS DEL DUQUE AYUDANDO A LOS AMANTES <br>DE LA LECTURA A ENCONTRAR SU LIBRO DESEADO.</p>
+                       <p>La manera perfecta de obtener el libro que siempre has deseado. No esperes más y has tu pedido, obtén tu libro con nosotros y disfrútalo.</p>
                    </div>
                </div>
                <div class="col-xl-6 col-lg-6">
@@ -50,9 +32,9 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="abs-section-title text-center">
-                        <span>HOW IT WORKS</span>
-                        <h4>Complete Customer Ideas</h4>
-                        <p>The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit <br> in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+                        <span>CÓMO FUNCIONA</span>
+                        <h4>COMPLETAR IDEAS DE CLIENTE</h4>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -62,7 +44,7 @@
                         <div class="services-icon mb-25">
                             <i class="fa fa-share-square"></i>
                         </div>
-                        <h6>Admin Verify Details</h6>
+                        <h6>Verificar Detalle de Administrador</h6>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium totam rem aperiam, eaqueipsa quae veritatis.</p>
                         <div class="s-count-number">
                             <span>01</span>
@@ -433,56 +415,7 @@
     </div>
     <!-- location-area-end -->
 
-    <!-- cta-area-start -->
-    <section class="cta-area d-ldark-bg pt-55 pb-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item cta-item-d mb-30">
-                        <h5 class="cta-title">Follow Us</h5>
-                        <p>We make consolidating, marketing and tracking your social media website easy.</p>
-                        <div class="cta-social">
-                            <div class="social-icon">
-                                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-                                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="rss"><i class="fa fa-rss"></i></a>
-                                <a href="#" class="dribbble"><i class="fab fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item mb-30">
-                        <h5 class="cta-title">Sign Up To Newsletter</h5>
-                        <p>Join 60.000+ subscribers and get a new discount coupon  on every Saturday.</p>
-                        <div class="subscribe__form">
-                            <form action="#">
-                                <input type="email" placeholder="Enter your email here...">
-                                <button>subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item mb-30">
-                        <h5 class="cta-title">Download App</h5>
-                        <p>DukaMarket App is now available on App Store & Google Play. Get it now.</p>
-                        <div class="cta-apps">
-                            <div class="apps-store">
-                                <a href="#"><img src="assets/img/brand/app_ios.png" alt=""></a>
-                                <a href="#"><img src="assets/img/brand/app_android.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- cta-area-end -->
-
+   
 </main>
 
 @endsection

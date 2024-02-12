@@ -49,25 +49,16 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-10.jpg" alt=""></a></td>
-                                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket light</a></td>
+                                                        <td class="product-thumbnail"><a href="#"><img src="assets/img/cart/shop-p-10.jpg" alt=""></a></td>
+                                                        <td class="product-name"><a href="#">Jacket light</a></td>
                                                         <td class="product-price"><span class="amount">$130.00</span></td>
                                                         <td class="product-quantity">
                                                                 <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
                                                         </td>
                                                         <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                                        <td class="btn btn"><a href="#"><i class="fa fa-times"></i></a></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-11.jpg" alt=""></a></td>
-                                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket Pink</a></td>
-                                                        <td class="product-price"><span class="amount">$120.50</span></td>
-                                                        <td class="product-quantity">
-                                                                <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
-                                                        </td>
-                                                        <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                    </tr>
+                                                    
                                                     </tbody>
                                             </table>
                                         </div>
