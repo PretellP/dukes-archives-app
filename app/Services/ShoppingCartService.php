@@ -17,7 +17,7 @@ class ShoppingCartService
 
         $preference->auto_return = 'approved';
         $preference->back_urls = [
-            'success' => route('home.cart.paymentSuccess')
+            'success' => route('home.cart.processSell')
         ];
 
         $mp_items_array = array();
@@ -52,5 +52,32 @@ class ShoppingCartService
         $subtotal = $product->sale_price * $quantity;
 
         return [$total, $subtotal];
+    }
+
+    public function processSale(User $user, $products)
+    {
+        if ($sale = $user->orders()->create([
+            'date' => getCurrentDate(),
+            'hour' => getCurrentTime(),
+        ]))
+        {
+            foreach ($products as $product) {
+
+                $sale->details()->attach($product, [
+                    'quantity' => $product->pivot->quantity,
+                ]);
+
+                $newQtty = $product->inventory->quantity - $product->pivot->quantity;
+                $product->inventory->update([
+                    'quantity' => $newQtty < 0 ? 0 : $newQtty,
+                ]);
+            }
+
+            $user->shoppingCart()->detach();
+
+            return true;
+        }
+
+        return false;
     }
 }

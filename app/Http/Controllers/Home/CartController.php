@@ -4,9 +4,9 @@ namespace App\Http\Controllers\home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-use App\Models\{Product};
+use App\Models\{Product, Sale};
 use App\Services\ShoppingCartService;
+use Illuminate\Support\Facades\Http;
 use Auth;
 use Exception;
 
@@ -142,10 +142,29 @@ class CartController extends Controller
 
     public function paymentSuccess(Request $request)
     {
-        $py_id = $request['payment_id'];
+        return view('home.cart.payment_success');
+    }
 
-        return view('home.cart.payment_success', compact(
-            'py_id'
-        ));
+
+    public function processSell(Request $request)
+    {
+        $py_id = $request['payment_id'];
+        $response = Http::get('https://api.mercadopago.com/v1/payments/' . $py_id . '?access_token=' . config('services.mercadopago.token'));
+        $response = json_decode($response);
+        $status = $response->status;
+        $user = Auth::user();
+
+        if ($status == 'approved') {
+
+            $user->load(['shoppingCart.inventory']);
+
+            $products = $user->shoppingCart;
+
+            if ($this->shoppingCartService->processSale($user, $products)) {
+                return redirect()->route('home.cart.paymentSuccess');
+            }
+        }
+
+        abort(403, 'Página no encontrada');
     }
 }
