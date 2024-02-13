@@ -34,7 +34,7 @@
 
                             <div class="cont_link_py_success border-top pt-4 w-100">
 
-                                <a href="">
+                                <a href="{{route('home.record.index')}}">
                                     <i class="fa-regular fa-file-lines me-2"></i>
                                     Ver mi historial de pedidos
                                 </a>

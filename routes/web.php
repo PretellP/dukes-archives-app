@@ -85,6 +85,7 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "historial", "as" => "record."], function () {
             //----- record.* -----
             Route::get('/', 'index') -> name('index');
+            Route::get('/download-pdf/{item}', 'pdf') -> name('pdf');
         });
     });
     

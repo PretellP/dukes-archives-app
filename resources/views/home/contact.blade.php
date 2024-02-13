@@ -9,152 +9,47 @@
             <div class="row mb-25">
                 <div class="col-xl-12">
                     <div class="abs-section-title text-center">
-                        <span>LOCATION STORE</span>
-                        <h4>Where We Are</h4>
-                        <p>The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit <br> in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+                        <span>UBICACIÓN DE LA TIENDA</span>
+                        <h4>ESTAMOS AQUÍ</h4>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="location-item mb-30">
-                        <div class="location-image w-img mb-20">
-                            <img src="assets/img/location/location-1.jpg" alt="">
-                        </div>
-                        <h6>26 Rue Pelleport - Paris</h6>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-map-marker-alt"></i>
+            <div class="row mx-auto">
+            
+                <div class="col-xl-12 col-lg-8 col-md-10">
+                    
+                        <div class="location-item mb-30 mx-auto">
+                            
+                            <div class="sm-item-loc sm-item-border mt-50 col-4 float-start">
+                                <div class="sml-icon mr-20">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>Encuéntranos en;</span>
+                                    <p>Av. Izaguirre 325, Independencia</p>  
+                                </div>
                             </div>
-                            <div class="sm-content">
-                                <span>Find us</span>
-                                <p>Rue Saint-Antoine, Paris, France  </p>  
+                            <div class="sm-item-loc sm-item-border mt-50 col-4 float-start">
+                                <div class="sml-icon mr-20">
+                                    <i class="fa fa-phone-alt"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>Llámanos al:</span>
+                                    <p><a href="tel:+8804568">+51 987654321</a></p>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Call us</span>
-                                <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Mail us</span>
-                                <p><a href="https://wphix.com/cdn-cgi/l/email-protection#097a7d667b6c496a666479686770276a6664"><span class="__cf_email__" data-cfemail="bac9ced5c8dffad9d5d7cadbd4c394d9d5d7">[email&#160;protected]</span></a></p>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="location-item mb-30">
-                        <div class="location-image w-img mb-20">
-                            <img src="assets/img/location/location-2.jpg" alt="">
-                        </div>
-                        <h6>150 Stanley Rd - London</h6>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-map-marker-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Find us</span>
-                                <p>Brick Ln, Spitalfields, London E1, UK</p>  
+                            <div class="sm-item-loc sm-item-border mt-50 col-4 float-start">
+                                <div class="sml-icon mr-20">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="sm-content">
+                                    <span>Escríbenos a:</span>
+                                    <p><a href="https://wphix.com/cdn-cgi/l/email-protection#5122253e233411323e3c21303f287f323e3c"><span class="__cf_email__" data-cfemail="88fbfce7faedc8ebe7e5f8e9e6f1a6ebe7e5">dukesarchives@gmail.com</span></a></p>  
+                                </div>
                             </div>
                         </div>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Call us</span>
-                                <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Mail us</span>
-                                <p><a href="https://wphix.com/cdn-cgi/l/email-protection#a5d6d1cad7c0e5c6cac8d5c4cbdc8bc6cac8"><span class="__cf_email__" data-cfemail="7b080f14091e3b1814160b1a150255181416">[email&#160;protected]</span></a></p>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="location-item mb-30">
-                        <div class="location-image w-img mb-20">
-                            <img src="assets/img/location/location-3.jpg" alt="">
-                        </div>
-                        <h6>1357 Prospect - New York</h6>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-map-marker-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Find us</span>
-                                <p>Atlantic, Brooklyn, New York, US</p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Call us</span>
-                                <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Mail us</span>
-                                <p><a href="https://wphix.com/cdn-cgi/l/email-protection#493a3d263b2c092a262439282730672a2624"><span class="__cf_email__" data-cfemail="c6b5b2a9b4a386a5a9abb6a7a8bfe8a5a9ab">[email&#160;protected]</span></a></p>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="location-item mb-30">
-                        <div class="location-image w-img mb-20">
-                            <img src="assets/img/location/location-4.jpg" alt="">
-                        </div>
-                        <h6>86 Georgia Rd - Mardrid</h6>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-map-marker-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Find us</span>
-                                <p>Calle del Correo, 4, Madrid, Spain</p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc sm-item-border mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Call us</span>
-                                <p><a href="tel:+8804568">(+100) 123 456 7890</a></p>  
-                            </div>
-                        </div>
-                        <div class="sm-item-loc mb-20">
-                            <div class="sml-icon mr-20">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="sm-content">
-                                <span>Mail us</span>
-                                <p><a href="https://wphix.com/cdn-cgi/l/email-protection#5122253e233411323e3c21303f287f323e3c"><span class="__cf_email__" data-cfemail="88fbfce7faedc8ebe7e5f8e9e6f1a6ebe7e5">[email&#160;protected]</span></a></p>  
-                            </div>
-                        </div>
-                    </div>
+              
+                    
                 </div>
             </div>
         </div>
@@ -163,59 +58,10 @@
 
     <!-- cmamps-area-start -->
     <div class="cmamps-area">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1899531.5831083965!2d105.806381!3d21.58504!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x515f4860ede9e108!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5n!5e0!3m2!1sen!2sus!4v1644226635446!5m2!1sen!2sus"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.254105871753!2d-77.058923!3d-11.989047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d0bb70309c9d%3A0x6f2bb0c86f4a2ff3!2sAv.%20Carlos%20Izaguirre%2C%20Independencia%2015411%2C%20Per%C3%BA!5e0!3m2!1sen!2sus!4v1644226635446!5m2!1sen!2sus"></iframe>
     </div>
     <!-- cmamps-area-end -->
 
-    <!-- cta-area-start -->
-    <section class="cta-area d-ldark-bg pt-55 pb-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item cta-item-d mb-30">
-                        <h5 class="cta-title">Follow Us</h5>
-                        <p>We make consolidating, marketing and tracking your social media website easy.</p>
-                        <div class="cta-social">
-                            <div class="social-icon">
-                                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-                                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="rss"><i class="fas fa-rss"></i></a>
-                                <a href="#" class="dribbble"><i class="fab fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item mb-30">
-                        <h5 class="cta-title">Sign Up To Newsletter</h5>
-                        <p>Join 60.000+ subscribers and get a new discount coupon  on every Saturday.</p>
-                        <div class="subscribe__form">
-                            <form action="#">
-                                <input type="email" placeholder="Enter your email here...">
-                                <button>subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="cta-item mb-30">
-                        <h5 class="cta-title">Download App</h5>
-                        <p>DukaMarket App is now available on App Store & Google Play. Get it now.</p>
-                        <div class="cta-apps">
-                            <div class="apps-store">
-                                <a href="#"><img src="assets/img/brand/app_ios.png" alt=""></a>
-                                <a href="#"><img src="assets/img/brand/app_android.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- cta-area-end -->
 
 </main>
 

@@ -9,15 +9,22 @@ use Auth;
 
 class HomeController extends Controller
 {
+    
     public function index()
     {
+        $shoppingCart = collect();
         $wishlistCount = 0;
+        $user = Auth::user();
+        if ($user) {
+            $shoppingCart = $user->shoppingCart()->with('files')->get();
+            $CartProductsIds = array();
 
-        if (Auth::check()) {
-            $user = Auth::user();
             $wishlistCount = $user->desired()->count();
         }
         
-        return view('home.index', compact('wishlistCount'));
+        return view('home.index', compact(
+            'wishlistCount',
+            'shoppingCart'
+        ));
     }
 }
