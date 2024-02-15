@@ -242,3 +242,14 @@ function getFileExtension(ModelsFile $file)
 
     return $extension;
 }
+
+    function getShoppingCart(){
+        $shoppingCart = collect();
+        $user= Auth::user();
+
+        if($user){
+            $shoppingCart = $user->shoppingCart()->with('files')->get();
+            
+        }
+        return $shoppingCart;
+    }

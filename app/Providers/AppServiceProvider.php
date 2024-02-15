@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\View;
+use Auth;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -22,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {     
         \Carbon\Carbon::setLocale(config('app.locale'));
     }
 }

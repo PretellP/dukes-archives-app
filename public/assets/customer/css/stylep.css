@@ -248,6 +248,20 @@ input.disabled[type=number] {
     padding: 4px;
     object-fit: cover;
 }
+.img-carousel{
+    width: 243.333px;
+    height: 500px;
+    object-fit: cover;
+    margin: 30px;
+}
+
+
+
+.carousel-set{
+    width: 243.333px;
+    height: 300px;
+    object-fit: cover;
+}
 .img-selected {
     height: 500px;
     width: 500px;
@@ -269,6 +283,12 @@ input.disabled[type=number] {
     padding: 3px;
     object-fit: cover;
 }
+.img_footer{
+    width: 200px;
+    height: 200px;
+    background: #F3F5F6;
+    margin-right: 70px;
+  }
 
 .w-img img {
     width: 100%;

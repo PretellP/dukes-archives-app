@@ -147,9 +147,9 @@
                     <button type="submit" data-toggle="modal" class="btn btn-warning" value="Update">Guardar
                         Cambios</button>
                 </div>
-        </div>
+                </div>
         
-        </form>
+            </form>
     </div>
 </div>
 </div>

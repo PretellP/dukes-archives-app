@@ -39,36 +39,40 @@
                                             <table class="table">
                                                     <thead>
                                                     <tr>
-                                                        <th class="product-thumbnail">Images</th>
-                                                        <th class="cart-product-name">Product</th>
-                                                        <th class="product-price">Unit Price</th>
-                                                        <th class="product-quantity">Quantity</th>
+                                                        <th class="product-thumbnail">N° de Pedido</th>
+                                                        <th class="product-price">Fecha</th>                                         
+                                                        <th class="product-subtotal">Hora</th>
                                                         <th class="product-subtotal">Total</th>
-                                                        <th class="product-remove">Remove</th>
+                                                        <th class="product-remove">Descargar</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr>
-                                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-10.jpg" alt=""></a></td>
-                                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket light</a></td>
-                                                        <td class="product-price"><span class="amount">$130.00</span></td>
-                                                        <td class="product-quantity">
-                                                                <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
-                                                        </td>
-                                                        <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="product-thumbnail"><a href="{{route('home.product-details.index')}}"><img src="assets/img/cart/shop-p-11.jpg" alt=""></a></td>
-                                                        <td class="product-name"><a href="{{route('home.product-details.index')}}">Jacket Pink</a></td>
-                                                        <td class="product-price"><span class="amount">$120.50</span></td>
-                                                        <td class="product-quantity">
-                                                                <div class="cart-plus-minus"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
-                                                        </td>
-                                                        <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                    </tr>
+                                                        @foreach ($sales as $item)
+                                                        <tr>
+                                                            <td class="product-name"><a href="#">{{ $item->id }}</a></td>
+                                                            <td class="product-price"><span class="amount">{{ $item->date }}</span></td> 
+                                                            <td class="product-subtotal"><span class="amount">{{ $item->hour }}</span></td>
+                                                            
+                                                            @php
+                                                                $totalPrice = 0;
+                                                            @endphp
+                                                            
+                                                            @foreach ($item->details as $detail)
+                                                                @php
+                                                                    $totalPrice += $detail->pivot->quantity * $detail->sale_price;
+                                                                @endphp
+                                                            @endforeach
+                                                    
+                                                            <td class="product-subtotal"><span class="amount">S/ {{ $totalPrice }}</span></td>
+                                                            <td>
+                                                                <a href="{{route('home.record.pdf', $item) }}" class="btn btn-warning">
+                                                                        PDF
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
+                                                    
                                             </table>
                                         </div>
                                     </form>

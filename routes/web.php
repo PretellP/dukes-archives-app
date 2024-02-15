@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\{
     SalesController
 };
 
-use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
+use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController, RecordController};
 
 use Illuminate\Support\Facades\{Auth, Route};
 
@@ -82,6 +82,14 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         });
     });
 
+    Route::controller(RecordController::class)->group(function () {
+        Route::group(["prefix" => "historial", "as" => "record."], function () {
+            //----- record.* -----
+            Route::get('/', 'index') -> name('index');
+            Route::get('/download-pdf/{item}', 'pdf') -> name('pdf');
+        });
+    });
+    
     Route::controller(WishlistController::class)->group(function () {
         Route::group(["prefix" => "lista-de-deseos", "as" => "wishlist."], function () {
             //----- wishlist.* -----
@@ -97,12 +105,12 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "perfil", "as" => "profile."], function () {
              //----- profile.* -----
             Route::get('/', 'index')->name('index');
-            Route::post('/validar-edicion/{column}', 'editValidate')->name('validateEdit');
+            Route::patch('/validar-edicion/{column}', 'editValidate')->name('validateEdit');
             Route::get('/mis-compras', 'order')->name('order');
             Route::get('/cambiar-contrasena', 'password')->name('password');
             Route::post('/editar-contrasena', 'editarContrasena')->name('editar-contrasena');
             Route::post('/verificar-contrasena', 'verificarContrasena')->name('verificar-contrasena');
-
+            /* Route::post('/user/{user}', 'update') -> name('update'); */
             // Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
             // Route::get('/', 'lista-de-deseos')->name('list');
             // Route::get('/ver/{user}', 'show')->name('show');

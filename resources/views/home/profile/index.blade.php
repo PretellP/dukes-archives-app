@@ -32,10 +32,9 @@
 
             <div class="col-md-9 col-9 p-1">
 
-                <form action="#" class="userForm" id="editUserForm" method="POST" enctype="multipart/form-data"
-                    data-validateemail="{{ route('home.profile.validateEdit', ['column' => 'email']) }}">
+                <form action="{{ route('home.profile.validateEdit', ['column' => Auth::user()]) }}" class="userForm" id="editUserForm" method="POST" enctype="multipart/form-data">
                         @csrf
-
+                        @method('PATCH')
                     <input type="hidden" name="id" value="{{ Auth::user()->id }}">
 
                     <div class="p-4" style="background-color: white">
@@ -49,7 +48,7 @@
                                 <div class="form-group col-md-12">
                                     <label for="inputPassword">Nombre de usuario </label>
                                     <div class="input-group">
-                                        <input name="nickname" type="text" class="form-control" readonly="readonly"
+                                        <input name="nickname" type="text" class="form-control"
                                             value="{{ Auth::user()->nickname }}">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -64,7 +63,7 @@
 
                                 <div class="form-group col-md-6">
                                     <label for="inputCompanyName">Nombre </label>
-                                    <input type="text" name="name" class="form-control name" readonly="readonly"
+                                    <input type="text" name="name" class="form-control name"
                                         value="{{ Auth::user()->name }}">
                                 </div>
 
