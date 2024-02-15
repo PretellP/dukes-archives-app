@@ -4,23 +4,25 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\{User, Product, Label};
+use App\Models\{Announcement, User, Product, Label};
 use Auth;
 
 class HomeController extends Controller
 {
-    
+
     public function index()
     {
-        
-        $products= Product::with([
-                'labels',
-                'files' => fn ($q) => $q->where('file_type', 'imagenes')
+        $labels = Label::with(['products' => fn ($q) =>
+            $q->with([
+                'files' => fn ($q) => $q
+                    ->where('file_type', 'imagenes')
             ])
-            ->paginate(
-                $perPage = 9, $columns = ['*'],$pageName = 'shop'
-            );
-        $labels = Label::with('products')->get(['id', 'name']);
+        ])
+        ->has('products')
+        ->get();
+
+        $banners = Announcement::with('file')->get();
+
         $shoppingCart = collect();
         $wishlistCount = 0;
         $user = Auth::user();
@@ -31,12 +33,14 @@ class HomeController extends Controller
 
             $wishlistCount = $user->desired()->count();
         }
-        
+
+        // dd($labels);
+
         return view('home.index', compact(
             'wishlistCount',
-            'products',
+            'shoppingCart',
             'labels',
-            'shoppingCart'
+            'banners'
         ));
     }
 }

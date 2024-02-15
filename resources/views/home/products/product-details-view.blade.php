@@ -34,45 +34,45 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
-                
+
+
+
+
                 <div class="col-xl-6">
                     <div class="product__details-content">
                         <h6>{{ $productDetails->name }}</h6>
-                        
+
                         <div class="price mb-10">
                             <span>S/ {{ $productDetails->sale_price }}</span>
                         </div>
                         <div class="product-stock mb-20">
-                            <h5>Availability: <span> 940 in stock</span></h5>
+                            <h5>Disponibilidad: <span> {{ $productDetails->inventory->quantity }} En stock</span></h5>
                         </div>
                         <div class="cart-option mb-15">
                             <div class="product-quantity mr-20">
                                 <div class="cart-plus-minus p-relative"><input type="text" value="1"><div class="dec qtybutton">-</div><div class="inc qtybutton">+</div></div>
                             </div>
-                            <a href="cart.html" class="cart-btn">Add to Cart</a>
+                            <a href="{{ route('home.cart.agregarProducto', ['p' => $productDetails]) }}" class="cart-btn">Añadir al carrito</a>
                         </div>
                         <div class="details-meta">
                             <div class="d-meta-left">
                                 <div class="dm-item mr-20">
-                                    <a href="{{route('home.wishlist.agregarProducto', $productDetails)}}"><i class="fas fa-heart"></i>Add to wishlist</a>
+                                    <a href="{{route('home.wishlist.agregarProducto', $productDetails)}}"><i class="fas fa-heart"></i>Añadir a la lista de deseados</a>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="product-tag-area mt-15">
                             <div class="product_info">
-                                
+
                                 <span class="tagged_as">
-                                    <span class="title">Tags:</span>
+                                    <span class="title">Etiquetas:</span>
                                     @foreach ($productDetails->labels as $index => $label)
                                         {{ strtoupper($label->name) }}@if($index < count($productDetails->labels) - 1), @endif
-                                    @endforeach                  
+                                    @endforeach
                                     .
                                 </span>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
             <div class="tab-content" id="prodductDesTaContent">
                 <div class="tab-pane fade active show" id="des" role="tabpanel" aria-labelledby="des-tab">
                     <div class="product__details-des-wrapper">
-                        
+
                         {{ $productDetails->description }}
 
                     </div>

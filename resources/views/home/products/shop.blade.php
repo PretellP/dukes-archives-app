@@ -70,7 +70,7 @@
 
 
                                                         <h6><a href="#">{{ $product->name }}</a></h6>
-                                                       
+
                                                         <div class="price mb-10">
                                                             <span>S/{{ $product->sale_price }}</span>
                                                         </div>
@@ -84,7 +84,7 @@
                                                         <button type="button" class="wc-checkout d-flex align-items-center justify-content-center w-100 openProductDetailModal"
                                                             data-url="{{ url('/shop/product/'.$product->id) }}"
                                                             data-send="{{ route('home.shop.show', $product )}}">
-                                                            Quick View
+                                                            Vista previa
                                                         </button>
                                                     </div>
                                                 </div>

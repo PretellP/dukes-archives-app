@@ -95,7 +95,7 @@ class CartController extends Controller
         $shoppingCart = $user->shoppingCart()->sum('quantity');
 
         //return response()->json(['count' => $wishlist]);
-        return redirect()->route('home.shop.index');
+        return redirect()->back();
 
         //return response()->json([
         //    "success" => "Producto agregado a la lista de deseos",

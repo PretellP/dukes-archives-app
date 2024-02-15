@@ -16,10 +16,12 @@ class AnnouncementService
 
         $data['status'] = isset($data['status']) ? 1 : 0;
 
-        if ($data['description'] != '') {
+        if ($data['description']) {
 
             $target = isset($data['blank_indicator']) ? '_BLANK' : '_SELF';
             $data['description'] = '<a href="' . $data['description'] . '"  target="' . $target . '">' . $data['description'] . '</a>';
+        } else {
+            $data['description'] = '';
         }
 
         $banner = Announcement::create($data);

@@ -142,7 +142,7 @@ $(function () {
                         form.trigger('reset')
                         modal.modal('hide')
 
-                        select.val('').change()
+                        select.val([]).change()
                         imageInput.filepond('removeFiles')
 
                         Toast.fire({

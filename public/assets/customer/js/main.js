@@ -376,145 +376,152 @@
 
 	////////////////////////////////////////////////////
 	// 11. Product Slider Activation Js
-	if (jQuery(".product-slider").length > 0) {
-		let testimonialTwo = new Swiper('.product-slider', {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			// direction: 'vertical',
-			loop: true,
-			observer: true,
-			observeParents: true,
-			autoplay: {
-					delay: 6000,
-				},
+	if (jQuery(".product-slids").length > 0) {
 
-			// If we need pagination
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			// Navigation arrows
-			navigation: {
-				nextEl: '.bs-button-next',
-				prevEl: '.bs-button-prev',
-			},
+        $('.recomand-product-area').each(function (e) {
 
-			// And if we need scrollbar
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			breakpoints: {
-				370: {
-					slidesPerView: 2,
-				},
-				550: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 3,
-				},
-				1200: {
-					slidesPerView: 5,
-				},
-				1400: {
-					slidesPerView: 6,
-					}
-				}
-			});
+            let key = $(this).data('key')
+
+            let testimonialTwo = new Swiper('.product-slider'+key, {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                // direction: 'vertical',
+                loop: true,
+                observer: true,
+                observeParents: true,
+                autoplay: {
+                        delay: 6000,
+                    },
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.bs'+key+'-button-next',
+                    prevEl: '.bs'+key+'-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                breakpoints: {
+                    370: {
+                        slidesPerView: 2,
+                    },
+                    550: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                    },
+                    1400: {
+                        slidesPerView: 6,
+                        }
+                    }
+                });
+        })
+
 	}
 
 	////////////////////////////////////////////////////
 	// 11. Product Slider Activation Js
-	if (jQuery(".product-slider-2").length > 0) {
-		let testimonialTwo = new Swiper('.product-slider-2', {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			// direction: 'vertical',
-			loop: true,
-			observer: true,
-			observeParents: true,
-			autoplay: {
-					delay: 6000,
-				},
+	// if (jQuery(".product-slider-2").length > 0) {
+	// 	let testimonialTwo = new Swiper('.product-slider-2', {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 0,
+	// 		// direction: 'vertical',
+	// 		loop: true,
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		autoplay: {
+	// 				delay: 6000,
+	// 			},
 
-			// If we need pagination
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			// Navigation arrows
-			navigation: {
-				nextEl: '.bs2-button-next',
-				prevEl: '.bs2-button-prev',
-			},
+	// 		// If we need pagination
+	// 		pagination: {
+	// 			el: '.swiper-pagination',
+	// 			clickable: true,
+	// 		},
+	// 		// Navigation arrows
+	// 		navigation: {
+	// 			nextEl: '.bs2-button-next',
+	// 			prevEl: '.bs2-button-prev',
+	// 		},
 
-			// And if we need scrollbar
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			breakpoints: {
-				370: {
-					slidesPerView: 2,
-				},
-				550: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 3,
-				},
-				1200: {
-					slidesPerView: 5,
-				},
-				1400: {
-					slidesPerView: 6,
-					}
-				}
-			});
-	}
+	// 		// And if we need scrollbar
+	// 		scrollbar: {
+	// 			el: '.swiper-scrollbar',
+	// 		},
+	// 		breakpoints: {
+	// 			370: {
+	// 				slidesPerView: 2,
+	// 			},
+	// 			550: {
+	// 				slidesPerView: 2,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 3,
+	// 			},
+	// 			1200: {
+	// 				slidesPerView: 5,
+	// 			},
+	// 			1400: {
+	// 				slidesPerView: 6,
+	// 				}
+	// 			}
+	// 		});
+	// }
 
-	////////////////////////////////////////////////////
-	// 11. Product Slider Activation Js
-	if (jQuery(".product-slider-3").length > 0) {
-		let testimonialTwo = new Swiper('.product-slider-3', {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			// direction: 'vertical',
-			loop: true,
-			autoplay: {
-					delay: 6000,
-				},
+	// ////////////////////////////////////////////////////
+	// // 11. Product Slider Activation Js
+	// if (jQuery(".product-slider-3").length > 0) {
+	// 	let testimonialTwo = new Swiper('.product-slider-3', {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 0,
+	// 		// direction: 'vertical',
+	// 		loop: true,
+	// 		autoplay: {
+	// 				delay: 6000,
+	// 			},
 
-			// If we need pagination
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			// Navigation arrows
-			navigation: {
-				nextEl: '.bs2-button-next',
-				prevEl: '.bs2-button-prev',
-			},
+	// 		// If we need pagination
+	// 		pagination: {
+	// 			el: '.swiper-pagination',
+	// 			clickable: true,
+	// 		},
+	// 		// Navigation arrows
+	// 		navigation: {
+	// 			nextEl: '.bs2-button-next',
+	// 			prevEl: '.bs2-button-prev',
+	// 		},
 
-			// And if we need scrollbar
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			breakpoints: {
-				550: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 3,
-				},
-				1200: {
-					slidesPerView: 4,
-				},
-				1400: {
-					slidesPerView: 5,
-					}
-				}
-			});
-	}
+	// 		// And if we need scrollbar
+	// 		scrollbar: {
+	// 			el: '.swiper-scrollbar',
+	// 		},
+	// 		breakpoints: {
+	// 			550: {
+	// 				slidesPerView: 2,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 3,
+	// 			},
+	// 			1200: {
+	// 				slidesPerView: 4,
+	// 			},
+	// 			1400: {
+	// 				slidesPerView: 5,
+	// 				}
+	// 			}
+	// 		});
+	// }
 
 	////////////////////////////////////////////////////
 	// 11. Product Slider Activation Js

@@ -275,7 +275,7 @@ input.disabled[type=number] {
     padding: 4px;
     margin-top: 20px;
     margin-bottom: 20px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 .img-show-gallery {
     height: 400px;
@@ -1142,6 +1142,12 @@ select[disabled] {
 .btn_return_shop:hover
 {
     color: white;
+}
+
+.bs-button-next
+{
+    left: 10px;
+    right: auto;
 }
 
 

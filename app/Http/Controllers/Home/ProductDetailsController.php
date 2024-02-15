@@ -14,14 +14,15 @@ class ProductDetailsController extends Controller
 
         $productDetails = $product->load([
             'labels',
-            'files' => fn ($q) => $q->where('file_type', 'imagenes')
+            'files' => fn ($q) => $q->where('file_type', 'imagenes'),
+            'inventory'
         ]);
-    
+
         if (Auth::check()) {
             $user = Auth::user();
             $wishlistCount = $user->desired()->count();
-        } 
-      
+        }
+
         return view('home.products.product-details-view', compact(
             'productDetails',
             'wishlistCount'

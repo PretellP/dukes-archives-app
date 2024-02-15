@@ -20,19 +20,16 @@
                             </div>
                         </div>
  --}}
-                        <div class="col-xl-5 col-lg-4  d-lg-block ">
-                            <div class="header__search">
-                                <form action="#">
-                                    <div class="header__search-box">
-                                        <input class="search-input" type="text" id="searchInput" placeholder="Escribe para buscar">
-                                        <button class="button" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                        <div id="autocompleteContainer" class="bg-light"></div>
-                                    </div>
-                                </form>
-                            </div>
+                        <div class="col-xl-5 col-lg-4 d-flex align-items-center">
+                            <img src="{{ asset('assets/customer/img/logo/LOGOO-2.png') }}" alt="" style="width: 90px;">
+                            <h4 class="ms-3 text-white text-center">
+                                Los Archivos del Duke
+                            </h4>
                         </div>
+
+
+
+
                         <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4 ms-auto" >
                             <div class="header-action">
                                 @guest
@@ -103,7 +100,7 @@
                                         <div class="cart__mini">
                                             @php
                                                 $shoppingCart = getShoppingCart();
-                                            @endphp 
+                                            @endphp
 
                                             @if ($shoppingCart->isEmpty())
                                                 <div class="d-flex justify-content-center pt-40 pb-40">
@@ -114,7 +111,7 @@
                                             <ul>
                                                 <li>
                                                   <div class="cart__title">
-                                                    <h4>Tu carrito de compras</h4>                                               
+                                                    <h4>Tu carrito de compras</h4>
                                                   </div>
                                                 </li>
                                                 @foreach ( $shoppingCart as $item )
@@ -138,12 +135,12 @@
                                                       </div>
                                                     </div>
                                                   </li>
-                                                    
+
                                                 @endforeach
-                                            @endif                                  
+                                            @endif
                                                 <li>
                                                     <a href="{{route('home.cart.index')}}" class="wc-cart mb-10">Ver Carrito</a>
-                                                    
+
                                                 </li>
                                             </ul>
                                         </div>
