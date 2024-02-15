@@ -96,9 +96,6 @@
                             </div>
 
                         </div>
-                        <div class="text-center pt-30 pb-30">
-                            {{ $products->links('pagination::bootstrap-4') }}
-                        </div>
                     </div>
                 </div>
             </div>

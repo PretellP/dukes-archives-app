@@ -15,17 +15,15 @@ class ShopController extends Controller
         $products= Product::with([
                 'labels',
                 'files' => fn ($q) => $q->where('file_type', 'imagenes')
-            ])
-            ->paginate(
-                $perPage = 9, $columns = ['*'],$pageName = 'shop'
-            );
+        ])->get();
+
         $labels = Label::get(['id', 'name']);
 
         $wishlistCount = 0;
         if (Auth::check()) {
             $user = Auth::user();
             $wishlistCount = $user->desired()->count();
-        }    
+        }
 
         return view('home.products.shop', compact(
             'products',
