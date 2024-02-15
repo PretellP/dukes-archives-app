@@ -43,13 +43,17 @@ class ProfileController extends Controller
         }
     }
 
-    public function editValidate(Request $request, string $column)
-    {
-        $id = $request['id'];
-        $user = User::where($column, $request[$column])->first();
-
-        return $user == null || $user->id == $id ? 'true' : 'false';
+    public function editValidate(Request $request)
+    { 
+        $user = Auth::user(); 
+        if ($user) {
+            $data = $request->except(['_token', '_method', 'id']);
+            $user->update($data);
+            return back()->with('success', 'Perfil actualizado correctamente');
+        }   
     }
+
+    
 
 
 

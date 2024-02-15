@@ -95,8 +95,8 @@
                                     <i class="flaticon-shopping-bag"></i>
                                     <span class="count">1</span>
                                     <span class="text d-sm-block d-none">
-                                        <span class="sub">Carrito:</span>
-                                        $00.00
+                                        <span class="sub">Carrito</span>
+                                        de Compras
                                     </span>
                                     </a>
                                     <div class="cart">

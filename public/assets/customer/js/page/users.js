@@ -9,7 +9,9 @@ $(function () {
     // initRoleSelect(formEditObject.find('.roleSelect'), formEditObject)
     // initGenderSelect(formEditObject.find('.genderSelect'), formEditObject)
     // initDocTypeSelect(formEditObject.find('.document_type_select'), formEditObject)
-
+    $('.btn-editar-usuario').click(function() {
+        $('#editUserForm').submit(); // Envía el formulario de edición
+    });
 
     var editUserForm = $('#editUserForm').validate({
         rules: {

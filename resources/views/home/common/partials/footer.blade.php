@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="footer__widget-content">
                                     <div class="footer__link footer__link-2">
-                                       <img src="{{asset('assets/login/img/logo.png')}}" class="img-thumbnail" alt="IMG">
+                                       <img src="{{asset('assets/login/img/logo.png')}}" class="img_footer" alt="IMG">
                                        <h4 class="text-white">LOS ARCHIVOS DEL DUQUE</h4>
                                     </div>
                                 </div> 

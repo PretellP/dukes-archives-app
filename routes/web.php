@@ -104,12 +104,12 @@ Route::group(["prefix" => "inicio", "as" => "home."], function () {
         Route::group(["prefix" => "perfil", "as" => "profile."], function () {
              //----- profile.* -----
             Route::get('/', 'index')->name('index');
-            Route::post('/validar-edicion/{column}', 'editValidate')->name('validateEdit');
+            Route::patch('/validar-edicion/{column}', 'editValidate')->name('validateEdit');
             Route::get('/mis-compras', 'order')->name('order');
             Route::get('/cambiar-contrasena', 'password')->name('password');
             Route::post('/editar-contrasena', 'editarContrasena')->name('editar-contrasena');
             Route::post('/verificar-contrasena', 'verificarContrasena')->name('verificar-contrasena');
-
+            /* Route::post('/user/{user}', 'update') -> name('update'); */
             // Route::get('/mis-metodos-de-pago', 'pay')->name('pay');
             // Route::get('/', 'lista-de-deseos')->name('list');
             // Route::get('/ver/{user}', 'show')->name('show');
