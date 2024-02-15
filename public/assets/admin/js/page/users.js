@@ -268,6 +268,7 @@ $(function () {
 
                 var user = data.user;
 
+
                 form.find('input[name=password]').attr('placeholder', 'Ingrese una nueva contraseña')
                 form.find('input[name=id]').val(user.id)
                 form.find('input[name=name]').val(user.name);

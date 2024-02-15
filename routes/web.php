@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\{
     UsersController,
     DashboardController,
     LabelsController,
-    ProductController
+    ProductController,
+    SalesController
 };
 
 use App\Http\Controllers\Home\{AboutController, ProfileController, HomeController, ProductsController, ShopController, CartController, ContactController, ProductDetailsController, WishlistController};
@@ -204,6 +205,10 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
             Route::controller(AnnouncementsController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
+                Route::get('/obtener-banner/{banner}', 'editBanner')->name('edit');
+                Route::post('/registrar-banner', 'store')->name('store');
+                Route::post('/actualizar-banner/{banner}', 'updateBanner')->name('update');
+                Route::delete('/eliminar-banner/{banner}', 'destroyBanner')->name('destroy');
             });
         });
 
@@ -215,6 +220,20 @@ Route::group(['middleware' => ['auth', 'check.valid.user']], function () {
             Route::controller(CustomerController::class)->group(function () {
 
                 Route::get('/', 'index')->name('index');
+                 Route::get('/exportar-excel', 'exportExcel')->name('exportExcel');
+            });
+        });
+
+        // ---------------- SELLS ---------------
+
+        // --------- admin.sales.*
+
+        Route::group(['prefix' => 'ventas', 'as' => 'sales.'], function () {
+
+            Route::controller(SalesController::class)->group(function () {
+
+                Route::get('/', 'index')->name('index');
+                Route::get('/exportar-excel', 'exportExcel')->name('exportExcel');
             });
         });
     });

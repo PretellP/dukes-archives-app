@@ -21,7 +21,7 @@ class UsersController extends Controller
 
     public function index(Request $request)
     {
-        if($request->ajax()){   
+        if($request->ajax()){
             return $this->userService->getDataTable();
         }else{
 
@@ -34,7 +34,7 @@ class UsersController extends Controller
                 'genders',
                 'document_types'
             ));
-        } 
+        }
     }
 
     public function registerValidate(Request $request, string $column)
@@ -60,7 +60,7 @@ class UsersController extends Controller
             "success" => $success,
             "message" => $message
         ]);
-    }  
+    }
 
     public function show(User $user)
     {
@@ -70,7 +70,7 @@ class UsersController extends Controller
             "user" => $user
         ]);
     }
-    
+
     public function editValidate(Request $request, string $column)
     {
         $id = $request['id'];
