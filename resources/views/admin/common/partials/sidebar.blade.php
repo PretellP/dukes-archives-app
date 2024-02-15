@@ -15,12 +15,12 @@
 
         <ul class="sidebar-menu">
 
-            <li class="{{setActive('admin.dashboard.*')}}">
+            {{-- <li class="{{setActive('admin.dashboard.*')}}">
                 <a href="{{route('admin.dashboard.index')}}" class="nav-link">
                     <i class="fa-solid fa-house"></i>
                     <span>Inicio</span>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="{{setActive('admin.users.*')}}">
                 <a href="{{route('admin.users.index')}}" class="nav-link">
@@ -50,12 +50,12 @@
                 </a>
             </li>
 
-            <li class="">
+            {{-- <li class="">
                 <a href="" class="nav-link">
                     <i class="fa-solid fa-layer-group"></i>
                     <span>Inventario</span>
                 </a>
-            </li>
+            </li> --}}
 
             <ul class="sidebar-menu txt-divider">
                 <li class="">
@@ -73,8 +73,8 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="" class="nav-link">
+            <li class="{{ setActive('admin.sales.*') }}">
+                <a href="{{ route('admin.sales.index') }}" class="nav-link">
                     <i class="fa-solid fa-circle-dollar-to-slot"></i>
                     <span>Ventas</span>
                 </a>

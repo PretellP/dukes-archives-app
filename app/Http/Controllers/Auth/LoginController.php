@@ -38,7 +38,7 @@ class LoginController extends Controller
         {
             case '1':
             case '2':
-                $this->redirectTo = route('admin.dashboard.index');
+                $this->redirectTo = route('admin.users.index');
                 return $this->redirectTo;
                 break;
             case '3':

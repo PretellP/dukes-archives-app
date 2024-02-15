@@ -8,14 +8,14 @@
         <div class="card page-title-container">
             <div class="card-header">
                 <div class="total-width-container">
-                    <h4>CLIENTES</h4>
+                    <h4>VENTAS</h4>
                 </div>
             </div>
         </div>
 
         <div class="card-body card z-index-2 principal-container container-dashboard">
 
-            <form action="{{ route('admin.customers.exportExcel') }}" id="form-users-export" method="GET">
+            <form action="{{ route('admin.sales.exportExcel') }}" id="form-users-export" method="GET">
 
                 <div class="mb-4">
                     <button type="submit" class="btn btn-success">
@@ -25,19 +25,16 @@
                 </div>
             </form>
 
-            <table id="customers-table" class="table table-hover" data-url="{{ route('admin.customers.index') }}">
+            <table id="sales-table" class="table table-hover" data-url="{{route('admin.sales.index')}}">
                 <thead>
                     <tr>
                         <th>N°</th>
-                        <th>Nombre</th>
-                        <th>Sexo</th>
-                        <th>Email</th>
-                        <th>Fecha de nacimiento</th>
-                        <th>Tipo de documento</th>
-                        <th>Nro. documento</th>
-                        <th>Teléfono</th>
-                        <th>Rol</th>
-                        <th>Estado</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Cant. Productos</th>
+                        <th>Monto de venta</th>
+                        <th>Ganancia total</th>
                     </tr>
                 </thead>
             </table>
@@ -50,10 +47,11 @@
 
 @endsection
 
+
 @section('modals')
 @include('admin.users.partials.modals._view')
 @endsection
 
 @section('extra-script')
-<script type="module" src="{{ asset('assets/admin/js/page/customers.js') }}"></script>
+<script type="module" src="{{ asset('assets/admin/js/page/sales.js') }}"></script>
 @endsection
