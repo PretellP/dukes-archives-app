@@ -28,8 +28,6 @@
                         </div>
 
 
-
-
                         <div class="col-xl-4 col-lg-5 col-md-8 col-sm-8 col-4 ms-auto" >
                             <div class="header-action">
                                 @guest
